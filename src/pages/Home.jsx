@@ -60,56 +60,63 @@ const Home = () => {
     {
       title: "Digital Transformation",
       image: dtImg,
-      slug: "digital-transformation",
+      slug: "digitaltransformation",
       description:
         "Driving seamless enterprise-wide innovation with tailored transformation strategies.",
     },
     {
       title: "Digital Marketing",
       image: dmImg,
-      slug: "digital-marketing",
+      slug: "digitalmarketing",
       description:
         "Amplifying your brand reach with data-driven and engaging marketing solutions.",
     },
     {
       title: "Product Engineering",
       image: peImg,
+      slug: "productengineering",
       description:
         "Building scalable, high-performance products that accelerate your business growth.",
     },
     {
       title: "Data Engineering",
       image: deImg,
+      slug: "dataengineering",
       description:
         "Designing robust data pipelines for reliable and actionable business insights.",
     },
     {
       title: "Cloud & Infrastructure",
       image: ciImg,
+      slug: "cloudandinfrastructure",
       description:
         "Enabling secure and scalable cloud environments tailored to your needs.",
     },
     {
       title: "IT Consulting and Staffing",
       image: itsImg,
+      slug: "itconsultingandstaffing",
       description:
         "Providing expert consulting and skilled staffing to power your IT initiatives.",
     },
     {
       title: "Digital Engineering",
       image: dgImg,
+      slug: "digitalengineering",
       description:
         "Innovating with cutting-edge digital solutions to optimize your workflows.",
     },
     {
       title: "Outsourcing Services",
       image: osImg,
+      slug: "outsourcingservices",
       description:
         "Delivering reliable outsourcing to extend your capabilities efficiently.",
     },
     {
-      title: "Outsourcing Services",
+      title: "Software Development",
       image: osImg,
+      slug: "softwaredevelopment",
       description:
         "Delivering reliable outsourcing to extend your capabilities efficiently.",
     },

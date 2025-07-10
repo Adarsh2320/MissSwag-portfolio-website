@@ -12,9 +12,7 @@ import IntegratedHRMS from "./pages/Products/IntegratedHRMS";
 import AutoCareHub from "./pages/Products/AutoCareHub";
 import IntegratedEMS_LMS from "./pages/Products/IntegratedEMS_LMS";
 import DigitalMarketing from "./pages/Services/DigitalMarketing";
-
-
-
+import DigitalTransformation from "./pages/Services/DigitalTransformation";
 
 export default function App() {
   return (
@@ -29,11 +27,20 @@ export default function App() {
         <Route path="/products/macha" element={<Macha />} />
         <Route path="/products/integratedhims" element={<IntegratedHIMS />} />
         <Route path="/products/integratedhrms" element={<IntegratedHRMS />} />
-        <Route path="/products/integratedems_lms" element={<IntegratedEMS_LMS />} />
-        <Route path="/services/digitalmarketing" element={<DigitalMarketing />} />
+        <Route
+          path="/products/integratedems_lms"
+          element={<IntegratedEMS_LMS />}
+        />
+        <Route
+          path="/services/digitalmarketing"
+          element={<DigitalMarketing />}
+        />
+        <Route
+          path="/services/digitaltransformation"
+          element={<DigitalTransformation />}
+        />
 
         {/* Add more routes as needed */}
-
       </Routes>
     </Router>
   );
