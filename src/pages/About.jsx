@@ -4,20 +4,21 @@ import Footer from "../components/Footer";
 import { Rocket, Users, Lightbulb, ShieldCheck } from "lucide-react";
 import logo from "../assets/logo.jpg";
 
+
 const About = () => {
   return (
     <div className="bg-black text-white">
       <Navbar />
 
       {/* About Section */}
-      <section className="bg-gradient-to-br from-[#0f172a] to-[#14532d] py-24 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
-          {/* Text Content */}
-          <div className="text-center md:text-left md:w-1/2 md:pl-8">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+      <section className="relative py-24 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+          {/* Text Content on Left */}
+          <div className="w-full md:w-1/2 md:pr-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-left">
               About Gamayas
             </h1>
-            <p className="text-xl text-gray-300 leading-relaxed text-justify">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed text-justify">
               We are a technology company that builds intelligent platforms and
               delivers world-class digital transformation solutions. At Gamayas,
               we harness innovation to empower enterprises and uplift
@@ -27,12 +28,12 @@ const About = () => {
             </p>
           </div>
 
-          {/* Logo Image */}
-          <div className="md:w-1/2 flex justify-center">
+          {/* Background Image on Right */}
+          <div className="w-full md:w-1/2">
             <img
-              src={logo}
-              alt="Gamayas Logo"
-              className="w-60 h-auto object-contain rounded-xl shadow-lg"
+              src="https://www.maverickconsole.com/assets/mcs/images/portfolio/Digital.jpg"
+              alt="Digital"
+              className="w-full h-auto object-contain rounded-xl shadow-lg"
             />
           </div>
         </div>

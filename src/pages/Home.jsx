@@ -20,8 +20,14 @@ import peImg from "../assets/product_engineering.jpg";
 import deImg from "../assets/data_engineering.jpg";
 import ciImg from "../assets/cloud_and_infrastructure.jpg";
 import itsImg from "../assets/consulting_and_staffing.jpg";
-import dgImg from "../assets/digital_engineering.jpg";
 import osImg from "../assets/outsourcing.jpg";
+import sdImg from "../assets/software_development.jpg"; // <-- Add this image in your assets folder
+import atiImg from "../assets/advanced_technology_integration.jpg"; // <-- Add this image in your assets folder
+
+import missSwagImg from "../assets/products_logos/missswag.jpg";
+import machaImg from "../assets/products_logos/macha.jpg";
+import saathiImg from "../assets/products_logos/saathicare.jpg";
+import autoCureImg from "../assets/products_logos/autocurehub.jpg";
 
 import {
   Cpu,
@@ -62,65 +68,66 @@ const Home = () => {
       image: dtImg,
       slug: "digitaltransformation",
       description:
-        "Driving seamless enterprise-wide innovation with tailored transformation strategies.",
-    },
-    {
-      title: "Digital Marketing",
-      image: dmImg,
-      slug: "digitalmarketing",
-      description:
-        "Amplifying your brand reach with data-driven and engaging marketing solutions.",
+        "Driving enterprise-wide innovation with strategic digital adoption and agile execution.",
     },
     {
       title: "Product Engineering",
       image: peImg,
       slug: "productengineering",
       description:
-        "Building scalable, high-performance products that accelerate your business growth.",
+        "Designing, building, and scaling next-gen products that fuel business evolution.",
     },
     {
-      title: "Data Engineering",
-      image: deImg,
-      slug: "dataengineering",
+      title: "Digital Marketing",
+      image: dmImg,
+      slug: "digitalmarketing",
       description:
-        "Designing robust data pipelines for reliable and actionable business insights.",
+        "Boosting brand presence with performance-driven and creative marketing strategies.",
     },
     {
-      title: "Cloud & Infrastructure",
+      title: "Software Development",
+      image: sdImg, // Replace with appropriate image variable
+      slug: "softwaredevelopment",
+      description:
+        "Crafting robust, scalable software tailored to meet dynamic business demands.",
+    },
+    {
+      title: "Cloud and Infrastructure",
       image: ciImg,
-      slug: "cloudandinfrastructure",
+      slug: "cloudinfrastructure",
       description:
-        "Enabling secure and scalable cloud environments tailored to your needs.",
+        "Empowering businesses with secure, scalable, and optimized cloud infrastructure solutions.",
     },
     {
-      title: "IT Consulting and Staffing",
+      title: "IT Consulting and Staffing Services",
       image: itsImg,
-      slug: "itconsultingandstaffing",
+      slug: "itconsultingstaffing",
       description:
-        "Providing expert consulting and skilled staffing to power your IT initiatives.",
-    },
-    {
-      title: "Digital Engineering",
-      image: dgImg,
-      slug: "digitalengineering",
-      description:
-        "Innovating with cutting-edge digital solutions to optimize your workflows.",
+        "Delivering expert guidance and skilled professionals to support your IT objectives.",
     },
     {
       title: "Outsourcing Services",
       image: osImg,
       slug: "outsourcingservices",
       description:
-        "Delivering reliable outsourcing to extend your capabilities efficiently.",
+        "Enhancing operational efficiency through reliable and strategic outsourcing models.",
     },
     {
-      title: "Software Development",
-      image: osImg,
-      slug: "softwaredevelopment",
+      title: "Advanced Technology Integration",
+      image: atiImg, // Replace with appropriate image variable
+      slug: "advancedtechnologyintegration",
       description:
-        "Delivering reliable outsourcing to extend your capabilities efficiently.",
+        "Integrating cutting-edge technologies to streamline processes and drive innovation.",
+    },
+    {
+      title: "Data Engineering",
+      image: deImg,
+      slug: "dataengineering",
+      description:
+        "Building powerful data architectures for real-time analytics and informed decisions.",
     },
   ];
+  
 
   return (
     <div className="bg-black text-white">
@@ -271,44 +278,44 @@ const Home = () => {
             {[
               {
                 title: "MissSwag",
-                slug: "Missswag", // match with /products/Missswag
-                image: "",
+                slug: "Missswag",
+                image: missSwagImg,
                 desc: "Patient engagement platform tailored for modern clinics and hospitals.",
               },
               {
                 title: "Macha Platform",
-                slug: "Macha", // match with /products/Macha
-                image: "",
+                slug: "Macha",
+                image: machaImg,
                 desc: "Multi-vendor services platform for seamless vendor onboarding and discovery.",
               },
               {
                 title: "Saathi Care",
                 slug: "SaathiCare",
-                image: "",
+                image: saathiImg,
                 desc: "On-demand home healthcare and elderly assistance mobile solution.",
               },
               {
-                title: "Auto Cure Hub",
-                slug: "AutoCareHub",
-                image: "",
+                title: "AutoCure Hub",
+                slug: "AutoCureHub",
+                image: autoCureImg,
                 desc: "AI-powered vehicle service management and diagnostics interface.",
               },
               {
                 title: "Integrated HIMS",
                 slug: "IntegratedHIMS",
-                image: "",
+                image: saathiImg,
                 desc: "Comprehensive hospital management system with real-time analytics.",
               },
               {
                 title: "Integrated HRMS",
                 slug: "IntegratedHRMS",
-                image: "",
+                image: saathiImg,
                 desc: "Streamlined human resource solution for modern enterprise teams.",
               },
               {
                 title: "EMS + LMS",
                 slug: "IntegratedEMS_LMS",
-                image: "",
+                image: saathiImg,
                 desc: "Unified Emergency + Learning Management System for smart institutions.",
               },
             ].map((product, i) => (

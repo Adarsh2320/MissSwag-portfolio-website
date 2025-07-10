@@ -1,19 +1,26 @@
 // File: src/pages/Services/DigitalTransformation.jsx
 
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Lightbulb, Zap } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
 // Replace with actual hosted image URLs
-const bannerImg = "https://images.unsplash.com/photo-1498050108023-c5249f4df085";
-const img1 = "https://images.unsplash.com/photo-1593642634367-d91a135587b5";
-const img2 = "https://images.unsplash.com/photo-1605902711622-cfb43c4437d1";
-const img3 = "https://images.unsplash.com/photo-1519389950473-47ba0277781c";
-const img4 = "https://images.unsplash.com/photo-1556740749-887f6717d7e4";
-const img5 = "https://images.unsplash.com/photo-1581093588401-a8f8bda45805";
-const img6 = "https://images.unsplash.com/photo-1555949963-aa79dcee981d";
+const bannerImg =
+  "https://images.unsplash.com/photo-1498050108023-c5249f4df085";
+const img1 =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGaI1EIlIQM_s7087VyiTxEYxTmtvdlMQvIg&s";
+const img2 =
+  "https://integranxt.com/wp-content/uploads/2023/12/image-1012x675-8.png";
+const img3 =
+  "https://resources.nice.com/wp-content/uploads/2024/02/reimagining-customer-experience.jpg";
+const img4 =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR401oIerBlEjo39aVqQfGh7rIKvQ6Kpqw1Ep7pIWxAVPtCc0w0X2mfvvUUZ5z1rOR92po&usqp=CAU";
+const img5 =
+  "https://www.shutterstock.com/image-photo/business-intelligence-concept-data-analysis-600nw-2288262579.jpg";
+const img6 =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyO0m1KxhOoW678yHa7KBUhzp1rXqDktTDXA&s";
 
 const features = [
   "Enterprise-wide Technology Modernization",
@@ -21,7 +28,7 @@ const features = [
   "Customer Experience Re-imagination",
   "Cloud-Native Infrastructure Adoption",
   "Data-Driven Business Intelligence",
-  "Change Management & Training"
+  "Change Management & Training",
 ];
 
 const descriptions = [
@@ -30,10 +37,14 @@ const descriptions = [
   "Design smarter interfaces, omnichannel engagement, and seamless UX that delights your customers.",
   "Migrate to secure, flexible cloud infrastructure that improves uptime and reduces cost.",
   "Harness your business data using analytics and dashboards that enable real-time decision-making.",
-  "Support your team through guided digital change adoption and continuous learning programs."
+  "Support your team through guided digital change adoption and continuous learning programs.",
 ];
 
 const DigitalTransformation = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" }); // or "smooth" for animation
+  }, []);
+
   return (
     <div className="bg-black text-white">
       <Navbar />
@@ -54,7 +65,8 @@ const DigitalTransformation = () => {
               Digital Transformation
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
-              Empower your enterprise with agile, AI-ready, and future-proof digital systems.
+              Empower your enterprise with agile, AI-ready, and future-proof
+              digital systems.
             </p>
           </motion.div>
         </div>
@@ -73,8 +85,10 @@ const DigitalTransformation = () => {
             Transform the Way You Operate
           </h2>
           <p className="text-lg text-gray-300">
-            We help businesses digitize operations, rethink customer journeys, and align teams around scalable, cloud-first architectures.
-            Our solutions are centered around speed, intelligence, and measurable outcomes.
+            We help businesses digitize operations, rethink customer journeys,
+            and align teams around scalable, cloud-first architectures. Our
+            solutions are centered around speed, intelligence, and measurable
+            outcomes.
           </p>
         </motion.div>
       </section>
@@ -99,9 +113,7 @@ const DigitalTransformation = () => {
               <h3 className="text-xl font-semibold text-green-400 mb-2">
                 {features[i]}
               </h3>
-              <p className="text-gray-300 text-sm">
-                {descriptions[i]}
-              </p>
+              <p className="text-gray-300 text-sm">{descriptions[i]}</p>
             </motion.div>
           ))}
         </div>
@@ -117,10 +129,12 @@ const DigitalTransformation = () => {
           viewport={{ once: true }}
         >
           <Zap className="mx-auto text-green-400 w-12 h-12 mb-4 animate-pulse" />
-          <h2 className="text-4xl font-bold mb-4">Begin Your Transformation Journey</h2>
+          <h2 className="text-4xl font-bold mb-4">
+            Begin Your Transformation Journey
+          </h2>
           <p className="text-gray-300 mb-6">
-            Partner with Gamayas to unlock a smarter, faster, and leaner digital enterprise.
-            From strategy to execution — we’ve got you covered.
+            Partner with Gamayas to unlock a smarter, faster, and leaner digital
+            enterprise. From strategy to execution — we’ve got you covered.
           </p>
           <a
             href="#contact"

@@ -1,44 +1,44 @@
-// File: src/pages/Services/ITConsultingStaffing.jsx
+// File: src/pages/Services/SoftwareDevelopment.jsx
 
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Users, Zap } from "lucide-react";
+import { Code2, Zap } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-const bannerImg = "https://images.unsplash.com/photo-1551434678-e076c223a692";
+const bannerImg =
+  "https://images.unsplash.com/photo-1518770660439-4636190af475";
 const img1 =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQPcuCxzZZMixSSHRxvEumkb30rhQS8wtOEV1ojdG_5v3oCwUltZF9KnP2uxA3i2eyRcU&usqp=CAU";
-const img2 =
-  "https://www.appinessworld.com/assets/images/tech-talent-on-demand-3.png";
+  "https://edge1s.com/wp-content/uploads/2024/03/AdobeStock_200208909-1024x482.jpeg";
+const img2 = "https://images.unsplash.com/photo-1605379399642-870262d3d051";
 const img3 =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM-j159jgYC9VNR4fKAvx0aWPJCzDMZm_cJg&s";
+  "https://7t.ai/wp-content/uploads/2022/06/iStock-1177116437-2234x1117.jpg";
 const img4 =
-  "https://kantata.marketing/wp-content/uploads/2021/08/how-create-present-resource-plan.jpg";
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxhcP2lUX32kfTqXWsQOT2k9L-tfngVz60143R6LPLHE-tS6n8OjXhdbmrxqvDNUml5vo&usqp=CAU";
 const img5 =
-  "https://gdcitsolutions.com/wp-content/uploads/Staff-Augmentation-Concept.jpg";
+  "https://www.hulkapps.com/cdn/shop/articles/scaled_IMAGE-FILE-UPLOADS-breaking-down-cross-platform-compatibility-830907_1024x.jpg?v=1722247485";
 const img6 =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Uh3r5I5TKqrDiVhjMJDNiqUF_EkLRpq1gS2OfdUUm1xnZCW217jOl1d-0st0hCnIG-0&usqp=CAU";
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwEOTK-F2Sgl2QfIgtJTQlJkBhcTKebeHV8sNnFU6vZctJjJ57nZyLnkq4ghWIyIKKG4s&usqp=CAU";
 
 const features = [
-  "IT Strategy & Roadmap Consulting",
-  "On-Demand Tech Talent Pool",
-  "Agile & DevOps Expertise",
-  "Project-Based Resource Deployment",
-  "Cost-Efficient Staff Augmentation",
-  "Talent Acquisition & Retention",
+  "Custom Web & Mobile Apps",
+  "Secure Backend Development",
+  "API Design & Integration",
+  "DevOps & Continuous Delivery",
+  "Cross-Platform Compatibility",
+  "Maintenance & Scalability Planning",
 ];
 
 const descriptions = [
-  "Design technology strategies aligned with business objectives and future trends.",
-  "Access a curated pool of pre-vetted IT professionals with specialized skills.",
-  "Infuse agility into your teams with experts in CI/CD, DevOps, and scrum delivery.",
-  "Scale your teams for new initiatives without long-term overheads.",
-  "Optimize workforce cost while retaining quality through smart staffing models.",
-  "Hire and retain top talent with our tech-driven recruitment and retention solutions.",
+  "Build intuitive web and mobile apps tailored to your business goals and users.",
+  "Develop robust, scalable, and secure backend systems using modern technologies.",
+  "Integrate with third-party services or build custom APIs for smooth data exchange.",
+  "Automate builds, tests, and deployments for faster and safer product updates.",
+  "Ensure seamless experience across devices with responsive and adaptive design.",
+  "Plan for growth with performance tuning, monitoring, and feature expansion support.",
 ];
 
-const ITConsultingStaffing = () => {
+const SoftwareDevelopment = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
@@ -60,11 +60,11 @@ const ITConsultingStaffing = () => {
             className="text-center px-4"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-green-400 mb-4">
-              IT Consulting & Staffing
+              Software Development
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
-              Bridge talent gaps and accelerate delivery with expert consulting
-              and staffing solutions.
+              Empower your business with custom-built software tailored to your
+              unique challenges.
             </p>
           </motion.div>
         </div>
@@ -80,12 +80,12 @@ const ITConsultingStaffing = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-green-400 mb-6">
-            The Right People, The Right Strategy
+            Solutions That Fit, Code That Works
           </h2>
           <p className="text-lg text-gray-300">
-            We empower your organization with cutting-edge consulting and a
-            flexible talent strategy. From team extension to full project
-            staffing, we help you meet today’s demands and tomorrow’s goals.
+            We engineer custom software for every scale—startups, SMBs, and
+            enterprises. With a focus on performance, user experience, and
+            reliability, we help you build future-ready applications.
           </p>
         </motion.div>
       </section>
@@ -125,19 +125,20 @@ const ITConsultingStaffing = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Users className="mx-auto text-green-400 w-12 h-12 mb-4 animate-pulse" />
+          <Code2 className="mx-auto text-green-400 w-12 h-12 mb-4 animate-pulse" />
           <h2 className="text-4xl font-bold mb-4">
-            Let’s Build Your Tech Team
+            Start Building Smarter Software
           </h2>
           <p className="text-gray-300 mb-6">
-            Partner with Gamayas to power your innovation pipeline with the
-            right technology strategy and skilled talent.
+            From planning to maintenance, we take care of your software’s full
+            journey. Partner with Gamayas for dependable and future-proof
+            development.
           </p>
           <a
             href="#contact"
             className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transition"
           >
-            Connect With Us
+            Let’s Code Your Vision
           </a>
         </motion.div>
       </section>
@@ -147,4 +148,4 @@ const ITConsultingStaffing = () => {
   );
 };
 
-export default ITConsultingStaffing;
+export default SoftwareDevelopment;

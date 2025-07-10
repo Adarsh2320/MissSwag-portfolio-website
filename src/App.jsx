@@ -9,11 +9,17 @@ import SaathiCare from "./pages/Products/SaathiCare";
 import Macha from "./pages/Products/Macha";
 import IntegratedHIMS from "./pages/Products/IntegratedHIMS";
 import IntegratedHRMS from "./pages/Products/IntegratedHRMS";
-import AutoCareHub from "./pages/Products/AutoCareHub";
 import IntegratedEMS_LMS from "./pages/Products/IntegratedEMS_LMS";
+
 import DigitalMarketing from "./pages/Services/DigitalMarketing";
 import DigitalTransformation from "./pages/Services/DigitalTransformation";
-
+import DataEngineering from "./pages/Services/DataEngineering";
+import CloudInfrastructure from "./pages/Services/CloudInfrastructure";
+import SoftwareDevelopment from "./pages/Services/SoftwareDevelopment";
+import ITConsultingStaffing from "./pages/Services/ITConsultingStaffing";
+import ProductEngineering from "./pages/Services/ProductEngineering";
+import OutsourcingServices from "./pages/Services/OutsourcingServices";
+import AdvancedTechnologyIntegration from "./pages/Services/AdvancedTechnologyIntegration";
 export default function App() {
   return (
     <Router>
@@ -22,7 +28,6 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/products/missswag" element={<Missswag />} />
-        <Route path="/products/autocarehub" element={<AutoCareHub />} />
         <Route path="/products/saathicare" element={<SaathiCare />} />
         <Route path="/products/macha" element={<Macha />} />
         <Route path="/products/integratedhims" element={<IntegratedHIMS />} />
@@ -38,6 +43,31 @@ export default function App() {
         <Route
           path="/services/digitaltransformation"
           element={<DigitalTransformation />}
+        />
+        <Route path="/services/dataengineering" element={<DataEngineering />} />
+        <Route
+          path="/services/cloudinfrastructure"
+          element={<CloudInfrastructure />}
+        />
+        <Route
+          path="/services/softwaredevelopment"
+          element={<SoftwareDevelopment />}
+        />
+        <Route
+          path="/services/itconsultingstaffing"
+          element={<ITConsultingStaffing />}
+        />
+        <Route
+          path="/services/productengineering"
+          element={<ProductEngineering />}
+        />
+        <Route
+          path="/services/outsourcingservices"
+          element={<OutsourcingServices />}
+        />
+        <Route
+          path="/services/advancedtechnologyintegration"
+          element={<AdvancedTechnologyIntegration />}
         />
 
         {/* Add more routes as needed */}

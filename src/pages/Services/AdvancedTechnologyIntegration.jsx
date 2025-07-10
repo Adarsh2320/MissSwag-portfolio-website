@@ -1,44 +1,45 @@
-// File: src/pages/Services/ITConsultingStaffing.jsx
+// File: src/pages/Services/AdvancedTechnologyIntegration.jsx
 
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Users, Zap } from "lucide-react";
+import { Cpu } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-const bannerImg = "https://images.unsplash.com/photo-1551434678-e076c223a692";
+const bannerImg =
+  "https://images.unsplash.com/photo-1581090700227-1e8eec7fefc4";
 const img1 =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQPcuCxzZZMixSSHRxvEumkb30rhQS8wtOEV1ojdG_5v3oCwUltZF9KnP2uxA3i2eyRcU&usqp=CAU";
+  "https://miro.medium.com/v2/resize:fit:691/1*saGK1cIa1j77vNoA4EDJDg@2x.jpeg";
 const img2 =
-  "https://www.appinessworld.com/assets/images/tech-talent-on-demand-3.png";
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDek2dZdKLSIk504GECjbYbZtEuefvU4Y0SgQ5KQxxHGIofu0nHLO65HLTOXJTOeDZaSc&usqp=CAU";
 const img3 =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM-j159jgYC9VNR4fKAvx0aWPJCzDMZm_cJg&s";
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoyBaq4HwMmzgDm8HbqrHwSPxsu96dwZ8iGGUo8QgNixedfEDt9CIeFzJkmLKNs6cpSTM&usqp=CAU";
 const img4 =
-  "https://kantata.marketing/wp-content/uploads/2021/08/how-create-present-resource-plan.jpg";
+  "https://media.licdn.com/dms/image/v2/D4E12AQGO00cTvSB2XA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1697703068227?e=2147483647&v=beta&t=EQHGIydfS7bozonv_REIuoLnkYHP9Ur-T3ihR-Jtl50";
 const img5 =
-  "https://gdcitsolutions.com/wp-content/uploads/Staff-Augmentation-Concept.jpg";
+  "https://media.istockphoto.com/id/1313551846/vector/digital-smart-contract-isometric-icon-concept-of-electronic-signature-blockchain-technology.jpg?s=612x612&w=0&k=20&c=hqE8rEWrU9ABnzgjChz_mIYKoPGXSUIevUB4TNlioC4=";
 const img6 =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Uh3r5I5TKqrDiVhjMJDNiqUF_EkLRpq1gS2OfdUUm1xnZCW217jOl1d-0st0hCnIG-0&usqp=CAU";
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS89UGx90Ozsncj2Z7dTHgu6Fka_77Cdtr6p0BJ-FsWhpD8naZFZ_D27iH6xEGJ3xL1j4o&usqp=CAU";
 
 const features = [
-  "IT Strategy & Roadmap Consulting",
-  "On-Demand Tech Talent Pool",
-  "Agile & DevOps Expertise",
-  "Project-Based Resource Deployment",
-  "Cost-Efficient Staff Augmentation",
-  "Talent Acquisition & Retention",
+  "AI & Machine Learning Integration",
+  "IoT & Sensor Ecosystem Deployment",
+  "Edge & Quantum Computing Solutions",
+  "AR/VR Experience Design",
+  "Blockchain & Smart Contract Setup",
+  "Technology Roadmapping & Strategy",
 ];
 
 const descriptions = [
-  "Design technology strategies aligned with business objectives and future trends.",
-  "Access a curated pool of pre-vetted IT professionals with specialized skills.",
-  "Infuse agility into your teams with experts in CI/CD, DevOps, and scrum delivery.",
-  "Scale your teams for new initiatives without long-term overheads.",
-  "Optimize workforce cost while retaining quality through smart staffing models.",
-  "Hire and retain top talent with our tech-driven recruitment and retention solutions.",
+  "Embed intelligence into operations with predictive and cognitive AI models.",
+  "Connect physical assets through sensor networks for real-time visibility.",
+  "Leverage edge and emerging computing paradigms for next-gen performance.",
+  "Create immersive virtual experiences for training, design, or retail.",
+  "Implement blockchain protocols for transparent and secure digital workflows.",
+  "Define your innovation roadmap and align emerging tech with business goals.",
 ];
 
-const ITConsultingStaffing = () => {
+const AdvancedTechnologyIntegration = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
@@ -60,11 +61,10 @@ const ITConsultingStaffing = () => {
             className="text-center px-4"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-green-400 mb-4">
-              IT Consulting & Staffing
+              Advanced Technology Integration
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
-              Bridge talent gaps and accelerate delivery with expert consulting
-              and staffing solutions.
+              Integrate cutting-edge technologies to gain a competitive edge.
             </p>
           </motion.div>
         </div>
@@ -80,12 +80,11 @@ const ITConsultingStaffing = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-green-400 mb-6">
-            The Right People, The Right Strategy
+            Embrace Tomorrow’s Technology Today
           </h2>
           <p className="text-lg text-gray-300">
-            We empower your organization with cutting-edge consulting and a
-            flexible talent strategy. From team extension to full project
-            staffing, we help you meet today’s demands and tomorrow’s goals.
+            We help organizations integrate disruptive technologies into
+            existing systems, enabling them to innovate with speed and scale.
           </p>
         </motion.div>
       </section>
@@ -125,19 +124,19 @@ const ITConsultingStaffing = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Users className="mx-auto text-green-400 w-12 h-12 mb-4 animate-pulse" />
+          <Cpu className="mx-auto text-green-400 w-12 h-12 mb-4 animate-pulse" />
           <h2 className="text-4xl font-bold mb-4">
-            Let’s Build Your Tech Team
+            Future-Ready with Emerging Tech
           </h2>
           <p className="text-gray-300 mb-6">
-            Partner with Gamayas to power your innovation pipeline with the
-            right technology strategy and skilled talent.
+            From AI to blockchain and beyond, Gamayas empowers your business
+            with the tech of tomorrow — integrated today.
           </p>
           <a
             href="#contact"
             className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transition"
           >
-            Connect With Us
+            Start Your Tech Evolution
           </a>
         </motion.div>
       </section>
@@ -147,4 +146,4 @@ const ITConsultingStaffing = () => {
   );
 };
 
-export default ITConsultingStaffing;
+export default AdvancedTechnologyIntegration;

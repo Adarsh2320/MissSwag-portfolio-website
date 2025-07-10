@@ -6,7 +6,7 @@ import { CheckCircle, Sparkles, Info, ArrowLeftCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const product = {
-  name: "Auto Cure Hub",
+  name: "AutoCure Hub",
   tagline: "AI-Powered Vehicle Service Management",
   description:
     "Auto Cure Hub is an intelligent automotive diagnostics and service platform that simplifies maintenance, tracks vehicle health, and connects users with verified garages—all in one interface.",
@@ -29,7 +29,7 @@ const product = {
   },
 };
 
-const AutoCareHub = () => {
+const AutoCureHub = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
