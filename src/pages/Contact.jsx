@@ -4,6 +4,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Mail, Phone, MapPin, SendHorizonal, Star } from "lucide-react";
+import WhatsappButton from "../components/WhatsappButton";
 
 const Contact = () => {
   return (
@@ -104,7 +105,9 @@ const Contact = () => {
           Start a Conversation
         </a>
       </section>
+      <WhatsappButton />
 
+      {/* Footer */}
       <Footer />
     </div>
   );
