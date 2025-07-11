@@ -49,7 +49,7 @@ const Contact = () => {
         className="py-20 px-6 bg-gradient-to-br from-[#0f172a] to-black"
         id="contact"
       >
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-28 items-center">
           {/* Live Google Map */}
           <div className="bg-[#0f172a] p-6 rounded-lg shadow-lg text-center">
             <h2 className="text-2xl font-bold mb-4">Find Us Here</h2>

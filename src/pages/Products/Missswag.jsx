@@ -5,6 +5,10 @@ import { motion } from "framer-motion";
 import { CheckCircle, Sparkles, Info, ArrowLeftCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton"; // Ensure this component exists in your project
+import { ArrowRightCircle } from "lucide-react";
+
+import autoCureImg from "../../assets/products_logos/missswag.jpg";
+import p1Img from "../../assets/autocure_images/p1.jpg";
 
 const product = {
   name: "MissSwag",
@@ -18,9 +22,11 @@ const product = {
     "EHR Integration & HIPAA Compliance",
   ],
   screenshots: [
-    "/images/products/missswag-1.jpg",
-    "/images/products/missswag-2.jpg",
-    "/images/products/missswag-3.jpg",
+    p1Img,
+    p1Img,
+    p1Img,
+    p1Img,
+    p1Img,
   ],
   details: {
     launched: "2024",
@@ -53,16 +59,37 @@ const ProductDetail = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-12 flex items-center justify-center gap-8"
         >
-          <a href="https://autocure-hub.vercel.app/">
-            <div className="border-2 border-green-500 inline-block mb-4 pt-10 pl-20 pb-10 pr-20 rounded-full  ">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-green-400">
-                {product.name}
-              </h1>
-              <p className="text-xl text-gray-300 italic">{product.tagline}</p>
+          {/* Title and Tagline container with arrow inside */}
+          <a
+            href="https://autocure-hub.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="border-2 border-green-500 inline-flex items-center gap-6 pt-10 pl-16 pb-10 pr-16 rounded-full transform -translate-x-6">
+              <div>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-green-400">
+                  {product.name}
+                </h1>
+                <p className="text-xl text-gray-300 italic">
+                  {product.tagline}
+                </p>
+              </div>
+
+              {/* Right Arrow Icon inside circle */}
+              <div className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white transition duration-300">
+                <ArrowRightCircle size={28} />
+              </div>
             </div>
           </a>
+
+          {/* Circular Image on right */}
+          <img
+            src={autoCureImg}
+            alt="AutoCure Hub Logo"
+            className="w-48 h-48 rounded-full object-cover"
+          />
         </motion.div>
 
         {/* Overview */}
@@ -78,29 +105,29 @@ const ProductDetail = () => {
           </p>
         </motion.div>
 
-        {/* Screenshots */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-semibold text-green-300 mb-6 text-center">
+        {/* Screenshots Slider */}
+        <div className="mb-20 overflow-hidden">
+          <h2 className="text-3xl font-semibold text-green-300 mb-12 text-center">
             Product Screenshots
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {product.screenshots.map((img, i) => (
-              <motion.div
-                key={i}
-                className="overflow-hidden rounded-xl border border-green-700 shadow-md"
-                whileHover={{ scale: 1.03 }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <img
-                  src={img}
-                  alt={`Screenshot ${i + 1}`}
-                  className="w-full h-64 object-cover"
-                />
-              </motion.div>
-            ))}
+
+          <div className="relative w-full">
+            <div className="flex gap-6 animate-marquee whitespace-nowrap">
+              {[...product.screenshots, ...product.screenshots].map(
+                (img, i) => (
+                  <div
+                    key={i}
+                    className="flex-shrink-0 w-[400px] h-[300px] rounded-xl border border-green-700 overflow-hidden shadow-md"
+                  >
+                    <img
+                      src={img}
+                      alt={`Screenshot ${i + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )
+              )}
+            </div>
           </div>
         </div>
 

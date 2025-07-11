@@ -89,7 +89,7 @@ const products = [
     title: "Macha Platform",
     slug: "Macha",
     image: machaImg,
-    desc: "Multi-vendor services platform for seamless vendor onboarding and discovery.",
+    desc: "Smart delivery service platform for vendors and customers.",
   },
   {
     title: "Saathi Care",
@@ -427,27 +427,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ----------------------------------------------------------------- */}
-      {/* CTA                                                               */}
-      {/* ----------------------------------------------------------------- */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#0f172a] to-black text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4">
-            Let’s Build the Future, Together.
-          </h2>
-          <p className="text-lg text-gray-100 mb-6">
-            Whether you're a startup or an enterprise, Gamayas delivers
-            world‑class engineering and digital strategy to help you grow
-            smarter, faster.
-          </p>
-          <a
-            href="#contact"
-            className="bg-white text-green-900 px-8 py-3 rounded-full font-semibold shadow hover:shadow-lg transition hover:bg-green-100"
-          >
-            Get a Free Consultation
-          </a>
-        </div>
-      </section>
       {/* ----------------------------------------------------------------- */}
       {/* WhatsApp Button                                                  */}
       {/* ----------------------------------------------------------------- */}
