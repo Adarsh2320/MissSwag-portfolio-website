@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Settings, Zap } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsappButton from "../../components/WhatsappButton";
 
 const bannerImg =
   "https://images.unsplash.com/photo-1581091870622-30e203b47b04";
@@ -141,6 +142,8 @@ const ProductEngineering = () => {
           </a>
         </motion.div>
       </section>
+
+      <WhatsappButton />
 
       <Footer />
     </div>

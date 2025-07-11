@@ -4,6 +4,9 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Mail, Phone, MapPin, SendHorizonal, Star } from "lucide-react";
+import contact from "../assets/contact.jpg"; // Update the path and filename as needed
+import WhatsappButton from "../components/WhatsappButton"; // Make sure this path is correct
+import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -64,27 +67,51 @@ const Contact = () => {
           </div>
 
           {/* Contact Details */}
-          <div className="space-y-8">
-            <div className="text-center md:text-left">
-              <Mail className="text-green-400 mx-auto md:mx-0 mb-2" size={24} />
-              <h4 className="text-lg font-semibold">Email Us</h4>
-              <p className="text-gray-400">contact@gamayas.com</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left mt-10">
+            {/* Email */}
+            <div>
+              <Mail className="text-green-400 mx-auto md:mx-0 mb-4" size={36} />
+              <h4 className="text-xl font-semibold mb-1">Email Us</h4>
+              <p className="text-gray-300 text-lg">contact@gamayas.com</p>
             </div>
-            <div className="text-center md:text-left">
+
+            {/* Call */}
+            <div>
               <Phone
-                className="text-green-400 mx-auto md:mx-0 mb-2"
-                size={24}
+                className="text-green-400 mx-auto md:mx-0 mb-4"
+                size={36}
               />
-              <h4 className="text-lg font-semibold">Call Us</h4>
-              <p className="text-gray-400">+91 70570 58841</p>
+              <h4 className="text-xl font-semibold mb-1">Call Us</h4>
+              <p className="text-gray-300 text-lg">+91 70570 58841</p>
             </div>
-            <div className="text-center md:text-left">
+
+            {/* WhatsApp */}
+            <div>
+              <a
+                href="https://wa.me/917057058841"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <FaWhatsapp
+                  className="text-green-400 mx-auto md:mx-0 mb-4"
+                  size={38}
+                />
+              </a>
+              <h4 className="text-xl font-semibold mb-1">WhatsApp</h4>
+              <p className="text-gray-300 text-lg">+91 70570 58841</p>
+            </div>
+
+            {/* Location */}
+            <div>
               <MapPin
-                className="text-green-400 mx-auto md:mx-0 mb-2"
-                size={24}
+                className="text-green-400 mx-auto md:mx-0 mb-4"
+                size={36}
               />
-              <h4 className="text-lg font-semibold">Visit Us</h4>
-              <p className="text-gray-400">Hyderabad, Telangana, India</p>
+              <h4 className="text-xl font-semibold mb-1">Visit Us</h4>
+              <p className="text-gray-300 text-lg">
+                Hyderabad, Telangana, India
+              </p>
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Cloud, Zap } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsappButton from "../../components/WhatsappButton";
 
 const bannerImg =
   "https://images.unsplash.com/photo-1581091012184-7e0cdfbb679e";
@@ -140,7 +141,7 @@ const CloudInfrastructure = () => {
           </a>
         </motion.div>
       </section>
-
+      <WhatsappButton />
       <Footer />
     </div>
   );

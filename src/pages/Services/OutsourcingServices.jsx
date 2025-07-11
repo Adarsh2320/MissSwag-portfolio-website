@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Share2 } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsappButton from "../../components/WhatsappButton";
 
 const bannerImg =
   "https://images.unsplash.com/photo-1573164574391-d73a17f061a4";
@@ -142,7 +143,8 @@ const OutsourcingServices = () => {
           </a>
         </motion.div>
       </section>
-
+      {/* WhatsApp Button */}
+      <WhatsappButton />
       <Footer />
     </div>
   );

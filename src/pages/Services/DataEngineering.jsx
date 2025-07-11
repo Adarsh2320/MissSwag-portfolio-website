@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Database, Zap } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsappButton from "../../components/WhatsappButton";
 
 const bannerImg =
   "https://images.unsplash.com/photo-1504384308090-c894fdcc538d"; // Data related tech image
@@ -142,6 +143,7 @@ const DataEngineering = () => {
         </motion.div>
       </section>
 
+      <WhatsappButton />
       <Footer />
     </div>
   );

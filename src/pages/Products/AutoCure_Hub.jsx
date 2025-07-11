@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, Sparkles, Info, ArrowLeftCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import WhatsappButton from "../../components/WhatsappButton";
 
 const product = {
   name: "AutoCure Hub",
@@ -29,7 +30,7 @@ const product = {
   },
 };
 
-const AutoCureHub = () => {
+const AutoCure_Hub = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -37,6 +38,7 @@ const AutoCureHub = () => {
   }, []);
 
   return (
+
     <section className="bg-gradient-to-br from-[#0f172a] to-black text-white py-20 px-6 min-h-screen">
       <div className="max-w-6xl mx-auto">
         {/* Back Button */}
@@ -162,8 +164,11 @@ const AutoCureHub = () => {
           </div>
         </motion.div>
       </div>
+        {/* WhatsApp Button */}
+        <WhatsappButton />
     </section>
+    
   );
 };
 
-export default AutoCareHub;
+export default AutoCure_Hub;

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Cpu } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsappButton from "../../components/WhatsappButton";
 
 const bannerImg =
   "https://images.unsplash.com/photo-1581090700227-1e8eec7fefc4";
@@ -140,7 +141,10 @@ const AdvancedTechnologyIntegration = () => {
           </a>
         </motion.div>
       </section>
+      {/* WhatsApp Button */} 
+      <WhatsappButton />
 
+      {/* Footer */}
       <Footer />
     </div>
   );

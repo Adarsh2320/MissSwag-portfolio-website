@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, Sparkles, Info, ArrowLeftCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import WhatsappButton from "../../components/WhatsappButton";
 
 const product = {
   name: "EMS + LMS",
@@ -165,6 +166,7 @@ const EMSLMS = () => {
           </div>
         </motion.div>
       </div>
+      <WhatsappButton />
     </section>
   );
 };

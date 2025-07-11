@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, Sparkles, Info, ArrowLeftCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import WhatsappButton from "../../components/WhatsappButton"; // Ensure this component exists in your project
 
 const product = {
   name: "MissSwag",
@@ -162,6 +163,8 @@ const ProductDetail = () => {
           </div>
         </motion.div>
       </div>
+      {/* WhatsApp Button */}
+      <WhatsappButton />
     </section>
   );
 };

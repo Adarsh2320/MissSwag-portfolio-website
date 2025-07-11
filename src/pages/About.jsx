@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Rocket, Users, Lightbulb, ShieldCheck } from "lucide-react";
 import logo from "../assets/logo.jpg";
+import WhatsappButton from "../components/WhatsappButton";
 
 
 const About = () => {
@@ -123,6 +124,8 @@ const About = () => {
           </a>
         </div>
       </section>
+
+      <WhatsappButton />
 
       <Footer />
     </div>

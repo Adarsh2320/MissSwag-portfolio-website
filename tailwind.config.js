@@ -73,3 +73,26 @@ export default {
   },
   plugins: [],
 };
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      // floating bob for images
+      animation: {
+        bob: "bob 4s ease-in-out infinite",
+        fall: "fall linear infinite",
+      },
+      keyframes: {
+        bob: {
+          "0%,100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-15px)" },
+        },
+        fall: {
+          "0%":   { transform: "translateY(-120vh) rotateX(20deg)" },
+          "100%": { transform: "translateY(120vh) rotateX(20deg)" },
+        },
+      },
+    },
+  },
+  plugins: [],
+};

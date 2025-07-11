@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Lightbulb, Zap } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsappButton from "../../components/WhatsappButton";
 
 // Replace with actual hosted image URLs
 const bannerImg =
@@ -144,7 +145,8 @@ const DigitalTransformation = () => {
           </a>
         </motion.div>
       </section>
-
+      {/* WhatsApp Button */}
+      <WhatsappButton />
       <Footer />
     </div>
   );

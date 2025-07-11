@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Megaphone, Zap } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsappButton from "../../components/WhatsappButton";
 
 const bannerImg =
   "https://images.unsplash.com/photo-1519389950473-47ba0277781c";
@@ -143,6 +144,7 @@ const DigitalMarketing = () => {
         </motion.div>
       </section>
 
+      <WhatsappButton />
       <Footer />
     </div>
   );

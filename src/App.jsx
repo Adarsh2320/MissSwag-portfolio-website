@@ -4,9 +4,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import "./styles/navbarAnimation.css";
+
 import Missswag from "./pages/Products/Missswag";
 import SaathiCare from "./pages/Products/SaathiCare";
 import Macha from "./pages/Products/Macha";
+import AutoCure_Hub from "./pages/Products/AutoCure_Hub"; 
 import IntegratedHIMS from "./pages/Products/IntegratedHIMS";
 import IntegratedHRMS from "./pages/Products/IntegratedHRMS";
 import IntegratedEMS_LMS from "./pages/Products/IntegratedEMS_LMS";
@@ -20,6 +22,7 @@ import ITConsultingStaffing from "./pages/Services/ITConsultingStaffing";
 import ProductEngineering from "./pages/Services/ProductEngineering";
 import OutsourcingServices from "./pages/Services/OutsourcingServices";
 import AdvancedTechnologyIntegration from "./pages/Services/AdvancedTechnologyIntegration";
+
 export default function App() {
   return (
     <Router>
@@ -30,6 +33,7 @@ export default function App() {
         <Route path="/products/missswag" element={<Missswag />} />
         <Route path="/products/saathicare" element={<SaathiCare />} />
         <Route path="/products/macha" element={<Macha />} />
+        <Route path="/products/autocure_hub" element={<AutoCure_Hub />} />
         <Route path="/products/integratedhims" element={<IntegratedHIMS />} />
         <Route path="/products/integratedhrms" element={<IntegratedHRMS />} />
         <Route
