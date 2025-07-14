@@ -62,8 +62,8 @@ const Footer = () => {
           </div>
           <p className="text-gray-300 mb-6 leading-relaxed text-sm lg:text-base text-justify">
             Gamayas is a Hyderabad-based IT firm specializing in digital
-            transformation, consulting, product engineering, and AI-driven
-            solutions.
+            transformation, top consulting, software development, product engineering, and
+            AI-driven solutions.
           </p>
 
           <div className="flex gap-x-4 mt-4">

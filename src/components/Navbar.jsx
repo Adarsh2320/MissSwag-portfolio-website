@@ -10,7 +10,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Gamayas Logo"
-            className="w-14 h-14 rounded-full object-cover border border-green-500 shadow"
+            className="w-14 h-14 rounded-md object-cover border border-green-500 shadow"
           />
           <div className="leading-tight">
             <span className="text-xl font-bold tracking-wide block">
