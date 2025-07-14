@@ -142,21 +142,21 @@ const About = () => {
       </section>
 
       {/* Our Mission Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      <section className="py-16 pl-32 pr-6 bg-gradient-to-b from-[#0f172a] to-black text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-24">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="w-full md:w-1/2 group"
+            className="w-full md:w-1/2 group max-w-md"
           >
             <div className="overflow-hidden rounded-2xl shadow-xl border border-green-400/20">
               <img
-                src="https://www.freepik.com/premium-photo/businessman-clicks-virtual-screen-mission_92015619.htm#fromView=keyword&page=1&position=5&uuid=d4d1d25f-6f52-4639-bd64-d37e245f78bf&query=Our+Mission" // <-- Add image src here
+                src="https://static.vecteezy.com/system/resources/thumbnails/003/396/738/small_2x/businessman-clicks-on-virtual-screen-mission-photo.jpg"
                 alt="Our Mission"
-                className="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700"
+                className="w-full h-[300px] object-cover transform group-hover:scale-105 transition duration-700"
               />
             </div>
           </motion.div>
@@ -172,19 +172,25 @@ const About = () => {
             <h2 className="text-4xl font-bold mb-6 text-green-400">
               Our Mission
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              To bridge the gap between traditional systems and future-forward
-              innovation through scalable, human-centric digital solutions. We
-              aim to accelerate digital journeys by combining engineering
-              excellence, creativity, and deep domain expertise.
+            <p className="text-lg text-gray-300 leading-relaxed mb-4">
+              At Gamayas, we bridge the gap between traditional systems and
+              future innovation by delivering scalable, human-centric digital
+              solutions. We focus on modernizing legacy infrastructure with
+              thoughtful engineering and user-first design.
+            </p>
+            <p className="text-lg text-gray-300 leading-relaxed mb-4">
+              Our mission is to accelerate digital journeys through technical
+              excellence, creativity, and deep industry insight. We build
+              adaptable, future-ready solutions that empower organizations to
+              thrive in a rapidly evolving digital landscape.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Our Team Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-black to-[#0f172a] text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+      <section className="py-16 pl-32 pr-6 md:pl-32 bg-gradient-to-b from-black to-[#0f172a] text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center md:items-start gap-24">
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
@@ -196,11 +202,17 @@ const About = () => {
             <h2 className="text-4xl font-bold mb-6 text-green-400">
               Our Team & Culture
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              We are a team of engineers, strategists, creatives, and
-              problem-solvers united by a shared belief in the power of
-              technology. We work with agility, empathy, and relentless
-              curiosity to make technology more meaningful for everyone.
+            <p className="text-lg text-gray-300 leading-relaxed mb-4">
+              We are a diverse team of engineers, strategists, creatives, and
+              problem-solvers united by a shared belief in the transformative
+              power of technology. Together, we bring a wide range of skills and
+              perspectives that fuel innovation and drive meaningful change.
+            </p>
+            <p className="text-lg text-gray-300 leading-relaxed mb-4">
+              Guided by agility, empathy, and relentless curiosity, we work
+              tirelessly to make technology more accessible and impactful. Our
+              mission is to create solutions that truly resonate with people and
+              deliver real-world value for everyone.
             </p>
           </motion.div>
 
@@ -210,13 +222,13 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="w-full md:w-1/2 group"
+            className="w-full md:w-1/2 group max-w-md"
           >
             <div className="overflow-hidden rounded-2xl shadow-xl border border-green-400/20">
               <img
-                src="" // <-- Add image src here
+                src="https://thumbs.dreamstime.com/b/business-outdoor-team-teamwork-collaboration-support-concept-68410852.jpg"
                 alt="Team Culture"
-                className="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700"
+                className="w-full h-[300px] object-cover transform group-hover:scale-105 transition duration-700"
               />
             </div>
           </motion.div>
@@ -224,21 +236,21 @@ const About = () => {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      <section className="py-16 pl-32 pr-6 md:pl-32 bg-gradient-to-b from-[#0f172a] to-black text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-24">
           {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="w-full md:w-1/2 group"
+            className="w-full md:w-1/2 group max-w-md"
           >
             <div className="overflow-hidden rounded-2xl shadow-xl border border-green-400/20">
               <img
-                src="" // <-- Add image src here
+                src="https://image.semiconductor.samsung.com/image/samsung/p6/semiconductor/about-us/our-story/pc-our-story-block-02.png?$ORIGIN_PNG$" // <-- example image added
                 alt="Our Story"
-                className="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700"
+                className="w-full h-[300px] object-cover transform group-hover:scale-105 transition duration-700"
               />
             </div>
           </motion.div>
@@ -274,7 +286,7 @@ const About = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white">
+      <section className="py-24 pl-64 pr-6 bg-gradient-to-b from-[#0f172a] to-black text-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
           {/* Left Description Panel */}
           <div className="md:w-1/3">
@@ -371,51 +383,51 @@ const About = () => {
             {[
               {
                 tech: "React",
-                logo: "https://e7.pngegg.com/pngimages/581/350/png-clipart-react-javascript-library-github-github-symmetry-web-application-thumbnail.png",
+                logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-TLdbAqtzJd2i6o0TLdIxnQUzhKNKb58koA&s",
               },
               {
                 tech: "Node.js",
-                logo: "https://e7.pngegg.com/pngimages/416/280/png-clipart-node-js-express-js-javascript-redis-mean-node-js-angle-text-thumbnail.png",
+                logo: "https://static-img.2coffee.dev/cluster-trong-nodejs-la-gi-su-dung-cluster-de-tang-kha-nang-chiu-tai-ung-dung-viet-bang-nodejs-horizontal-thumbnail.webp",
               },
               {
                 tech: "Java",
-                logo: "https://e7.pngegg.com/pngimages/405/878/png-clipart-java-logo-java-runtime-environment-computer-icons-java-platform-standard-edition-java-miscellaneous-text-thumbnail.png",
+                logo: "https://thumbs.dreamstime.com/b/java-logo-editorial-illustrative-white-background-eps-download-vector-jpeg-banner-java-logo-editorial-illustrative-white-208329454.jpg",
               },
               {
                 tech: "Python",
-                logo: "https://e7.pngegg.com/pngimages/447/294/png-clipart-python-javascript-logo-clojure-python-logo-blue-angle-thumbnail.png",
+                logo: "https://thumbs.dreamstime.com/b/python-logo-icon-vector-logos-logo-icons-set-social-media-flat-banner-vectors-svg-eps-jpg-jpeg-emblem-wallpaper-background-python-208329675.jpg",
               },
               {
                 tech: "MySQL",
-                logo: "https://e7.pngegg.com/pngimages/747/798/png-clipart-mysql-mysql-thumbnail.png",
+                logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmtoB0gMPQD7NsDMjZgxI8uSaosj1CzzYDzQ&s",
               },
               {
                 tech: "PHP",
-                logo: "https://e7.pngegg.com/pngimages/184/491/png-clipart-php-php-thumbnail.png",
+                logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUXbDN6MjKqhEQLKobn2Ffg4goxiTe6xptfw&s",
               },
               {
                 tech: "Microsoft .NET",
-                logo: "https://e7.pngegg.com/pngimages/105/481/png-clipart-net-framework-software-framework-programmer-computing-platform-microsoft-corporation-7s-framework-example-blue-text-thumbnail.png",
+                logo: "https://seeklogo.com/images/M/microsoft-net-logo-4D9DA1DB77-seeklogo.com.png",
               },
               {
                 tech: "JavaScript",
-                logo: "https://e7.pngegg.com/pngimages/602/440/png-clipart-javascript-open-logo-number-js-angle-text-thumbnail.png",
+                logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgC6vRmJVYMmS_2IqSVlnUURfI1NYe7u033A&s",
               },
               {
                 tech: "React Native",
-                logo: "https://e7.pngegg.com/pngimages/541/179/png-clipart-react-native-logo-tech-companies-thumbnail.png",
+                logo: "https://4409803.fs1.hubspotusercontent-na1.net/hubfs/4409803/react-native%20%281%29.png",
               },
               {
                 tech: "Joomla",
-                logo: "https://e7.pngegg.com/pngimages/269/742/png-clipart-joomla-content-management-system-web-design-web-development-logo-web-design-web-design-search-engine-optimization-thumbnail.png",
+                logo: "https://docs.joomla.org/images/8/8d/Vertical-logo-dark-background-en.png",
               },
               {
                 tech: "Bootstrap",
-                logo: "https://e7.pngegg.com/pngimages/439/345/png-clipart-bootstrap-logo-thumbnail-tech-companies-thumbnail.png",
+                logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcGNdkcY1HLVE6eyWzdWkFOiz0Pps-moLl6A&s",
               },
               {
                 tech: "Angular",
-                logo: "https://e7.pngegg.com/pngimages/14/568/png-clipart-angularjs-logo-javascript-security-token-angle-triangle-thumbnail.png",
+                logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0-wnQQShczpqLhHmGImNKVTt9uAWsA93uxw&s",
               },
             ].map(({ tech, logo }) => (
               <motion.div
@@ -432,11 +444,11 @@ const About = () => {
                 }}
               >
                 {/* Logo Container */}
-                <div className="relative w-20 h-20 mb-4 rounded-xl overflow-hidden border border-green-500 bg-green-400/5 group-hover:shadow-lg group-hover:shadow-green-500/20 transition duration-300">
+                <div className="relative w-20 h-20 mb-4 rounded-xl overflow-hidden bg-green-400/5 group-hover:shadow-lg group-hover:shadow-green-500/20 transition duration-300">
                   <img
                     src={logo}
                     alt={`${tech} logo`}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
@@ -490,18 +502,22 @@ const About = () => {
               {
                 title: "1. Ideation & Planning",
                 desc: "We start by deeply understanding your business needs and defining clear goals.",
+                img: "https://miro.medium.com/v2/resize:fit:1000/1*2DIYWgawO1igRYOagiz_uQ.gif",
               },
               {
                 title: "2. UI/UX Design",
                 desc: "Our designers create clean, intuitive interfaces focused on user experience.",
+                img: "https://cdn.dribbble.com/userupload/24153620/file/original-644051f8226411aebdb7df782ef56a7e.gif",
               },
               {
                 title: "3. Agile Development",
                 desc: "Modular, test-driven development in sprints with frequent feedback loops.",
+                img: "https://go3consulting.com/wp-content/uploads/Agile-360p.gif",
               },
               {
                 title: "4. QA & Deployment",
                 desc: "Rigorous testing ensures reliability. We deploy with full monitoring & support.",
+                img: "https://media.lordicon.com/icons/wired/flat/2591-deployment.gif",
               },
             ].map((step, i) => (
               <motion.div
@@ -518,12 +534,12 @@ const About = () => {
                   <div className="absolute inset-0 bg-green-500/10 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none" />
 
                   <div className="relative z-10 flex flex-col items-center">
-                    {/* Image Placeholder */}
+                    {/* Image */}
                     <div className="w-16 h-16 mb-4 rounded-xl overflow-hidden border border-green-500 bg-green-400/5">
                       <img
-                        src="" // ← Add image URL here
+                        src={step.img}
                         alt={`${step.title} icon`}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
 
@@ -642,7 +658,7 @@ const About = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="relative py-24 px-6 bg-gradient-to-r from-green-800 via-[#0f172a] to-green-900 text-white overflow-hidden">
+      <section className="relative py-12 px-6 bg-gradient-to-r from-green-800 via-[#0f172a] to-green-900 text-white overflow-hidden">
         {/* Floating Glow Effects */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute w-72 h-72 bg-green-400/10 blur-3xl rounded-full top-0 left-0 animate-pulse" />

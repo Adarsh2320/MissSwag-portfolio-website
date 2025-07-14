@@ -17,7 +17,7 @@ import Footer from "../components/Footer";
 import slide1 from "../assets/photo1.jpg";
 import slide2 from "../assets/photo2.jpg";
 import slide3 from "../assets/photo3.jpg";
-import aboutImg from "../assets/logo.jpg";
+import aboutImg from "../assets/aboutus.jpg";
 
 // SERVICE IMAGES
 import dtImg from "../assets/digital_transformation.jpg";
@@ -241,13 +241,13 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-black text-white py-16 px-6">
+      <section className="bg-gradient-to-br from-[#0f172a] to-black text-white py-16 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { number: "400+", label: "Projects Completed" },
-            { number: "15+", label: "Successful Years" },
+            { number: "10+", label: "Projects Completed" },
+            { number: "5+", label: "Successful Years" },
             { number: "98%", label: "Client Retention" },
-            { number: "30+", label: "Countries" },
+            { number: "5+", label: "Countries" },
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -262,47 +262,6 @@ const Home = () => {
               <p className="text-gray-300 text-sm">{item.label}</p>
             </motion.div>
           ))}
-        </div>
-      </section>
-
-      {/* Project Discussion CTA Section */}
-      <section className="bg-gradient-to-b from-[#0f172a] to-black text-white py-24 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* Left Content */}
-          <motion.div
-            className="md:w-1/2"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-green-400">
-              Let’s discuss your project
-            </h2>
-            <p className="text-lg text-gray-300">
-              Together, we can bring your vision to life — one smart solution at
-              a time.
-            </p>
-          </motion.div>
-
-          {/* Right Quote + Button */}
-          <motion.div
-            className="md:w-1/2 bg-[#111827] text-white p-8 rounded-xl shadow-lg border border-green-500/20 text-center"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <p className="italic text-gray-300 mb-6 text-lg">
-              “The best way to predict the future is to build it.”
-            </p>
-            <a
-              href="#contact"
-              className="inline-block bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-full font-semibold transition duration-300 shadow"
-            >
-              Contact Us
-            </a>
-          </motion.div>
         </div>
       </section>
 
@@ -323,8 +282,9 @@ const Home = () => {
               <img
                 src={aboutImg}
                 alt="About Gamayas"
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                className="w-full max-h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
               />
+
               <div className="absolute inset-0 bg-green-400/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500" />
             </div>
           </motion.div>
@@ -460,25 +420,25 @@ const Home = () => {
                 step: "1",
                 title: "Discovery",
                 desc: "We understand your goals, challenges, and users to define a clear roadmap.",
-                icon: "",
+                icon: "https://cdn-icons-gif.flaticon.com/14447/14447460.gif", // magnifying glass / discovery
               },
               {
                 step: "2",
                 title: "Design",
                 desc: "We craft user-centric wireframes, UI/UX, and branding aligned with your vision.",
-                icon: "",
+                icon: "https://cdn-icons-gif.flaticon.com/17122/17122766.gif", // pen tool / design
               },
               {
                 step: "3",
                 title: "Development",
                 desc: "Our engineers build scalable and secure solutions using modern tech.",
-                icon: "",
+                icon: "https://cdn-icons-gif.flaticon.com/17122/17122569.gif", // coding / dev
               },
               {
                 step: "4",
                 title: "Launch & Support",
                 desc: "We deploy, monitor, and support your app for long-term success.",
-                icon: "",
+                icon: "https://cdn-icons-gif.flaticon.com/14447/14447525.gif", // rocket / launch
               },
             ].map((s, i) => (
               <motion.div
@@ -591,19 +551,45 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 px-6 bg-gradient-to-r from-green-800 via-[#0f172a] to-green-900 text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">We’re Ready When You Are</h2>
-        <p className="text-lg text-gray-200 mb-6 max-w-2xl mx-auto">
-          Let’s collaborate and bring your vision to life. Connect with us today
-          for tailored digital strategies and intelligent tech.
-        </p>
-        <a
-          href="mailto:contact@gamayas.com"
-          className="bg-white text-green-900 px-8 py-3 rounded-full font-semibold shadow hover:shadow-lg transition hover:bg-green-100"
-        >
-          Start a Conversation
-        </a>
+      {/* Project Discussion CTA Section */}
+      <section className="bg-gradient-to-b from-[#0f172a] to-black text-white py-24 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Left Content */}
+          <motion.div
+            className="md:w-1/2"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-green-400">
+              Let’s discuss your project
+            </h2>
+            <p className="text-lg text-gray-300">
+              Together, we can bring your vision to life — one smart solution at
+              a time.
+            </p>
+          </motion.div>
+
+          {/* Right Quote + Button */}
+          <motion.div
+            className="md:w-1/2 bg-[#111827] text-white p-8 rounded-xl shadow-lg border border-green-500/20 text-center"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <p className="italic text-gray-300 mb-6 text-lg">
+              “The best way to predict the future is to build it.”
+            </p>
+            <Link
+              to="/contact"
+              className="inline-block bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-full font-semibold transition duration-300 shadow"
+            >
+              Contact Us
+            </Link>
+          </motion.div>
+        </div>
       </section>
 
       <WhatsappButton />
