@@ -61,7 +61,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white">
+      <section className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-16"
@@ -286,7 +286,7 @@ const About = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-24 pl-64 pr-6 bg-gradient-to-b from-[#0f172a] to-black text-white">
+      <section className="py-16 pl-64 pr-6 bg-gradient-to-b from-[#0f172a] to-black text-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
           {/* Left Description Panel */}
           <div className="md:w-1/3">
@@ -353,7 +353,7 @@ const About = () => {
       {/* Technologies Section */}
       <section
         id="technologies"
-        className="py-24 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white"
+        className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white"
       >
         <div className="max-w-6xl mx-auto text-center">
           <motion.h2
@@ -465,7 +465,7 @@ const About = () => {
       {/* Methodology Section */}
       <section
         id="methodology"
-        className="py-24 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white"
+        className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white"
       >
         <div className="max-w-6xl mx-auto text-center">
           {/* Heading */}
@@ -557,7 +557,7 @@ const About = () => {
 
           {/* Call to Action */}
           <motion.a
-            href="#contact"
+            href="/contact"
             className="inline-block bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition"
             whileHover={{ scale: 1.07 }}
             transition={{ type: "spring", stiffness: 250 }}
@@ -568,7 +568,7 @@ const About = () => {
       </section>
 
       {/* Our Team Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white">
+      <section className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Team</h2>
           <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg">
@@ -625,7 +625,7 @@ const About = () => {
       </section>
 
       {/* Investors Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-black to-[#0f172a] text-white text-center">
+      <section className="py-16 px-6 bg-gradient-to-b from-black to-[#0f172a] text-white text-center">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Investors</h2>
           <p className="text-gray-400 mb-10 max-w-xl mx-auto text-lg">
@@ -682,7 +682,7 @@ const About = () => {
           </p>
 
           <motion.a
-            href="#contact"
+            href="/contact"
             className="inline-block bg-white text-green-800 px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-green-400/30 transition relative"
             whileHover={{ scale: 1.07 }}
             transition={{ type: "spring", stiffness: 300 }}

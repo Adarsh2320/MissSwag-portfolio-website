@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 import WhatsappButton from "../../components/WhatsappButton";
 
 const bannerImg =
-  "https://images.unsplash.com/photo-1581091012184-7e0cdfbb679e";
+  "https://stl.tech/wp-content/uploads/2022/08/cloud-computing.jpg";
 const img1 =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTisLHNPIXL4T5_HQMjNTs30ACDYq-Gq2ZEWzOCjbRJfyndVNZjzZ_JKH8V4K0aa3X8sFo&usqp=CAU";
 const img2 = "https://stackgen.com/hubfs/Blog-Images/Vector-4.png";
@@ -71,7 +71,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-20 px-6">
+      <section className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black">
         <motion.div
           className="max-w-5xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -117,7 +117,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#0f172a] to-black text-center">
+      <section className="py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black text-center">
         <motion.div
           className="max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
@@ -134,7 +134,7 @@ const CloudInfrastructure = () => {
             infrastructure that drives innovation and agility.
           </p>
           <a
-            href="#contact"
+            href="/contact"
             className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transition"
           >
             Let’s Get Started

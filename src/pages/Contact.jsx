@@ -46,7 +46,7 @@ const Contact = () => {
 
       {/* Contact Info + Map Section */}
       <section
-        className="py-20 px-6 bg-gradient-to-br from-[#0f172a] to-black"
+        className="py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black"
         id="contact"
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-28 items-center">

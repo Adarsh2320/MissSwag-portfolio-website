@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 import WhatsappButton from "../../components/WhatsappButton";
 
 const bannerImg =
-  "https://images.unsplash.com/photo-1581091870622-30e203b47b04";
+  "https://www.sparity.com/wp-content/uploads/2023/12/Product-Engineering-Facts-that-Drives-your-Business-Growth-1-1.webp";
 const img1 =
   "https://www.bigeng.io/content/images/2023/02/Product-Lifecycle-Header.jpg";
 const img2 =
@@ -73,7 +73,7 @@ const ProductEngineering = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-20 px-6">
+      <section className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black">
         <motion.div
           className="max-w-5xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -119,7 +119,7 @@ const ProductEngineering = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#0f172a] to-black text-center">
+      <section className="py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black text-center">
         <motion.div
           className="max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
@@ -135,7 +135,7 @@ const ProductEngineering = () => {
             scale.
           </p>
           <a
-            href="#contact"
+            href="/contact"
             className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transition"
           >
             Start Building

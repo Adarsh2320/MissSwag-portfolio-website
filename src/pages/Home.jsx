@@ -36,6 +36,8 @@ import machaImg from "../assets/products_logos/macha.jpg";
 import saathiImg from "../assets/products_logos/saathicare.jpg";
 import autoCureImg from "../assets/products_logos/autocurehub.jpg";
 
+import logo from "../assets/logo.jpg";
+
 // ICON (example only, keep if you use it)
 import { Info } from "lucide-react";
 import WhatsappButton from "../components/WhatsappButton";
@@ -107,19 +109,19 @@ const products = [
   {
     title: "Integrated HIMS",
     slug: "IntegratedHIMS",
-    image: saathiImg,
+    image: logo,
     desc: "Comprehensive hospital management system with real-time analytics.",
   },
   {
     title: "Integrated HRMS",
     slug: "IntegratedHRMS",
-    image: saathiImg,
+    image: logo,
     desc: "Streamlined human resource solution for modern enterprise teams.",
   },
   {
     title: "EMS + LMS",
     slug: "IntegratedEMS_LMS",
-    image: saathiImg,
+    image: logo,
     desc: "Unified Emergency + Learning Management System for smart institutions.",
   },
 ];
@@ -241,7 +243,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-gradient-to-br from-[#0f172a] to-black text-white py-16 px-6">
+      <section className="bg-gradient-to-br from-[#0f172a] to-black text-white py-12 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
             { number: "10+", label: "Projects Completed" },
@@ -268,17 +270,18 @@ const Home = () => {
       {/* About Section */}
       <section
         id="about"
-        className="py-24 px-6 bg-gradient-to-br from-[#0f172a] to-black overflow-hidden"
+        className="py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black overflow-hidden"
       >
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-32 items-center">
           {/* Image with effects */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
+            className="-ml-20"
           >
-            <div className="relative group overflow-hidden rounded-3xl shadow-2xl border border-green-500/20">
+            <div className="relative group overflow-hidden rounded-3xl shadow-2xl border border-green-500/20 ">
               <img
                 src={aboutImg}
                 alt="About Gamayas"
@@ -295,8 +298,9 @@ const Home = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
+            className="ml-4"
           >
-            <div className="bg-white/5 backdrop-blur-md p-8 rounded-2xl shadow-lg border-l-4 border-green-500 hover:shadow-green-500/20 transition">
+            <div className="w-[135%] -ml-6 h-96 bg-white/5 backdrop-blur-md p-8 rounded-2xl shadow-lg border-l-4 border-green-500 hover:shadow-green-500/20 transition overflow-y-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-green-400 mb-6">
                 What is Gamayas?
               </h2>
@@ -326,7 +330,7 @@ const Home = () => {
       {/* Services Section */}
       <section
         id="services"
-        className="py-20 bg-gradient-to-br from-[#0f172a] to-black"
+        className="py-16 bg-gradient-to-br from-[#0f172a] to-black"
       >
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
@@ -401,7 +405,7 @@ const Home = () => {
       {/* Roadmap Section */}
       <section
         id="roadmap"
-        className="py-28 px-6 bg-gradient-to-br from-[#0f172a] to-black text-white"
+        className="py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black text-white"
       >
         <div className="max-w-7xl mx-auto text-center">
           <motion.h2
@@ -473,7 +477,7 @@ const Home = () => {
       {/* Products Section */}
       <section
         id="products"
-        className="relative py-24 px-6 bg-gradient-to-br from-[#0f172a] to-black overflow-hidden"
+        className="relative py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black overflow-hidden"
         style={{ perspective: "1200px" }} // true 3‑D depth
       >
         {/* Down‑fall background squares */}
@@ -534,7 +538,7 @@ const Home = () => {
                     <img
                       src={p.image}
                       alt={p.title}
-                      className="relative w-full h-full object-contain rounded-xl border border-green-500 shadow-md"
+                      className="relative w-full h-full object-contain rounded-xl shadow-md"
                     />
                   </div>
 
@@ -552,7 +556,7 @@ const Home = () => {
       </section>
 
       {/* Project Discussion CTA Section */}
-      <section className="bg-gradient-to-b from-[#0f172a] to-black text-white py-24 px-6">
+      <section className="bg-gradient-to-b from-[#0f172a] to-black text-white py-16 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Left Content */}
           <motion.div

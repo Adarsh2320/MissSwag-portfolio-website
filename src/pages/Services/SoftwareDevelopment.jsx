@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 import WhatsappButton from "../../components/WhatsappButton";
 
 const bannerImg =
-  "https://images.unsplash.com/photo-1518770660439-4636190af475";
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAr-QYVA1e_8hoD1F1bkA65jbNllQzq4T1edvauo4bI8vJzzSjYQOPpaNSUA9AgOxmME&usqp=CAU";
 const img1 =
   "https://edge1s.com/wp-content/uploads/2024/03/AdobeStock_200208909-1024x482.jpeg";
 const img2 = "https://images.unsplash.com/photo-1605379399642-870262d3d051";
@@ -72,7 +72,7 @@ const SoftwareDevelopment = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-20 px-6">
+      <section className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black">
         <motion.div
           className="max-w-5xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -118,7 +118,7 @@ const SoftwareDevelopment = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#0f172a] to-black text-center">
+      <section className="py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black text-center">
         <motion.div
           className="max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
@@ -136,7 +136,7 @@ const SoftwareDevelopment = () => {
             development.
           </p>
           <a
-            href="#contact"
+            href="/contact"
             className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transition"
           >
             Let’s Code Your Vision

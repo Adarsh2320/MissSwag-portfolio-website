@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 import WhatsappButton from "../../components/WhatsappButton";
 
 const bannerImg =
-  "https://images.unsplash.com/photo-1581090700227-1e8eec7fefc4";
+  "https://cdn.britannica.com/84/203584-050-57D326E5/speed-internet-technology-background.jpg";
 const img1 =
   "https://miro.medium.com/v2/resize:fit:691/1*saGK1cIa1j77vNoA4EDJDg@2x.jpeg";
 const img2 =
@@ -72,7 +72,7 @@ const AdvancedTechnologyIntegration = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-20 px-6">
+      <section className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black">
         <motion.div
           className="max-w-5xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -117,7 +117,7 @@ const AdvancedTechnologyIntegration = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#0f172a] to-black text-center">
+      <section className="py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black text-center">
         <motion.div
           className="max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
@@ -134,14 +134,14 @@ const AdvancedTechnologyIntegration = () => {
             with the tech of tomorrow — integrated today.
           </p>
           <a
-            href="#contact"
+            href="/contact"
             className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transition"
           >
             Start Your Tech Evolution
           </a>
         </motion.div>
       </section>
-      {/* WhatsApp Button */} 
+      {/* WhatsApp Button */}
       <WhatsappButton />
 
       {/* Footer */}

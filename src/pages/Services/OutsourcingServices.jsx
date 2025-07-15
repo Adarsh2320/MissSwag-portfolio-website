@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 import WhatsappButton from "../../components/WhatsappButton";
 
 const bannerImg =
-  "https://images.unsplash.com/photo-1573164574391-d73a17f061a4";
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqxKvwikbpdLO__cedkkXK7_nZTel1WTkJCQ&s";
 const img1 =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGnCOFAYba7SedqFU_zCvU6r1GZFi2yl6SfTBI9YMqvrGfnGPaYaiiFgsA4D-mmkX0q7I&usqp=CAU";
 const img2 =
@@ -72,7 +72,7 @@ const OutsourcingServices = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-20 px-6">
+      <section className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black">
         <motion.div
           className="max-w-5xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -118,7 +118,7 @@ const OutsourcingServices = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#0f172a] to-black text-center">
+      <section className="py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black text-center">
         <motion.div
           className="max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
@@ -136,7 +136,7 @@ const OutsourcingServices = () => {
             innovation.
           </p>
           <a
-            href="#contact"
+            href="/contact"
             className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transition"
           >
             Start Outsourcing Smartly

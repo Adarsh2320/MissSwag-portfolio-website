@@ -62,31 +62,39 @@ const Footer = () => {
           </div>
           <p className="text-gray-300 mb-6 leading-relaxed text-sm lg:text-base text-justify">
             Gamayas is a Hyderabad-based IT firm specializing in digital
-            transformation, top consulting, software development, product engineering, and
-            AI-driven solutions.
+            transformation, top consulting, software development, product
+            engineering, and AI-driven solutions.
           </p>
 
           <div className="flex gap-x-4 mt-4">
             <a
-              href="#"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-green-700 transition-colors"
             >
               <Facebook size={18} />
             </a>
             <a
-              href="#"
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-green-700 transition-colors"
             >
               <Twitter size={18} />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-green-700 transition-colors"
             >
               <Instagram size={18} />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-green-700 transition-colors"
             >
               <Linkedin size={18} />
@@ -132,17 +140,18 @@ const Footer = () => {
                 About Us
               </a>
             </li>
+
+            <li>
+              <a href="#services" className="hover:text-white transition-colors">
+                Services
+              </a>
+            </li>
             <li>
               <a
                 href="#products"
                 className="hover:text-white transition-colors"
               >
-                Our Products
-              </a>
-            </li>
-            <li>
-              <a href="#careers" className="hover:text-white transition-colors">
-                Careers
+                Products
               </a>
             </li>
             <li>
