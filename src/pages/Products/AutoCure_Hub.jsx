@@ -1,6 +1,13 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { CheckCircle, Sparkles, Info, ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
+import {
+  CheckCircle,
+  Sparkles,
+  Info,
+  ArrowLeftCircle,
+  ArrowRightCircle,
+  ExternalLink,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
 
@@ -40,60 +47,74 @@ const AutoCure_Hub = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-br from-[#0f172a] to-black text-white py-20 px-6 min-h-screen">
-      <div className="max-w-6xl mx-auto">
-        {/* Back Button */}
+    <section className="relative bg-gradient-to-br from-[#0f172a] to-black text-white py-20 px-6 min-h-screen">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1580894908361-967195033d76')] bg-cover bg-center opacity-70 -z-10"></div>
+
+      <div className="max-w-6xl mx-auto text-xl">
         <button
           onClick={() => navigate(-1)}
-          className="flex items-center text-green-400 hover:text-green-300 mb-10 transition-all"
+          className="flex items-center text-green-400 hover:text-green-300 mb-10 transition-all text-2xl"
         >
-          <ArrowLeftCircle className="w-6 h-6 mr-2" /> Back to Products
+          <ArrowLeftCircle className="w-7 h-7 mr-2" /> Back to Products
         </button>
 
-        {/* Logo + Title */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10"
+          className="text-center mb-12"
         >
           <img
             src={autoCureImg}
             alt="AutoCure Hub Logo"
-            className="mx-auto w-32 h-32 rounded-full object-cover mb-4 border-4 border-green-500 shadow-lg"
+            className="mx-auto w-40 h-40 rounded-full object-cover mb-5 border-4 border-green-500 shadow-xl"
           />
           <a
             href={product.details.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 text-green-400 text-4xl font-bold hover:text-green-300 transition"
+            className="inline-flex items-center gap-3 text-green-400 text-5xl font-bold hover:text-green-300 transition"
           >
-            {product.name} <ArrowRightCircle className="w-7 h-7" />
+            {product.name} <ArrowRightCircle className="w-8 h-8" />
           </a>
-          <p className="text-lg text-gray-400 italic mt-2">{product.tagline}</p>
+          <p className="text-2xl text-gray-300 italic mt-3">{product.tagline}</p>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
+            className="mt-8"
+          >
+            <a
+              href={product.details.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white text-xl font-semibold shadow-lg transition"
+            >
+              <ExternalLink className="mr-2" /> Visit AutoCure Hub Website
+            </a>
+          </motion.div>
         </motion.div>
 
-        {/* Description Box */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-[#0f172a] p-8 rounded-2xl shadow-xl border-l-8 border-green-500 mb-16 text-lg text-gray-300 leading-relaxed"
+          className="bg-[#0f172a] p-10 rounded-2xl shadow-xl border-l-8 border-green-500 mb-16 text-gray-300 leading-relaxed text-xl"
         >
-          <p className="mb-4">{product.description}</p>
-          <p className="text-gray-400 text-base">{product.moreDetails}</p>
+          <p className="mb-6">{product.description}</p>
+          <p className="text-gray-400">{product.moreDetails}</p>
         </motion.div>
 
-        {/* Screenshots Carousel */}
         <div className="mb-20">
-          <h2 className="text-3xl font-semibold text-green-300 mb-8 text-center">Screenshots</h2>
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Screenshots</h2>
           <div className="relative overflow-x-hidden">
             <div className="flex gap-6 animate-marquee whitespace-nowrap">
               {[...product.screenshots, ...product.screenshots].map((img, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[400px] h-[280px] rounded-xl border border-green-700 overflow-hidden shadow-lg"
+                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl border border-green-700 overflow-hidden shadow-lg"
                 >
                   <img
                     src={img}
@@ -106,7 +127,6 @@ const AutoCure_Hub = () => {
           </div>
         </div>
 
-        {/* Highlights Section */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -114,29 +134,28 @@ const AutoCure_Hub = () => {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-3xl font-semibold text-green-300 mb-6 text-center">
+          <h2 className="text-4xl font-semibold text-green-300 mb-8 text-center">
             Key Highlights
           </h2>
-          <ul className="space-y-4 max-w-3xl mx-auto text-lg text-gray-300">
+          <ul className="space-y-5 max-w-4xl mx-auto text-xl text-gray-300">
             {product.highlights.map((item, i) => (
               <li key={i} className="flex items-start gap-3">
-                <CheckCircle size={22} className="text-green-500 mt-1" />
+                <CheckCircle size={26} className="text-green-500 mt-1" />
                 {item}
               </li>
             ))}
           </ul>
         </motion.div>
 
-        {/* Info Cards */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-10 text-gray-300"
+          className="grid md:grid-cols-2 gap-10 text-gray-300 text-lg"
         >
-          <div className="bg-[#111827] p-6 rounded-xl shadow border border-green-700">
-            <h3 className="text-xl font-semibold text-white mb-4">
+          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700">
+            <h3 className="text-2xl font-semibold text-white mb-6">
               <Info className="inline mr-2" /> Product Details
             </h3>
             <p><span className="text-green-400 font-medium">Launched:</span> {product.details.launched}</p>
@@ -145,9 +164,9 @@ const AutoCure_Hub = () => {
             <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
           </div>
 
-          <div className="bg-[#111827] p-6 rounded-xl shadow border border-green-700 flex flex-col items-center justify-center text-center">
-            <Sparkles className="text-green-400 w-12 h-12 animate-pulse mb-2" />
-            <p className="text-xl font-medium">
+          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700 flex flex-col items-center justify-center text-center">
+            <Sparkles className="text-green-400 w-14 h-14 animate-pulse mb-3" />
+            <p className="text-2xl font-medium">
               Designed for modern garages and smart users.
             </p>
           </div>

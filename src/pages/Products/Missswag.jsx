@@ -1,11 +1,17 @@
-// File: src/pages/ProductDetail.jsx
+// File: src/pages/Products/MissSwag.jsx
 
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { CheckCircle, Sparkles, Info, ArrowLeftCircle } from "lucide-react";
+import {
+  CheckCircle,
+  Sparkles,
+  Info,
+  ArrowLeftCircle,
+  ArrowRightCircle,
+  ExternalLink,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import WhatsappButton from "../../components/WhatsappButton"; // Ensure this component exists in your project
-import { ArrowRightCircle } from "lucide-react";
+import WhatsappButton from "../../components/WhatsappButton";
 
 import autoCureImg from "../../assets/products_logos/missswag.jpg";
 import p1Img from "../../assets/autocure_images/p1.jpg";
@@ -21,22 +27,17 @@ const product = {
     "Automated Reminders & Follow-ups",
     "EHR Integration & HIPAA Compliance",
   ],
-  screenshots: [
-    p1Img,
-    p1Img,
-    p1Img,
-    p1Img,
-    p1Img,
-  ],
+  screenshots: [p1Img, p1Img, p1Img, p1Img, p1Img],
   details: {
     launched: "2024",
     version: "2.3",
     techStack: "React, Node.js, MongoDB, TailwindCSS",
     platforms: "Web, Android, iOS",
+    liveLink: "https://missswag.vercel.app/",
   },
 };
 
-const ProductDetail = () => {
+const MissSwag = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -44,94 +45,88 @@ const ProductDetail = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-br from-[#0f172a] to-black text-white py-20 px-6 min-h-screen">
-      <div className="max-w-6xl mx-auto">
-        {/* Back Button */}
+    <section className="relative bg-gradient-to-br from-[#0f172a] to-black text-white py-20 px-6 min-h-screen">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576765607924-4913f4b39e8e')] bg-cover bg-center opacity-70 -z-10"></div>
+
+      <div className="max-w-6xl mx-auto text-xl">
         <button
           onClick={() => navigate(-1)}
-          className="flex items-center text-green-400 hover:text-green-300 mb-10 transition-all"
+          className="flex items-center text-green-400 hover:text-green-300 mb-10 transition-all text-2xl"
         >
-          <ArrowLeftCircle className="w-6 h-6 mr-2" /> Back to Products
+          <ArrowLeftCircle className="w-7 h-7 mr-2" /> Back to Products
         </button>
 
-        {/* Title */}
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 flex items-center justify-center gap-8"
+          className="text-center mb-12"
         >
-          {/* Title and Tagline container with arrow inside */}
-          <a
-            href="https://autocure-hub.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="border-2 border-green-500 inline-flex items-center gap-6 pt-10 pl-16 pb-10 pr-16 rounded-full transform -translate-x-6">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-green-400">
-                  {product.name}
-                </h1>
-                <p className="text-xl text-gray-300 italic">
-                  {product.tagline}
-                </p>
-              </div>
-
-              {/* Right Arrow Icon inside circle */}
-              <div className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white transition duration-300">
-                <ArrowRightCircle size={28} />
-              </div>
-            </div>
-          </a>
-
-          {/* Circular Image on right */}
           <img
             src={autoCureImg}
-            alt="AutoCure Hub Logo"
-            className="w-48 h-48 rounded-full object-cover"
+            alt="MissSwag Logo"
+            className="mx-auto w-40 h-40 rounded-full object-cover mb-5 border-4 border-green-500 shadow-xl"
           />
+          <a
+            href={product.details.liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 text-green-400 text-5xl font-bold hover:text-green-300 transition"
+          >
+            {product.name} <ArrowRightCircle className="w-8 h-8" />
+          </a>
+          <p className="text-2xl text-gray-300 italic mt-3">{product.tagline}</p>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
+            className="mt-8"
+          >
+            <a
+              href={product.details.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white text-xl font-semibold shadow-lg transition"
+            >
+              <ExternalLink className="mr-2" /> Visit MissSwag Website
+            </a>
+          </motion.div>
         </motion.div>
 
-        {/* Overview */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-[#0f172a] p-8 rounded-2xl shadow-xl border-l-8 border-green-500 mb-16"
+          className="bg-[#0f172a] p-10 rounded-2xl shadow-xl border-l-8 border-green-500 mb-16 text-gray-300 leading-relaxed text-xl"
         >
-          <p className="text-lg text-gray-200 leading-relaxed">
-            {product.description}
+          <p className="mb-6">{product.description}</p>
+          <p className="text-gray-400">
+            MissSwag bridges the communication gap between healthcare providers and patients. Its multi-platform ecosystem ensures that users can access medical updates, schedule appointments, and receive automated reminders — all from their phone. The system is compliant, multilingual, and integrated with EHR standards, making it future-ready.
           </p>
         </motion.div>
 
-        {/* Screenshots Slider */}
-        <div className="mb-20 overflow-hidden">
-          <h2 className="text-3xl font-semibold text-green-300 mb-12 text-center">
-            Product Screenshots
-          </h2>
-
-          <div className="relative w-full">
+        <div className="mb-20">
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Screenshots</h2>
+          <div className="relative overflow-x-hidden">
             <div className="flex gap-6 animate-marquee whitespace-nowrap">
-              {[...product.screenshots, ...product.screenshots].map(
-                (img, i) => (
-                  <div
-                    key={i}
-                    className="flex-shrink-0 w-[400px] h-[300px] rounded-xl border border-green-700 overflow-hidden shadow-md"
-                  >
-                    <img
-                      src={img}
-                      alt={`Screenshot ${i + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                )
-              )}
+              {[...product.screenshots, ...product.screenshots].map((img, i) => (
+                <div
+                  key={i}
+                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl border border-green-700 overflow-hidden shadow-lg"
+                >
+                  <img
+                    src={img}
+                    alt={`Screenshot ${i + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Highlights */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -139,61 +134,47 @@ const ProductDetail = () => {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-3xl font-semibold text-green-300 mb-6 text-center">
+          <h2 className="text-4xl font-semibold text-green-300 mb-8 text-center">
             Key Highlights
           </h2>
-          <ul className="space-y-4 max-w-3xl mx-auto text-lg text-gray-300">
+          <ul className="space-y-5 max-w-4xl mx-auto text-xl text-gray-300">
             {product.highlights.map((item, i) => (
-              <li key={i} className="flex items-center gap-3">
-                <CheckCircle size={22} className="text-green-500" />
+              <li key={i} className="flex items-start gap-3">
+                <CheckCircle size={26} className="text-green-500 mt-1" />
                 {item}
               </li>
             ))}
           </ul>
         </motion.div>
 
-        {/* Product Info */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-10 text-gray-300"
+          className="grid md:grid-cols-2 gap-10 text-gray-300 text-lg"
         >
-          <div className="bg-[#111827] p-6 rounded-xl shadow border border-green-700">
-            <h3 className="text-xl font-semibold text-white mb-4">
+          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700">
+            <h3 className="text-2xl font-semibold text-white mb-6">
               <Info className="inline mr-2" /> Product Details
             </h3>
-            <p>
-              <span className="text-green-400 font-medium">Launched:</span>{" "}
-              {product.details.launched}
-            </p>
-            <p>
-              <span className="text-green-400 font-medium">Version:</span>{" "}
-              {product.details.version}
-            </p>
-            <p>
-              <span className="text-green-400 font-medium">Platform:</span>{" "}
-              {product.details.platforms}
-            </p>
-            <p>
-              <span className="text-green-400 font-medium">Tech Stack:</span>{" "}
-              {product.details.techStack}
-            </p>
+            <p><span className="text-green-400 font-medium">Launched:</span> {product.details.launched}</p>
+            <p><span className="text-green-400 font-medium">Version:</span> {product.details.version}</p>
+            <p><span className="text-green-400 font-medium">Platform:</span> {product.details.platforms}</p>
+            <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
           </div>
 
-          <div className="bg-[#111827] p-6 rounded-xl shadow border border-green-700 flex flex-col items-center justify-center text-center">
-            <Sparkles className="text-green-400 w-12 h-12 animate-bounce" />
-            <p className="mt-4 text-xl font-medium">
+          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700 flex flex-col items-center justify-center text-center">
+            <Sparkles className="text-green-400 w-14 h-14 animate-pulse mb-3" />
+            <p className="text-2xl font-medium">
               Empowering smart healthcare with intelligent UX!
             </p>
           </div>
         </motion.div>
       </div>
-      {/* WhatsApp Button */}
       <WhatsappButton />
     </section>
   );
 };
 
-export default ProductDetail;
+export default MissSwag;
