@@ -1,12 +1,8 @@
-// File: src/pages/Products/SaathiCare.jsx
-
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { CheckCircle, Sparkles, Info, ArrowLeftCircle } from "lucide-react";
+import { CheckCircle, Sparkles, Info, ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import WhatsappButton from "../../components/WhatsappButton"; // Ensure this component exists in your project
-
-import { ArrowRightCircle } from "lucide-react";
+import WhatsappButton from "../../components/WhatsappButton";
 
 import autoCureImg from "../../assets/products_logos/saathicare.jpg";
 import p1Img from "../../assets/autocure_images/p1.jpg";
@@ -35,7 +31,7 @@ const SaathiCare = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "auto" }); // or "smooth" for animation
+    window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
 
   return (
@@ -49,84 +45,57 @@ const SaathiCare = () => {
           <ArrowLeftCircle className="w-6 h-6 mr-2" /> Back to Products
         </button>
 
-        {/* Title */}
+        {/* Logo + Title */}
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 flex items-center justify-center gap-8"
+          className="text-center mb-10"
         >
-          {/* Title and Tagline container with arrow inside */}
-          <a
-            href="https://autocure-hub.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="border-2 border-green-500 inline-flex items-center gap-6 pt-10 pl-16 pb-10 pr-16 rounded-full transform -translate-x-6">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-green-400">
-                  {product.name}
-                </h1>
-                <p className="text-xl text-gray-300 italic">
-                  {product.tagline}
-                </p>
-              </div>
-
-              {/* Right Arrow Icon inside circle */}
-              <div className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white transition duration-300">
-                <ArrowRightCircle size={28} />
-              </div>
-            </div>
-          </a>
-
-          {/* Circular Image on right */}
           <img
             src={autoCureImg}
-            alt="AutoCure Hub Logo"
-            className="w-48 h-48 rounded-full object-cover"
+            alt="Saathi Care Logo"
+            className="mx-auto w-32 h-32 rounded-full object-cover mb-4 border-4 border-green-500 shadow-lg"
           />
+          <span className="inline-flex items-center gap-3 text-green-400 text-4xl font-bold">
+            {product.name}
+          </span>
+          <p className="text-lg text-gray-400 italic mt-2">{product.tagline}</p>
         </motion.div>
 
-        {/* Overview */}
+        {/* Description Box */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-[#0f172a] p-8 rounded-2xl shadow-xl border-l-8 border-green-500 mb-16"
+          className="bg-[#0f172a] p-8 rounded-2xl shadow-xl border-l-8 border-green-500 mb-16 text-lg text-gray-300 leading-relaxed"
         >
-          <p className="text-lg text-gray-200 leading-relaxed">
-            {product.description}
-          </p>
+          <p className="mb-4">{product.description}</p>
         </motion.div>
 
-        {/* Screenshots Slider */}
-        <div className="mb-20 overflow-hidden">
-          <h2 className="text-3xl font-semibold text-green-300 mb-12 text-center">
-            Product Screenshots
-          </h2>
-
-          <div className="relative w-full">
+        {/* Screenshots Carousel */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-semibold text-green-300 mb-8 text-center">Screenshots</h2>
+          <div className="relative overflow-x-hidden">
             <div className="flex gap-6 animate-marquee whitespace-nowrap">
-              {[...product.screenshots, ...product.screenshots].map(
-                (img, i) => (
-                  <div
-                    key={i}
-                    className="flex-shrink-0 w-[400px] h-[300px] rounded-xl border border-green-700 overflow-hidden shadow-md"
-                  >
-                    <img
-                      src={img}
-                      alt={`Screenshot ${i + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                )
-              )}
+              {[...product.screenshots, ...product.screenshots].map((img, i) => (
+                <div
+                  key={i}
+                  className="flex-shrink-0 w-[400px] h-[280px] rounded-xl border border-green-700 overflow-hidden shadow-lg"
+                >
+                  <img
+                    src={img}
+                    alt={`Screenshot ${i + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Highlights */}
+        {/* Highlights Section */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -139,15 +108,15 @@ const SaathiCare = () => {
           </h2>
           <ul className="space-y-4 max-w-3xl mx-auto text-lg text-gray-300">
             {product.highlights.map((item, i) => (
-              <li key={i} className="flex items-center gap-3">
-                <CheckCircle size={22} className="text-green-500" />
+              <li key={i} className="flex items-start gap-3">
+                <CheckCircle size={22} className="text-green-500 mt-1" />
                 {item}
               </li>
             ))}
           </ul>
         </motion.div>
 
-        {/* Product Info */}
+        {/* Info Cards */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -159,33 +128,21 @@ const SaathiCare = () => {
             <h3 className="text-xl font-semibold text-white mb-4">
               <Info className="inline mr-2" /> Product Details
             </h3>
-            <p>
-              <span className="text-green-400 font-medium">Launched:</span>{" "}
-              {product.details.launched}
-            </p>
-            <p>
-              <span className="text-green-400 font-medium">Version:</span>{" "}
-              {product.details.version}
-            </p>
-            <p>
-              <span className="text-green-400 font-medium">Platform:</span>{" "}
-              {product.details.platforms}
-            </p>
-            <p>
-              <span className="text-green-400 font-medium">Tech Stack:</span>{" "}
-              {product.details.techStack}
-            </p>
+            <p><span className="text-green-400 font-medium">Launched:</span> {product.details.launched}</p>
+            <p><span className="text-green-400 font-medium">Version:</span> {product.details.version}</p>
+            <p><span className="text-green-400 font-medium">Platform:</span> {product.details.platforms}</p>
+            <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
           </div>
 
           <div className="bg-[#111827] p-6 rounded-xl shadow border border-green-700 flex flex-col items-center justify-center text-center">
-            <Sparkles className="text-green-400 w-12 h-12 animate-bounce" />
-            <p className="mt-4 text-xl font-medium">
+            <Sparkles className="text-green-400 w-12 h-12 animate-pulse mb-2" />
+            <p className="text-xl font-medium">
               Caring made smarter with Saathi!
             </p>
           </div>
         </motion.div>
       </div>
-      {/* WhatsApp Button */}
+
       <WhatsappButton />
     </section>
   );
