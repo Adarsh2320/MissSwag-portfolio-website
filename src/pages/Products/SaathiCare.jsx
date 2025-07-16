@@ -19,7 +19,18 @@ import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
 
 import saathiCareImg from "../../assets/products_logos/saathicare.jpg";
-import p1Img from "../../assets/autocure_images/p1.jpg";
+import p1Img from "../../assets/Saathi Care Screenshots/p1.jpeg";
+import p2Img from "../../assets/Saathi Care Screenshots/p2.jpeg";
+import p3Img from "../../assets/Saathi Care Screenshots/p3.jpeg";
+import p4Img from "../../assets/Saathi Care Screenshots/p4.jpeg";
+import p5Img from "../../assets/Saathi Care Screenshots/p5.jpeg";
+import p6Img from "../../assets/Saathi Care Screenshots/p6.jpeg";
+import p7Img from "../../assets/Saathi Care Screenshots/p7.jpeg";
+import p8Img from "../../assets/Saathi Care Screenshots/p8.jpeg";
+import p9Img from "../../assets/Saathi Care Screenshots/p9.jpeg";
+import p10Img from "../../assets/Saathi Care Screenshots/p10.jpeg";
+import p11Img from "../../assets/Saathi Care Screenshots/p11.jpeg";
+
 
 const product = {
   name: "Saathi Care",
@@ -34,7 +45,7 @@ const product = {
     { icon: AlertTriangle, label: "Emergency Alert Integration with SOS" },
     { icon: Users, label: "Multi-user Support for Families" },
   ],
-  screenshots: [p1Img, p1Img, p1Img, p1Img, p1Img, p1Img],
+  screenshots: [p1Img, p2Img, p3Img, p4Img, p5Img, p6Img, p7Img, p8Img, p9Img, p10Img, p11Img],
   details: {
     launched: "2023",
     version: "1.5",
@@ -130,7 +141,7 @@ const SaathiCare = () => {
                 (img, i) => (
                   <div
                     key={i}
-                    className="flex-shrink-0 w-[250px] h-[490px] rounded-xl overflow-hidden shadow-lg"
+                    className="flex-shrink-0 w-[600px] h-[350px] rounded-xl overflow-hidden shadow-lg"
                   >
                     <img
                       src={img}

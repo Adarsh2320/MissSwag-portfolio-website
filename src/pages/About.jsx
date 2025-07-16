@@ -581,22 +581,22 @@ const About = () => {
               {
                 name: "John Carter",
                 role: "CEO & Co-Founder",
-                src: "", // ← Add image URL here
+                src: "https://images.unsplash.com/photo-1676378388741-61acfa5ac03b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRlY2huaWNhbCUyMHBlcnNvbiUyMHdpdGglMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D", // ← Add image URL here
               },
               {
                 name: "Sophie Moore",
                 role: "Community Lead",
-                src: "", // ← Add image URL here
+                src: "https://images.unsplash.com/photo-1652105425332-e10c5392b863?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHRlY2huaWNhbCUyMHBlcnNvbiUyMHdpdGglMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D", // ← Add image URL here
               },
               {
                 name: "Alex Turner",
                 role: "Operations",
-                src: "", // ← Add image URL here
+                src: "https://plus.unsplash.com/premium_photo-1663040355610-20350fe375ee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzN8fHRlY2huaWNhbCUyMHBlcnNvbiUyMHdpdGglMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D", // ← Add image URL here
               },
               {
                 name: "Alex Johnson",
                 role: "Developer",
-                src: "", // ← Add image URL here
+                src: "https://images.unsplash.com/photo-1654262609484-76d1a8f3b016?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTB8fHRlY2huaWNhbCUyMHBlcnNvbiUyMHdpdGglMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D", // ← Add image URL here
               },
             ].map((member, i) => (
               <motion.div
@@ -634,7 +634,7 @@ const About = () => {
           </p>
 
           <div className="flex flex-wrap justify-center items-center gap-6">
-            {["Company", "Company", "Company", "Company", "Company"].map(
+            {["Google", "Microsoft", "Amazon", "Flipkart", "Apple"].map(
               (name, i) => (
                 <motion.div
                   key={i}
@@ -645,9 +645,9 @@ const About = () => {
                   viewport={{ once: true }}
                 >
                   <img
-                    src="" // ← Add investor logo URL
+                    src="data:image/jpeg;base64,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" // ← Add investor logo URL
                     alt="Investor"
-                    className="w-5 h-5 object-contain"
+                    className="w-8 h-9 object-fit"
                   />
                   {name}
                 </motion.div>

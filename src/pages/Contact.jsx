@@ -1,240 +1,226 @@
-// File: src/pages/Products/IntegratedHRMS.jsx
+// File: src/pages/Contact.jsx
 
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import {
-  ArrowLeftCircle,
-  ArrowRightCircle,
-  ExternalLink,
-  Sparkles,
-  Info,
-  ClipboardCheck,
-  UserCircle2,
-  ShieldCheck,
-  Users,
-  MailCheck,
-  CalendarCheck,
+  Mail,
+  Phone,
+  MapPin,
   SendHorizonal,
   User,
-  MessageCircle,
+  Sparkles,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import WhatsappButton from "../../components/WhatsappButton";
+import contact from "../assets/contact.jpg";
+import WhatsappButton from "../components/WhatsappButton";
+import { FaWhatsapp } from "react-icons/fa";
 
-import autoCureImg from "../../assets/products_logos/autocurehub.jpg";
-import p1Img from "../../assets/autocure_images/p1.jpg";
-
-const product = {
-  name: "Integrated HRMS",
-  tagline: "Smart HR Management. Simplified.",
-  description:
-    "Integrated HRMS is a robust and scalable platform for managing all HR operations. It helps businesses automate payroll, streamline onboarding, track attendance, monitor performance, and handle leave management — ensuring efficiency, compliance, and employee satisfaction.",
-  highlights: [
-    { icon: CalendarCheck, label: "Automated Payroll & Salary Slips" },
-    { icon: ClipboardCheck, label: "Employee Onboarding & Exit Process" },
-    { icon: Users, label: "Leave, Attendance & Shift Management" },
-    { icon: UserCircle2, label: "Performance Appraisal & Document Storage" },
-    { icon: ShieldCheck, label: "Role-Based Access for Admins, HR, and Employees" },
-    { icon: MailCheck, label: "Analytics Dashboard with HR Metrics" },
-  ],
-  moreDetails:
-    "Integrated HRMS empowers HR departments by automating routine tasks and centralizing all records in one place. It enables better decision-making with real-time insights, simplifies compliance, and enhances employee engagement through self-service features and mobile-friendly dashboards.",
-  screenshots: [p1Img, p1Img, p1Img, p1Img, p1Img, p1Img],
-  details: {
-    launched: "2024",
-    version: "1.5",
-    techStack: "React, Node.js, Express, MongoDB, TailwindCSS",
-    platforms: "Web App (Admin + Employee Dashboards)",
-    link: "https://integrated-hrms.vercel.app/",
-  },
+const fadeInUp = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const IntegratedHRMS = () => {
-  const navigate = useNavigate();
+const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "auto" });
-  }, []);
+  const [feedbackName, setFeedbackName] = useState("");
+  const [feedbackEmail, setFeedbackEmail] = useState("");
+  const [feedbackMessage, setFeedbackMessage] = useState("");
+
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    const data = { name, email, subject, message };
+    const res = await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    const result = await res.json();
+    alert(result.message);
+  };
+
+  const handleFeedbackSubmit = async (e) => {
+    e.preventDefault();
+    const data = { name: feedbackName, email: feedbackEmail, message: feedbackMessage };
+    const res = await fetch("http://localhost:5000/api/feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    const result = await res.json();
+    alert(result.message);
+  };
 
   return (
-    <section className="relative bg-gradient-to-br from-[#0f172a] to-black text-white py-20 px-6 min-h-screen">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507679799987-c73779587ccf')] bg-cover bg-center opacity-70 -z-10"></div>
+    <div className="bg-black text-white">
+      <Navbar />
 
-      <div className="max-w-6xl mx-auto text-xl">
-        <button
-          onClick={() => navigate(-1)}
-          className="flex items-center text-green-400 hover:text-green-300 mb-10 transition-all text-2xl"
-        >
-          <ArrowLeftCircle className="w-7 h-7 mr-2" /> Back to Products
-        </button>
+      {/* Hero Section */}
+      <section className="relative w-full h-screen flex items-center justify-end mt-20 px-6 overflow-hidden">
+        <motion.img
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.2 }}
+          src={contact}
+          alt="Contact"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
 
         <motion.div
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          variants={fadeInUp}
+          initial="initial"
+          animate="animate"
+          className="relative z-10 text-white text-right max-w-xl pr-12 md:pr-32"
         >
-          <img
-            src={autoCureImg}
-            alt="Integrated HRMS Logo"
-            className="mx-auto w-40 h-40 rounded-full object-cover mb-5 border-4 border-green-500 shadow-xl"
-          />
-          <a
-            href={product.details.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 text-green-400 text-5xl font-bold hover:text-green-300 transition"
-          >
-            {product.name} <ArrowRightCircle className="w-8 h-8" />
-          </a>
-          <p className="text-2xl text-gray-300 italic mt-3">{product.tagline}</p>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: 0.6 }}
-            className="mt-8"
-          >
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-pulse">
+            Ready to get digitalise
+          </h1>
+          <p className="text-lg md:text-2xl font-medium text-green-300">
+            with AI-driven, scalable tech solutions
+          </p>
+          <div className="mt-6">
             <a
-              href={product.details.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white text-xl font-semibold shadow-lg transition"
+              href="#contact"
+              className="px-6 py-2 bg-green-600 hover:bg-green-500 transition rounded-full font-semibold shadow hover:shadow-green-500/50"
             >
-              <ExternalLink className="mr-2" /> Visit HRMS Website
+              Contact us Now
             </a>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="bg-[#0f172a] p-10 rounded-2xl shadow-xl border-l-8 border-green-500 mb-16 text-gray-300 leading-relaxed text-xl"
-        >
-          <p className="mb-6">{product.description}</p>
-          <p className="text-gray-400">{product.moreDetails}</p>
-        </motion.div>
-
-        <div className="mb-20">
-          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Screenshots</h2>
-          <div className="relative overflow-x-hidden">
-            <div className="flex gap-6 animate-marquee whitespace-nowrap">
-              {[...product.screenshots, ...product.screenshots].map((img, i) => (
-                <div
-                  key={i}
-                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl overflow-hidden shadow-lg"
-                >
-                  <img
-                    src={img}
-                    alt={`Screenshot ${i + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
           </div>
-        </div>
+        </motion.div>
+      </section>
 
+      {/* Contact Info + Map Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-[#0f172a] to-black" id="contact">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
           viewport={{ once: true }}
-          className="mb-20"
+          className="max-w-6xl mx-auto grid md:grid-cols-2 gap-28 items-start"
         >
-          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
-            Key Highlights
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-            {product.highlights.map((item, i) => (
-              <div
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="bg-[#0f172a] p-6 rounded-lg shadow-2xl hover:shadow-green-500/30 transition-all text-center"
+          >
+            <h2 className="text-2xl font-bold mb-4 text-green-400">Find Us Here</h2>
+            <iframe
+              title="Gamayas Office Location"
+              src="https://www.google.com/maps/embed?..."
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded border border-green-700 shadow-lg"
+            ></iframe>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center md:text-left">
+            {[{
+              Icon: Mail,
+              title: 'Email Us',
+              content: 'contact@gamayas.com'
+            }, {
+              Icon: Phone,
+              title: 'Call Us',
+              content: '+91 70570 58841'
+            }, {
+              Icon: FaWhatsapp,
+              title: 'WhatsApp',
+              content: '+91 70570 58841',
+              link: 'https://wa.me/917057058841'
+            }, {
+              Icon: MapPin,
+              title: 'Visit Us',
+              content: 'Hyderabad, Telangana, India'
+            }].map(({ Icon, title, content, link }, i) => (
+              <motion.div
                 key={i}
-                className="bg-[#111827] p-6 rounded-2xl shadow hover:shadow-green-500/30 group transition duration-300 transform hover:scale-105"
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="transition-all"
               >
-                <div className="w-full h-36 mb-4 flex items-center justify-center rounded-xl">
-                  <item.icon className="w-16 h-16 text-green-400 group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <p className="text-white text-lg leading-relaxed text-center group-hover:text-green-100 transition-colors duration-300">
-                  {item.label}
-                </p>
-              </div>
+                {link ? (
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    <Icon className="text-green-400 mx-auto md:mx-0 mb-4" size={36} />
+                  </a>
+                ) : (
+                  <Icon className="text-green-400 mx-auto md:mx-0 mb-4" size={36} />
+                )}
+                <h4 className="text-xl font-semibold mb-1">{title}</h4>
+                <p className="text-gray-300 text-lg">{content}</p>
+              </motion.div>
             ))}
           </div>
         </motion.div>
+      </section>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-10 text-gray-300 text-lg"
-        >
-          <div className="p-8 rounded-xl ml-10">
-            <h3 className="text-2xl font-semibold text-white mb-6">
-              <Info className="inline mr-2" /> Product Details
-            </h3>
-            <p><span className="text-green-400 font-medium">Launched:</span> {product.details.launched}</p>
-            <p><span className="text-green-400 font-medium">Version:</span> {product.details.version}</p>
-            <p><span className="text-green-400 font-medium">Platform:</span> {product.details.platforms}</p>
-            <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
-          </div>
-
-          <div className="p-8 rounded-xl shadow flex flex-col items-center justify-center text-center">
-            <Sparkles className="text-green-400 w-14 h-14 animate-pulse mb-3" />
-            <p className="text-2xl font-medium">
-              Empowering HR with automation and insight.
-            </p>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-24 max-w-4xl mx-auto bg-[#111827] border border-green-700 rounded-2xl p-10 text-white shadow-xl"
-        >
-          <h2 className="text-3xl font-semibold mb-8 text-center">Start a Conversation</h2>
-          <form className="grid gap-6">
-            <div>
-              <label className="block mb-2 text-lg">Your Name</label>
-              <input
-                type="text"
-                placeholder="John Doe"
-                className="w-full px-4 py-3 bg-[#0f172a] border border-green-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
-            </div>
-            <div>
-              <label className="block mb-2 text-lg">Your Email</label>
-              <input
-                type="email"
-                placeholder="john@example.com"
-                className="w-full px-4 py-3 bg-[#0f172a] border border-green-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
-            </div>
-            <div>
-              <label className="block mb-2 text-lg">Your Message</label>
-              <textarea
-                placeholder="Tell us more about your needs..."
-                rows="5"
-                className="w-full px-4 py-3 bg-[#0f172a] border border-green-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="mt-4 w-full flex justify-center items-center gap-2 px-6 py-3 text-lg bg-green-600 hover:bg-green-500 text-white rounded-full transition shadow-lg hover:shadow-green-400"
-            >
-              <SendHorizonal /> Send Message
+      {/* Forms Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-[#0f172a] to-black overflow-hidden">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+          <motion.form
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            onSubmit={handleContactSubmit}
+            className="bg-[#0f172a] p-8 rounded-xl shadow-xl border border-green-900 backdrop-blur-sm space-y-6"
+          >
+            <h3 className="text-2xl font-bold mb-4 text-white">Contact Form</h3>
+            <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" className="w-full p-3 rounded bg-black border border-green-500 text-white" required />
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="w-full p-3 rounded bg-black border border-green-500 text-white" required />
+            <input type="text" value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Subject" className="w-full p-3 rounded bg-black border border-green-500 text-white" />
+            <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Message" rows="4" className="w-full p-3 rounded bg-black border border-green-500 text-white" required></textarea>
+            <button type="submit" className="bg-green-600 hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-full flex items-center justify-center gap-2">
+              <SendHorizonal size={20} /> Send Message
             </button>
-          </form>
-        </motion.div>
-      </div>
+          </motion.form>
+
+          <motion.form
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            onSubmit={handleFeedbackSubmit}
+            className="bg-[#0f172a] p-8 rounded-xl shadow-xl border border-green-900 backdrop-blur-sm space-y-6"
+          >
+            <h3 className="text-2xl font-bold mb-4 text-white">Feedback Form</h3>
+            <input type="text" value={feedbackName} onChange={(e) => setFeedbackName(e.target.value)} placeholder="Name" className="w-full p-3 rounded bg-black border border-green-500 text-white" required />
+            <input type="email" value={feedbackEmail} onChange={(e) => setFeedbackEmail(e.target.value)} placeholder="Email" className="w-full p-3 rounded bg-black border border-green-500 text-white" required />
+            <textarea value={feedbackMessage} onChange={(e) => setFeedbackMessage(e.target.value)} placeholder="Feedback" rows="6" className="w-full p-3 rounded bg-black border border-green-500 text-white" required></textarea>
+            <button type="submit" className="bg-green-600 hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-full flex items-center justify-center gap-2">
+              <SendHorizonal size={20} /> Submit Feedback
+            </button>
+          </motion.form>
+        </div>
+      </section>
+
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="py-16 px-6 bg-gradient-to-r from-green-800 via-[#0f172a] to-green-900 text-white text-center"
+      >
+        <h2 className="text-3xl font-bold mb-4">We’re Ready When You Are</h2>
+        <p className="text-lg text-gray-200 mb-6 max-w-2xl mx-auto">
+          Let’s collaborate and bring your vision to life. Connect with us today
+          for tailored digital strategies and intelligent tech.
+        </p>
+        <a
+          href="mailto:contact@gamayas.com"
+          className="bg-white text-green-900 px-8 py-3 rounded-full font-semibold shadow hover:shadow-xl transition hover:bg-green-100"
+        >
+          Start a Conversation
+        </a>
+      </motion.section>
 
       <WhatsappButton />
-    </section>
+      <Footer />
+    </div>
   );
 };
 
-export default IntegratedHRMS;
+export default Contact;

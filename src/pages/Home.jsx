@@ -41,6 +41,7 @@ import autoCureImg from "../assets/products_logos/autocurehub.jpg";
 import HIMS from "../assets/products_logos/HIMS.jpg";
 import HRMS from "../assets/products_logos/HRMS.jpg";
 import EMS_LMS from "../assets/products_logos/EMS+LMS.jpg";
+import MomoMuffin from "../assets/products_logos/Momo_Muffin.jpg"
 import logo from "../assets/logo.jpg";
 
 import { Info } from "lucide-react";
@@ -86,7 +87,7 @@ const products = [
   { title: "Integrated HIMS", slug: "IntegratedHIMS", image: HIMS, desc: "Comprehensive hospital management system with real-time analytics." },
   { title: "Integrated HRMS", slug: "IntegratedHRMS", image: HRMS, desc: "Streamlined human resource solution for modern enterprise teams." },
   { title: "EMS + LMS", slug: "IntegratedEMS_LMS", image: EMS_LMS, desc: "Unified Emergency + Learning Management System for smart institutions." },
-  { title: "Momo Moffin", slug: "Momo_Moffin", image: logo, desc: "Effortless Fashion. Everyday Comfort. Curated for the Modern Wardrobe." },
+  { title: "Momo Moffin", slug: "Momo_Moffin", image: MomoMuffin, desc: "Effortless Fashion. Everyday Comfort. Curated for the Modern Wardrobe." },
 
 ];
 

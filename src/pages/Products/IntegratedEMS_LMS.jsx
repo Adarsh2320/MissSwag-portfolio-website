@@ -18,8 +18,13 @@ import {
 import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
 
-import logoImg from "../../assets/products_logos/autocurehub.jpg";
-import p1Img from "../../assets/autocure_images/p1.jpg";
+import logoImg from "../../assets/products_logos/EMS+LMS.jpg";
+const p1Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlbGCvXeBtDGLB4YnMgNBKcgydPVAYcrgHdi-PjR8aXbI5xMcrH7d9tm5OuKomMyZxgVg&usqp=CAU";
+const p2Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4tTGyevAcMAFxOOJd0gsZeqIyJTzW-F7MZQ&s";
+const p3Img = "https://thinkpalm.com/wp-content/uploads/2017/11/Learning-Management-System.jpg";
+const p4Img = "https://thinkpalm.com/wp-content/uploads/2017/11/Learning-Management-System.jpg";
+const p5Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW-ljA5bYD7N6Fi2njnM04NzyOdKqqQ1KYbg&s";
+
 
 const product = {
   name: "EMS + LMS",
@@ -34,7 +39,7 @@ const product = {
     { icon: Download, label: "Offline Access and Backup Learning Materials" },
     { icon: BellRing, label: "Push Notifications and Secure Communication Channels" },
   ],
-  screenshots: [p1Img, p1Img, p1Img, p1Img, p1Img, p1Img],
+  screenshots: [p1Img, p2Img, p3Img, p4Img, p5Img],
   details: {
     launched: "2024",
     version: "2.1",

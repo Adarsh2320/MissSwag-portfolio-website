@@ -19,7 +19,20 @@ import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
 
 import autoCureImg from "../../assets/products_logos/autocurehub.jpg";
-import p1Img from "../../assets/autocure_images/p1.jpg";
+import p1Img from "../../assets/AutoCureHub Screenshots/p1.png";
+import p2Img from "../../assets/AutoCureHub Screenshots/p2.png";
+import p3Img from "../../assets/AutoCureHub Screenshots/p3.png";
+import p4Img from "../../assets/AutoCureHub Screenshots/p4.png";
+import p5Img from "../../assets/AutoCureHub Screenshots/p5.png";
+import p6Img from "../../assets/AutoCureHub Screenshots/p6.png";
+import p7Img from "../../assets/AutoCureHub Screenshots/p7.png";
+import p8Img from "../../assets/AutoCureHub Screenshots/p8.png";
+import p9Img from "../../assets/AutoCureHub Screenshots/p9.png";
+import p10Img from "../../assets/AutoCureHub Screenshots/p10.png";
+import p11Img from "../../assets/AutoCureHub Screenshots/p11.png";
+import p12Img from "../../assets/AutoCureHub Screenshots/p12.png";
+import p13Img from "../../assets/AutoCureHub Screenshots/p13.png";
+import p14Img from "../../assets/AutoCureHub Screenshots/p14.png";
 
 const product = {
   name: "AutoCure Hub",
@@ -36,7 +49,7 @@ const product = {
   ],
   moreDetails:
     "The platform focuses on making vehicle servicing seamless and reliable by integrating AI-enabled scheduling, real-time notifications, and feedback systems. It eliminates manual bottlenecks by automating booking and monitoring, helping garages and customers stay synchronized. Designed with mobile-first responsiveness, it offers dashboards tailored to every stakeholder, providing clarity and operational control at all times.",
-  screenshots: [p1Img, p1Img, p1Img, p1Img, p1Img, p1Img],
+  screenshots: [p1Img, p5Img, p8Img, p4Img, p2Img, p6Img, p7Img, p3Img, p9Img, p10Img, p11Img, p12Img, p13Img, p14Img],
   details: {
     launched: "2024",
     version: "1.0",

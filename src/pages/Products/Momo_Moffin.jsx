@@ -1,18 +1,30 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  CheckCircle,
-  Sparkles,
-  Info,
   ArrowLeftCircle,
   ArrowRightCircle,
   ExternalLink,
+  Sparkles,
+  Info,
+  CheckCircle,
+  Truck,
+  Shirt,
+  Palette,
+  Repeat,
+  Ruler,
+  Star,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
 
-import momoLogo from "../../assets/products_logos/autocurehub.jpg";
-import tshirt1 from "../../assets/products_logos/autocurehub.jpg";
+import momoLogo from "../../assets/products_logos/Momo_Muffin.jpg";
+import tshirt1 from "../../assets/MomoMuffin Screenshots/p1.jpeg";
+import tshirt2 from "../../assets/MomoMuffin Screenshots/p2.jpeg";
+import tshirt3 from "../../assets/MomoMuffin Screenshots/p3.jpeg";
+import tshirt4 from "../../assets/MomoMuffin Screenshots/p4.jpeg";
+import tshirt5 from "../../assets/MomoMuffin Screenshots/p5.jpeg";
+import tshirt6 from "../../assets/MomoMuffin Screenshots/p6.jpeg";
+import tshirt7 from "../../assets/MomoMuffin Screenshots/p7.jpeg";
 
 const product = {
   name: "Momo Moffin",
@@ -20,16 +32,16 @@ const product = {
   description:
     "Momo Moffin is a trendy t-shirt brand made for bold, expressive individuals. From artistic prints to minimal classics, each piece is crafted with premium cotton and street-smart attitude. Whether you're dressing up for a chill weekend or making a statement at college, Momo Moffin fits your lifestyle.",
   highlights: [
-    "100% Premium Cotton & Eco-Friendly Dyes",
-    "Limited Edition Artist Collabs & Designs",
-    "Unisex Fit with All-Day Comfort",
-    "Easy Returns & Nationwide Delivery",
-    "Available in S to XXL Sizes",
-    "Exclusive Drops Every Month",
+    { icon: Shirt, label: "100% Premium Cotton & Eco-Friendly Dyes" },
+    { icon: Palette, label: "Limited Edition Artist Collabs & Designs" },
+    { icon: Ruler, label: "Unisex Fit with All-Day Comfort" },
+    { icon: Repeat, label: "Easy Returns & Nationwide Delivery" },
+    { icon: Star, label: "Available in S to XXL Sizes" },
+    { icon: Truck, label: "Exclusive Drops Every Month" },
   ],
   moreDetails:
     "Momo Moffin isn’t just fashion — it’s a movement. Our t-shirts are born from a desire to blend street style with storytelling. With every drop, we empower creators, support ethical production, and bring personality to your wardrobe.",
-  screenshots: [tshirt1, tshirt1, tshirt1, tshirt1, tshirt1],
+  screenshots: [tshirt1, tshirt2, tshirt3, tshirt4, tshirt5, tshirt6, tshirt7],
   details: {
     launched: "2025",
     version: "Collection 1.0",
@@ -47,8 +59,8 @@ const MomoMoffin = () => {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-[#1f2937] to-black text-white py-20 px-6 min-h-screen">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618354691373-95d48b08c284')] bg-cover bg-center opacity-60 -z-10"></div>
+    <section className="relative bg-gradient-to-br from-[#0f172a] to-black text-white py-20 px-6 min-h-screen">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618354691373-95d48b08c284')] bg-cover bg-center opacity-70 -z-10"></div>
 
       <div className="max-w-6xl mx-auto text-xl">
         <button
@@ -114,7 +126,7 @@ const MomoMoffin = () => {
               {[...product.screenshots, ...product.screenshots].map((img, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl border border-green-700 overflow-hidden shadow-lg"
+                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl overflow-hidden shadow-lg"
                 >
                   <img
                     src={img}
@@ -134,17 +146,24 @@ const MomoMoffin = () => {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-4xl font-semibold text-green-300 mb-8 text-center">
-            Why Momo Moffin?
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
+            Key Highlights
           </h2>
-          <ul className="space-y-5 max-w-4xl mx-auto text-xl text-gray-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
             {product.highlights.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <CheckCircle size={26} className="text-green-500 mt-1" />
-                {item}
-              </li>
+              <div
+                key={i}
+                className="bg-[#111827] p-6 rounded-2xl shadow hover:shadow-green-500/30 group transition duration-300 transform hover:scale-105"
+              >
+                <div className="w-full h-36 mb-4 flex items-center justify-center rounded-xl">
+                  <item.icon className="w-16 h-16 text-green-400 group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <p className="text-white text-lg leading-relaxed text-center group-hover:text-green-100 transition-colors duration-300">
+                  {item.label}
+                </p>
+              </div>
             ))}
-          </ul>
+          </div>
         </motion.div>
 
         <motion.div
@@ -154,7 +173,7 @@ const MomoMoffin = () => {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-10 text-gray-300 text-lg"
         >
-          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700">
+          <div className="p-8 rounded-xl ml-10">
             <h3 className="text-2xl font-semibold text-white mb-6">
               <Info className="inline mr-2" /> Product Details
             </h3>
@@ -164,7 +183,7 @@ const MomoMoffin = () => {
             <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
           </div>
 
-          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700 flex flex-col items-center justify-center text-center">
+          <div className="p-8 rounded-xl shadow flex flex-col items-center justify-center text-center">
             <Sparkles className="text-green-400 w-14 h-14 animate-pulse mb-3" />
             <p className="text-2xl font-medium">
               Crafted to express. Styled to impress.

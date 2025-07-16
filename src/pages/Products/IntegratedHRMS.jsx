@@ -18,8 +18,12 @@ import {
 import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
 
-import autoCureImg from "../../assets/products_logos/autocurehub.jpg";
-import p1Img from "../../assets/autocure_images/p1.jpg";
+import autoCureImg from "../../assets/products_logos/HRMS.jpg";
+const p1Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTUaJwiid4sLK0VX066zc9KuuQoiB_WRP-sQ&s";
+const p2Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_dPkKFL-HgR94PIxcNnG6G6VIbIqsndaX08MF_O0RSjkJRN9P2-u0a4_5DA4scQC0kf0&usqp=CAU";
+const p3Img = "https://cdn.educba.com/academy/wp-content/uploads/2023/05/Human-Resource-Management-System.jpg";
+const p4Img = "https://peopleworks.in/wp-content/uploads/2018/10/how-to-set-up-HRMS-sofware.jpg";
+const p5Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvYXrE64TiJs_0xdr-B8iP6_GFeCrqJuxBMw&s";
 
 const product = {
   name: "Integrated HRMS",
@@ -36,7 +40,7 @@ const product = {
   ],
   moreDetails:
     "Integrated HRMS empowers HR departments by automating routine tasks and centralizing all records in one place. It enables better decision-making with real-time insights, simplifies compliance, and enhances employee engagement through self-service features and mobile-friendly dashboards.",
-  screenshots: [p1Img, p1Img, p1Img, p1Img, p1Img, p1Img],
+  screenshots: [p1Img, p2Img, p3Img, p4Img, p5Img],
   details: {
     launched: "2024",
     version: "1.5",

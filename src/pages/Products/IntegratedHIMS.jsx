@@ -18,8 +18,13 @@ import {
 import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
 
-import autoCureImg from "../../assets/products_logos/autocurehub.jpg";
-import p1Img from "../../assets/autocure_images/p1.jpg";
+import autoCureImg from "../../assets/products_logos/HIMS.jpg";
+const p1Img = "https://www.manoramahealthcare.com/blog/wp-content/uploads/2022/10/Hospital-Information-Management-System-scaled.jpg";
+const p2Img = "https://www.karexpert.com/wp-content/uploads/2024/06/hospital-information-management-system.webp";
+const p3Img = "https://docpulse.com/wp-content/uploads/2024/02/slider-small-1.jpg";
+const p4Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRsrGvuH62pc3846I8hPDRwfOFaxZUT8owLA&s";
+const p5Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIXaFp3pofqi742k3_MDdo7xXiKFUiahenzw&s";
+
 
 const product = {
   name: "Integrated HIMS",
@@ -36,7 +41,7 @@ const product = {
   ],
   moreDetails:
     "From front desk to pharmacy and billing, HIMS digitizes hospital operations while ensuring scalability, compliance, and analytics for continuous improvement. Designed for clinics to multispecialty hospitals, it’s a central hub that improves patient experience and institutional efficiency.",
-  screenshots: [p1Img, p1Img, p1Img, p1Img, p1Img, p1Img],
+  screenshots: [p1Img, p2Img, p3Img, p4Img, p5Img],
   details: {
     launched: "2024",
     version: "3.1",

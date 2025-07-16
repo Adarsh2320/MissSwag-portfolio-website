@@ -3,12 +3,17 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  CheckCircle,
-  Sparkles,
-  Info,
   ArrowLeftCircle,
   ArrowRightCircle,
   ExternalLink,
+  Sparkles,
+  Info,
+  Rocket,
+  Users,
+  LayoutDashboard,
+  Eye,
+  Smartphone,
+  Lock,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
@@ -39,12 +44,12 @@ const product = {
   description:
     "Macha Platform is an all-in-one multi-vendor marketplace engine designed to empower local businesses, service providers, and customers. It simplifies onboarding, discovery, and transactions with real-time tracking and transparent workflows.",
   highlights: [
-    "Real-Time Service Tracking",
-    "Easy Vendor Onboarding",
-    "Integrated Review & Rating System",
-    "Admin Dashboard for Complete Oversight",
-    "Mobile-Optimized Interfaces for Vendors & Users",
-    "Secure Payments & Transaction History Logs"
+    { icon: Eye, label: "Real-Time Service Tracking" },
+    { icon: Users, label: "Easy Vendor Onboarding" },
+    { icon: Rocket, label: "Integrated Review & Rating System" },
+    { icon: LayoutDashboard, label: "Admin Dashboard for Complete Oversight" },
+    { icon: Smartphone, label: "Mobile-Optimized Interfaces for Vendors & Users" },
+    { icon: Lock, label: "Secure Payments & Transaction History Logs" }
   ],
   screenshots: [p1Img, p2Img, p3Img, p4Img, p5Img, p6Img, p7Img, p8Img, p9Img, p10Img, p11Img, p12Img, p13Img, p14Img, p15Img, p16Img, p17Img, p18Img],
   details: {
@@ -65,7 +70,7 @@ const MachaPlatform = () => {
 
   return (
     <section className="relative bg-gradient-to-br from-[#0f172a] to-black text-white py-20 px-6 min-h-screen">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c')] bg-cover bg-center opacity-70 -z-10"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c')] bg-cover bg-center opacity-70 -z-10" />
 
       <div className="max-w-6xl mx-auto text-xl">
         <button
@@ -127,18 +132,18 @@ const MachaPlatform = () => {
         </motion.div>
 
         <div className="mb-20">
-          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Gallery</h2>
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Screenshots</h2>
           <div className="relative overflow-x-hidden">
             <div className="flex gap-6 animate-marquee whitespace-nowrap">
               {[...product.screenshots, ...product.screenshots].map((img, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[600px] h-[350px] rounded-xl border border-green-700 overflow-hidden shadow-lg"
+                  className="flex-shrink-0 w-[600px] h-[350px] rounded-xl overflow-hidden shadow-lg"
                 >
                   <img
                     src={img}
                     alt={`Screenshot ${i + 1}`}
-                    className="w-full h-full object-fit"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               ))}
@@ -147,35 +152,31 @@ const MachaPlatform = () => {
         </div>
 
         <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="mb-20"
-          >
-            <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
-              Key Highlights
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-              {product.highlights.map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-[#111827] border border-green-500/10 p-6 rounded-2xl shadow hover:shadow-green-500/20 transition"
-                >
-                  <div className="w-full h-40 rounded-xl mb-4 overflow-hidden border border-green-500 bg-green-400/5">
-                    <img
-                      src=""
-                      alt={`Highlight ${i + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <p className="text-gray-100 text-bold text-base leading-relaxed">
-                    {item}
-                  </p>
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
+            Key Highlights
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+            {product.highlights.map((item, i) => (
+              <div
+                key={i}
+                className="bg-[#111827] p-6 rounded-2xl shadow hover:shadow-green-500/30 group transition duration-300 transform hover:scale-105"
+              >
+                <div className="w-full h-36 mb-4 flex items-center justify-center rounded-xl">
+                  <item.icon className="w-16 h-16 text-green-400 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-              ))}
-            </div>
-          </motion.div>
+                <p className="text-white text-lg leading-relaxed text-center group-hover:text-green-100 transition-colors duration-300">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -184,7 +185,7 @@ const MachaPlatform = () => {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-10 text-gray-300 text-lg"
         >
-          <div className=" p-8 rounded-xl shado">
+          <div className="p-8 rounded-xl ml-10">
             <h3 className="text-2xl font-semibold text-white mb-6">
               <Info className="inline mr-2" /> Product Details
             </h3>
@@ -194,7 +195,7 @@ const MachaPlatform = () => {
             <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
           </div>
 
-          <div className=" p-8 rounded-xl shadow  flex flex-col items-center justify-center text-center">
+          <div className="p-8 rounded-xl shadow flex flex-col items-center justify-center text-center">
             <Sparkles className="text-green-400 w-14 h-14 animate-pulse mb-3" />
             <p className="text-2xl font-medium">
               Connecting vendors to a smarter future.
@@ -202,6 +203,7 @@ const MachaPlatform = () => {
           </div>
         </motion.div>
       </div>
+
       <WhatsappButton />
     </section>
   );
