@@ -14,7 +14,7 @@ const Contact = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative w-full h-screen flex items-center justify-end px-6">
+      <section className="relative w-full h-screen flex items-center justify-end mt-20 px-6">
         {/* Background Image */}
         <img
           src={contact}

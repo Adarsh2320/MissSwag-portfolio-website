@@ -14,7 +14,24 @@ import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
 
 import autoCureImg from "../../assets/products_logos/macha.jpg";
-import p1Img from "../../assets/autocure_images/p1.jpg";
+import p1Img from "../../assets/Macha Screenshots/p1.png";
+import p2Img from "../../assets/Macha Screenshots/p2.png";
+import p3Img from "../../assets/Macha Screenshots/p3.png";
+import p4Img from "../../assets/Macha Screenshots/p4.png"; 
+import p5Img from "../../assets/Macha Screenshots/p5.png";
+import p6Img from "../../assets/Macha Screenshots/p6.png";
+import p7Img from "../../assets/Macha Screenshots/p7.png";
+import p8Img from "../../assets/Macha Screenshots/p8.png";
+import p9Img from "../../assets/Macha Screenshots/p9.png";
+import p10Img from "../../assets/Macha Screenshots/p10.png";
+import p11Img from "../../assets/Macha Screenshots/p11.png";
+import p12Img from "../../assets/Macha Screenshots/p12.png";
+import p13Img from "../../assets/Macha Screenshots/p13.png";
+import p14Img from "../../assets/Macha Screenshots/p14.png";
+import p15Img from "../../assets/Macha Screenshots/p15.png";
+import p16Img from "../../assets/Macha Screenshots/p16.png";
+import p17Img from "../../assets/Macha Screenshots/p17.png";
+import p18Img from "../../assets/Macha Screenshots/p18.png";
 
 const product = {
   name: "Macha Platform",
@@ -29,7 +46,7 @@ const product = {
     "Mobile-Optimized Interfaces for Vendors & Users",
     "Secure Payments & Transaction History Logs"
   ],
-  screenshots: [p1Img, p1Img, p1Img, p1Img, p1Img, p1Img],
+  screenshots: [p1Img, p2Img, p3Img, p4Img, p5Img, p6Img, p7Img, p8Img, p9Img, p10Img, p11Img, p12Img, p13Img, p14Img, p15Img, p16Img, p17Img, p18Img],
   details: {
     launched: "2023",
     version: "3.1",
@@ -110,18 +127,18 @@ const MachaPlatform = () => {
         </motion.div>
 
         <div className="mb-20">
-          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Screenshots</h2>
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Gallery</h2>
           <div className="relative overflow-x-hidden">
             <div className="flex gap-6 animate-marquee whitespace-nowrap">
               {[...product.screenshots, ...product.screenshots].map((img, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl border border-green-700 overflow-hidden shadow-lg"
+                  className="flex-shrink-0 w-[600px] h-[350px] rounded-xl border border-green-700 overflow-hidden shadow-lg"
                 >
                   <img
                     src={img}
                     alt={`Screenshot ${i + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-fit"
                   />
                 </div>
               ))}
@@ -130,24 +147,35 @@ const MachaPlatform = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h2 className="text-4xl font-semibold text-green-300 mb-8 text-center">
-            Key Highlights
-          </h2>
-          <ul className="space-y-5 max-w-4xl mx-auto text-xl text-gray-300">
-            {product.highlights.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <CheckCircle size={26} className="text-green-500 mt-1" />
-                {item}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="mb-20"
+          >
+            <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
+              Key Highlights
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+              {product.highlights.map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-[#111827] border border-green-500/10 p-6 rounded-2xl shadow hover:shadow-green-500/20 transition"
+                >
+                  <div className="w-full h-40 rounded-xl mb-4 overflow-hidden border border-green-500 bg-green-400/5">
+                    <img
+                      src=""
+                      alt={`Highlight ${i + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <p className="text-gray-100 text-bold text-base leading-relaxed">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -156,7 +184,7 @@ const MachaPlatform = () => {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-10 text-gray-300 text-lg"
         >
-          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700">
+          <div className=" p-8 rounded-xl shado">
             <h3 className="text-2xl font-semibold text-white mb-6">
               <Info className="inline mr-2" /> Product Details
             </h3>
@@ -166,7 +194,7 @@ const MachaPlatform = () => {
             <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
           </div>
 
-          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700 flex flex-col items-center justify-center text-center">
+          <div className=" p-8 rounded-xl shadow  flex flex-col items-center justify-center text-center">
             <Sparkles className="text-green-400 w-14 h-14 animate-pulse mb-3" />
             <p className="text-2xl font-medium">
               Connecting vendors to a smarter future.

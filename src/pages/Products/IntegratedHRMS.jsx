@@ -1,14 +1,19 @@
-// Updated: IntegratedHRMS.jsx with modern design, animations, and content
+// File: src/pages/Products/IntegratedHRMS.jsx
 
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  CheckCircle,
-  Sparkles,
-  Info,
   ArrowLeftCircle,
   ArrowRightCircle,
   ExternalLink,
+  Sparkles,
+  Info,
+  ClipboardCheck,
+  UserCircle2,
+  ShieldCheck,
+  Users,
+  MailCheck,
+  CalendarCheck,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
@@ -22,12 +27,12 @@ const product = {
   description:
     "Integrated HRMS is a robust and scalable platform for managing all HR operations. It helps businesses automate payroll, streamline onboarding, track attendance, monitor performance, and handle leave management — ensuring efficiency, compliance, and employee satisfaction.",
   highlights: [
-    "Automated Payroll & Salary Slips",
-    "Employee Onboarding & Exit Process",
-    "Leave, Attendance & Shift Management",
-    "Performance Appraisal & Document Storage",
-    "Role-Based Access for Admins, HR, and Employees",
-    "Analytics Dashboard with HR Metrics",
+    { icon: CalendarCheck, label: "Automated Payroll & Salary Slips" },
+    { icon: ClipboardCheck, label: "Employee Onboarding & Exit Process" },
+    { icon: Users, label: "Leave, Attendance & Shift Management" },
+    { icon: UserCircle2, label: "Performance Appraisal & Document Storage" },
+    { icon: ShieldCheck, label: "Role-Based Access for Admins, HR, and Employees" },
+    { icon: MailCheck, label: "Analytics Dashboard with HR Metrics" },
   ],
   moreDetails:
     "Integrated HRMS empowers HR departments by automating routine tasks and centralizing all records in one place. It enables better decision-making with real-time insights, simplifies compliance, and enhances employee engagement through self-service features and mobile-friendly dashboards.",
@@ -37,7 +42,7 @@ const product = {
     version: "1.5",
     techStack: "React, Node.js, Express, MongoDB, TailwindCSS",
     platforms: "Web App (Admin + Employee Dashboards)",
-    liveLink: "https://integrated-hrms.vercel.app/",
+    link: "https://integrated-hrms.vercel.app/",
   },
 };
 
@@ -72,7 +77,7 @@ const IntegratedHRMS = () => {
             className="mx-auto w-40 h-40 rounded-full object-cover mb-5 border-4 border-green-500 shadow-xl"
           />
           <a
-            href={product.details.liveLink}
+            href={product.details.link}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 text-green-400 text-5xl font-bold hover:text-green-300 transition"
@@ -88,7 +93,7 @@ const IntegratedHRMS = () => {
             className="mt-8"
           >
             <a
-              href={product.details.liveLink}
+              href={product.details.link}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white text-xl font-semibold shadow-lg transition"
@@ -116,7 +121,7 @@ const IntegratedHRMS = () => {
               {[...product.screenshots, ...product.screenshots].map((img, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl border border-green-700 overflow-hidden shadow-lg"
+                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl overflow-hidden shadow-lg"
                 >
                   <img
                     src={img}
@@ -136,17 +141,24 @@ const IntegratedHRMS = () => {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-4xl font-semibold text-green-300 mb-8 text-center">
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
             Key Highlights
           </h2>
-          <ul className="space-y-5 max-w-4xl mx-auto text-xl text-gray-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
             {product.highlights.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <CheckCircle size={26} className="text-green-500 mt-1" />
-                {item}
-              </li>
+              <div
+                key={i}
+                className="bg-[#111827] p-6 rounded-2xl shadow hover:shadow-green-500/30 group transition duration-300 transform hover:scale-105"
+              >
+                <div className="w-full h-36 mb-4 flex items-center justify-center rounded-xl">
+                  <item.icon className="w-16 h-16 text-green-400 group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <p className="text-white text-lg leading-relaxed text-center group-hover:text-green-100 transition-colors duration-300">
+                  {item.label}
+                </p>
+              </div>
             ))}
-          </ul>
+          </div>
         </motion.div>
 
         <motion.div
@@ -156,7 +168,7 @@ const IntegratedHRMS = () => {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-10 text-gray-300 text-lg"
         >
-          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700">
+          <div className="p-8 rounded-xl ml-10">
             <h3 className="text-2xl font-semibold text-white mb-6">
               <Info className="inline mr-2" /> Product Details
             </h3>
@@ -166,7 +178,7 @@ const IntegratedHRMS = () => {
             <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
           </div>
 
-          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700 flex flex-col items-center justify-center text-center">
+          <div className="p-8 rounded-xl shadow flex flex-col items-center justify-center text-center">
             <Sparkles className="text-green-400 w-14 h-14 animate-pulse mb-3" />
             <p className="text-2xl font-medium">
               Empowering HR with automation and insight.

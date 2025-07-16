@@ -1,52 +1,45 @@
-// File: src/pages/Products/AutoCure_Hub.jsx
-
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
+  CheckCircle,
+  Sparkles,
+  Info,
   ArrowLeftCircle,
   ArrowRightCircle,
   ExternalLink,
-  Sparkles,
-  Info,
-  CalendarCheck,
-  Users,
-  ClipboardCheck,
-  UserCircle2,
-  ShieldCheck,
-  MailCheck,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
 
-import autoCureImg from "../../assets/products_logos/autocurehub.jpg";
-import p1Img from "../../assets/autocure_images/p1.jpg";
+import momoLogo from "../../assets/products_logos/autocurehub.jpg";
+import tshirt1 from "../../assets/products_logos/autocurehub.jpg";
 
 const product = {
-  name: "AutoCure Hub",
-  tagline: "Smart Digital Vehicle Service Platform",
+  name: "Momo Moffin",
+  tagline: "Wear Your Mood. Rule the Street.",
   description:
-    "AutoCure Hub is a role-based online vehicle service management system that streamlines service bookings, task assignments, real-time progress tracking, and customer feedback. It digitizes operations for managers, employees, and users through individual dashboards, improving transparency and operational efficiency.",
+    "Momo Moffin is a trendy t-shirt brand made for bold, expressive individuals. From artistic prints to minimal classics, each piece is crafted with premium cotton and street-smart attitude. Whether you're dressing up for a chill weekend or making a statement at college, Momo Moffin fits your lifestyle.",
   highlights: [
-    { icon: CalendarCheck, label: "Online Service Booking with Real-Time Slot Availability" },
-    { icon: ClipboardCheck, label: "Manager Dashboard for Task Allocation & Tracking" },
-    { icon: Users, label: "Employee Dashboard for Task Updates & Status" },
-    { icon: UserCircle2, label: "User Dashboard for Booking History & Feedback" },
-    { icon: ShieldCheck, label: "Role-Based Secure Login for Manager, Employee & User" },
-    { icon: MailCheck, label: "Automated Email Notifications and Real-Time Updates" },
+    "100% Premium Cotton & Eco-Friendly Dyes",
+    "Limited Edition Artist Collabs & Designs",
+    "Unisex Fit with All-Day Comfort",
+    "Easy Returns & Nationwide Delivery",
+    "Available in S to XXL Sizes",
+    "Exclusive Drops Every Month",
   ],
   moreDetails:
-    "The platform focuses on making vehicle servicing seamless and reliable by integrating AI-enabled scheduling, real-time notifications, and feedback systems. It eliminates manual bottlenecks by automating booking and monitoring, helping garages and customers stay synchronized. Designed with mobile-first responsiveness, it offers dashboards tailored to every stakeholder, providing clarity and operational control at all times.",
-  screenshots: [p1Img, p1Img, p1Img, p1Img, p1Img, p1Img],
+    "Momo Moffin isn’t just fashion — it’s a movement. Our t-shirts are born from a desire to blend street style with storytelling. With every drop, we empower creators, support ethical production, and bring personality to your wardrobe.",
+  screenshots: [tshirt1, tshirt1, tshirt1, tshirt1, tshirt1],
   details: {
-    launched: "2024",
-    version: "1.0",
-    techStack: "HTML, CSS, JavaScript, Node.js, Express.js, MySQL",
-    platforms: "Web (Responsive for Mobile/Desktop)",
-    link: "https://autocure-hub.vercel.app/",
+    launched: "2025",
+    version: "Collection 1.0",
+    techStack: "React, TailwindCSS, Firebase, Stripe",
+    platforms: "Web & Mobile (Progressive Web App)",
+    link: "https://momomoffin.vercel.app/",
   },
 };
 
-const AutoCure_Hub = () => {
+const MomoMoffin = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -54,8 +47,8 @@ const AutoCure_Hub = () => {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-[#0f172a] to-black text-white py-20 px-6 min-h-screen">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1580894908361-967195033d76')] bg-cover bg-center opacity-70 -z-10"></div>
+    <section className="relative bg-gradient-to-br from-[#1f2937] to-black text-white py-20 px-6 min-h-screen">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618354691373-95d48b08c284')] bg-cover bg-center opacity-60 -z-10"></div>
 
       <div className="max-w-6xl mx-auto text-xl">
         <button
@@ -72,8 +65,8 @@ const AutoCure_Hub = () => {
           className="text-center mb-12"
         >
           <img
-            src={autoCureImg}
-            alt="AutoCure Hub Logo"
+            src={momoLogo}
+            alt="Momo Moffin Logo"
             className="mx-auto w-40 h-40 rounded-full object-cover mb-5 border-4 border-green-500 shadow-xl"
           />
           <a
@@ -98,7 +91,7 @@ const AutoCure_Hub = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white text-xl font-semibold shadow-lg transition"
             >
-              <ExternalLink className="mr-2" /> Visit AutoCure Hub Website
+              <ExternalLink className="mr-2" /> Visit Momo Moffin Store
             </a>
           </motion.div>
         </motion.div>
@@ -115,13 +108,13 @@ const AutoCure_Hub = () => {
         </motion.div>
 
         <div className="mb-20">
-          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Screenshots</h2>
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Gallery</h2>
           <div className="relative overflow-x-hidden">
             <div className="flex gap-6 animate-marquee whitespace-nowrap">
               {[...product.screenshots, ...product.screenshots].map((img, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl overflow-hidden shadow-lg"
+                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl border border-green-700 overflow-hidden shadow-lg"
                 >
                   <img
                     src={img}
@@ -141,24 +134,17 @@ const AutoCure_Hub = () => {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
-            Key Highlights
+          <h2 className="text-4xl font-semibold text-green-300 mb-8 text-center">
+            Why Momo Moffin?
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+          <ul className="space-y-5 max-w-4xl mx-auto text-xl text-gray-300">
             {product.highlights.map((item, i) => (
-              <div
-                key={i}
-                className="bg-[#111827] p-6 rounded-2xl shadow hover:shadow-green-500/30 group transition duration-300 transform hover:scale-105"
-              >
-                <div className="w-full h-36 mb-4 flex items-center justify-center rounded-xl">
-                  <item.icon className="w-16 h-16 text-green-400 group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <p className="text-white text-lg leading-relaxed text-center group-hover:text-green-100 transition-colors duration-300">
-                  {item.label}
-                </p>
-              </div>
+              <li key={i} className="flex items-start gap-3">
+                <CheckCircle size={26} className="text-green-500 mt-1" />
+                {item}
+              </li>
             ))}
-          </div>
+          </ul>
         </motion.div>
 
         <motion.div
@@ -168,7 +154,7 @@ const AutoCure_Hub = () => {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-10 text-gray-300 text-lg"
         >
-          <div className="p-8 rounded-xl ml-10">
+          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700">
             <h3 className="text-2xl font-semibold text-white mb-6">
               <Info className="inline mr-2" /> Product Details
             </h3>
@@ -178,10 +164,10 @@ const AutoCure_Hub = () => {
             <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
           </div>
 
-          <div className="p-8 rounded-xl shadow flex flex-col items-center justify-center text-center">
+          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700 flex flex-col items-center justify-center text-center">
             <Sparkles className="text-green-400 w-14 h-14 animate-pulse mb-3" />
             <p className="text-2xl font-medium">
-              Designed for modern garages and smart users.
+              Crafted to express. Styled to impress.
             </p>
           </div>
         </motion.div>
@@ -192,4 +178,4 @@ const AutoCure_Hub = () => {
   );
 };
 
-export default AutoCure_Hub;
+export default MomoMoffin;

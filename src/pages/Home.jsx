@@ -1,3 +1,5 @@
+
+
 // File: src/pages/Home.jsx
 
 import React, { useState } from "react";
@@ -12,8 +14,9 @@ import "swiper/css/navigation";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import WhatsappButton from "../components/WhatsappButton";
 
-// HERO SLIDES (replace with your own paths if needed)
+// HERO SLIDES
 import slide1 from "../assets/photo1.jpg";
 import slide2 from "../assets/photo2.jpg";
 import slide3 from "../assets/photo3.jpg";
@@ -35,16 +38,13 @@ import missSwagImg from "../assets/products_logos/missswag.jpg";
 import machaImg from "../assets/products_logos/macha.jpg";
 import saathiImg from "../assets/products_logos/saathicare.jpg";
 import autoCureImg from "../assets/products_logos/autocurehub.jpg";
-
+import HIMS from "../assets/products_logos/HIMS.jpg";
+import HRMS from "../assets/products_logos/HRMS.jpg";
+import EMS_LMS from "../assets/products_logos/EMS+LMS.jpg";
 import logo from "../assets/logo.jpg";
 
-// ICON (example only, keep if you use it)
 import { Info } from "lucide-react";
-import WhatsappButton from "../components/WhatsappButton";
 
-// ---------------------------------------------------------------------------
-// Animation variants (re‑used)
-// ---------------------------------------------------------------------------
 const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.15 } },
@@ -60,9 +60,6 @@ const fadeUp = {
   },
 };
 
-// ---------------------------------------------------------------------------
-// Static data
-// ---------------------------------------------------------------------------
 const slides = [
   {
     image: slide1,
@@ -82,119 +79,38 @@ const slides = [
 ];
 
 const products = [
-  {
-    title: "MissSwag",
-    slug: "Missswag",
-    image: missSwagImg,
-    desc: "Patient engagement platform tailored for modern clinics and hospitals.",
-  },
-  {
-    title: "Macha Platform",
-    slug: "Macha",
-    image: machaImg,
-    desc: "Smart delivery service platform for vendors and customers.",
-  },
-  {
-    title: "Saathi Care",
-    slug: "SaathiCare",
-    image: saathiImg,
-    desc: "On-demand home healthcare and elderly assistance mobile solution.",
-  },
-  {
-    title: "AutoCure Hub",
-    slug: "AutoCure_Hub",
-    image: autoCureImg,
-    desc: "AI-powered vehicle service management and diagnostics interface.",
-  },
-  {
-    title: "Integrated HIMS",
-    slug: "IntegratedHIMS",
-    image: logo,
-    desc: "Comprehensive hospital management system with real-time analytics.",
-  },
-  {
-    title: "Integrated HRMS",
-    slug: "IntegratedHRMS",
-    image: logo,
-    desc: "Streamlined human resource solution for modern enterprise teams.",
-  },
-  {
-    title: "EMS + LMS",
-    slug: "IntegratedEMS_LMS",
-    image: logo,
-    desc: "Unified Emergency + Learning Management System for smart institutions.",
-  },
+  { title: "MissSwag", slug: "Missswag", image: missSwagImg, desc: "Patient engagement platform tailored for modern clinics and hospitals." },
+  { title: "Macha Platform", slug: "Macha", image: machaImg, desc: "Smart delivery service platform for vendors and customers." },
+  { title: "Saathi Care", slug: "SaathiCare", image: saathiImg, desc: "On-demand home healthcare and elderly assistance mobile solution." },
+  { title: "AutoCure Hub", slug: "AutoCure_Hub", image: autoCureImg, desc: "AI-powered vehicle service management and diagnostics interface." },
+  { title: "Integrated HIMS", slug: "IntegratedHIMS", image: HIMS, desc: "Comprehensive hospital management system with real-time analytics." },
+  { title: "Integrated HRMS", slug: "IntegratedHRMS", image: HRMS, desc: "Streamlined human resource solution for modern enterprise teams." },
+  { title: "EMS + LMS", slug: "IntegratedEMS_LMS", image: EMS_LMS, desc: "Unified Emergency + Learning Management System for smart institutions." },
+  { title: "Momo Moffin", slug: "Momo_Moffin", image: logo, desc: "Effortless Fashion. Everyday Comfort. Curated for the Modern Wardrobe." },
+
 ];
 
 const serviceData = [
-  {
-    title: "Digital Transformation",
-    image: dtImg,
-    slug: "digitaltransformation",
-    desc: "Driving enterprise-wide innovation with strategic digital adoption and agile execution.",
-  },
-  {
-    title: "Product Engineering",
-    image: peImg,
-    slug: "productengineering",
-    desc: "Designing, building, and scaling next‑gen products that fuel business evolution.",
-  },
-  {
-    title: "Digital Marketing",
-    image: dmImg,
-    slug: "digitalmarketing",
-    desc: "Boosting brand presence with performance‑driven and creative marketing strategies.",
-  },
-  {
-    title: "Software Development",
-    image: sdImg,
-    slug: "softwaredevelopment",
-    desc: "Crafting robust, scalable software tailored to meet dynamic business demands.",
-  },
-  {
-    title: "Cloud and Infrastructure",
-    image: ciImg,
-    slug: "cloudinfrastructure",
-    desc: "Empowering businesses with secure, scalable, and optimized cloud infrastructure solutions.",
-  },
-  {
-    title: "IT Consulting & Staffing",
-    image: itsImg,
-    slug: "itconsultingstaffing",
-    desc: "Delivering expert guidance and skilled professionals to support your IT objectives.",
-  },
-  {
-    title: "Outsourcing Services",
-    image: osImg,
-    slug: "outsourcingservices",
-    desc: "Enhancing operational efficiency through reliable and strategic outsourcing models.",
-  },
-  {
-    title: "Advanced Tech Integration",
-    image: atiImg,
-    slug: "advancedtechnologyintegration",
-    desc: "Integrating cutting‑edge technologies to streamline processes and drive innovation.",
-  },
-  {
-    title: "Data Engineering",
-    image: deImg,
-    slug: "dataengineering",
-    desc: "Building powerful data architectures for real‑time analytics and informed decisions.",
-  },
+  { title: "Digital Transformation", image: dtImg, slug: "digitaltransformation", desc: "Driving enterprise-wide innovation with strategic digital adoption and agile execution." },
+  { title: "Product Engineering", image: peImg, slug: "productengineering", desc: "Designing, building, and scaling next‑gen products that fuel business evolution." },
+  { title: "Digital Marketing", image: dmImg, slug: "digitalmarketing", desc: "Boosting brand presence with performance‑driven and creative marketing strategies." },
+  { title: "Software Development", image: sdImg, slug: "softwaredevelopment", desc: "Crafting robust, scalable software tailored to meet dynamic business demands." },
+  { title: "Cloud and Infrastructure", image: ciImg, slug: "cloudinfrastructure", desc: "Empowering businesses with secure, scalable, and optimized cloud infrastructure solutions." },
+  { title: "IT Consulting & Staffing", image: itsImg, slug: "itconsultingstaffing", desc: "Delivering expert guidance and skilled professionals to support your IT objectives." },
+  { title: "Outsourcing Services", image: osImg, slug: "outsourcingservices", desc: "Enhancing operational efficiency through reliable and strategic outsourcing models." },
+  { title: "Advanced Tech Integration", image: atiImg, slug: "advancedtechnologyintegration", desc: "Integrating cutting‑edge technologies to streamline processes and drive innovation." },
+  { title: "Data Engineering", image: deImg, slug: "dataengineering", desc: "Building powerful data architectures for real‑time analytics and informed decisions." },
 ];
 
-// ---------------------------------------------------------------------------
-// Component
-// ---------------------------------------------------------------------------
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white overflow-x-hidden">
       <Navbar />
 
-      {/* Hero Section with Swiper */}
-      <section className="relative w-full h-[calc(100vh-80px)] overflow-hidden">
+       {/* Hero Section with Swiper */}
+      <section className="relative w-full h-[calc(100vh-80px)] overflow-hidden mt-20">
         <Swiper
           spaceBetween={0}
           centeredSlides
@@ -596,6 +512,7 @@ const Home = () => {
         </div>
       </section>
 
+
       <WhatsappButton />
       <Footer />
     </div>
@@ -603,3 +520,4 @@ const Home = () => {
 };
 
 export default Home;
+

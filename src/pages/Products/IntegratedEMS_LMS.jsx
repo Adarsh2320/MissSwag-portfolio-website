@@ -1,17 +1,24 @@
+// File: src/pages/Products/EMSLMS.jsx
+
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  CheckCircle,
-  Sparkles,
-  Info,
   ArrowLeftCircle,
   ArrowRightCircle,
   ExternalLink,
+  Sparkles,
+  Info,
+  Video,
+  AlertTriangle,
+  ShieldCheck,
+  Brain,
+  Download,
+  BellRing,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
 
-import autoCureImg from "../../assets/products_logos/autocurehub.jpg";
+import logoImg from "../../assets/products_logos/autocurehub.jpg";
 import p1Img from "../../assets/autocure_images/p1.jpg";
 
 const product = {
@@ -20,12 +27,12 @@ const product = {
   description:
     "EMS + LMS is an integrated web solution combining Emergency Management Systems (EMS) with Learning Management Systems (LMS). It helps educational institutions and organizations maintain safety while delivering uninterrupted learning. From instant alerts to remote classrooms, it provides real-time coordination and continuous skill development.",
   highlights: [
-    "Live Digital Classrooms with Attendance and Recordings",
-    "Real-Time Emergency Alerts with Geo-Fencing",
-    "Role-Based Dashboards for Admins, Teachers, and Responders",
-    "AI-Enabled Incident Prediction and Escalation",
-    "Offline Access and Backup Learning Materials",
-    "Push Notifications and Secure Communication Channels",
+    { icon: Video, label: "Live Digital Classrooms with Attendance and Recordings" },
+    { icon: AlertTriangle, label: "Real-Time Emergency Alerts with Geo-Fencing" },
+    { icon: ShieldCheck, label: "Role-Based Dashboards for Admins, Teachers, and Responders" },
+    { icon: Brain, label: "AI-Enabled Incident Prediction and Escalation" },
+    { icon: Download, label: "Offline Access and Backup Learning Materials" },
+    { icon: BellRing, label: "Push Notifications and Secure Communication Channels" },
   ],
   screenshots: [p1Img, p1Img, p1Img, p1Img, p1Img, p1Img],
   details: {
@@ -63,7 +70,7 @@ const EMSLMS = () => {
           className="text-center mb-12"
         >
           <img
-            src={autoCureImg}
+            src={logoImg}
             alt="EMS LMS Logo"
             className="mx-auto w-40 h-40 rounded-full object-cover mb-5 border-4 border-green-500 shadow-xl"
           />
@@ -102,7 +109,9 @@ const EMSLMS = () => {
           className="bg-[#0f172a] p-10 rounded-2xl shadow-xl border-l-8 border-green-500 mb-16 text-gray-300 leading-relaxed text-xl"
         >
           <p className="mb-6">{product.description}</p>
-          <p className="text-gray-400">This system is perfect for crisis-resilient institutions needing uninterrupted education alongside swift emergency response. It supports both synchronous and asynchronous learning, centralized SOP dissemination, and secure stakeholder communication during any crisis.</p>
+          <p className="text-gray-400">
+            This system is perfect for crisis-resilient institutions needing uninterrupted education alongside swift emergency response. It supports both synchronous and asynchronous learning, centralized SOP dissemination, and secure stakeholder communication during any crisis.
+          </p>
         </motion.div>
 
         <div className="mb-20">
@@ -112,7 +121,7 @@ const EMSLMS = () => {
               {[...product.screenshots, ...product.screenshots].map((img, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl border border-green-700 overflow-hidden shadow-lg"
+                  className="flex-shrink-0 w-[600px] h-[350px] rounded-xl overflow-hidden shadow-lg"
                 >
                   <img
                     src={img}
@@ -132,17 +141,24 @@ const EMSLMS = () => {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-4xl font-semibold text-green-300 mb-8 text-center">
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
             Key Highlights
           </h2>
-          <ul className="space-y-5 max-w-4xl mx-auto text-xl text-gray-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
             {product.highlights.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <CheckCircle size={26} className="text-green-500 mt-1" />
-                {item}
-              </li>
+              <div
+                key={i}
+                className="bg-[#111827] p-6 rounded-2xl shadow hover:shadow-green-500/30 group transition duration-300 transform hover:scale-105"
+              >
+                <div className="w-full h-36 mb-4 flex items-center justify-center rounded-xl">
+                  <item.icon className="w-16 h-16 text-green-400 group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <p className="text-white text-lg leading-relaxed text-center group-hover:text-green-100 transition-colors duration-300">
+                  {item.label}
+                </p>
+              </div>
             ))}
-          </ul>
+          </div>
         </motion.div>
 
         <motion.div
@@ -152,7 +168,7 @@ const EMSLMS = () => {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-10 text-gray-300 text-lg"
         >
-          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700">
+          <div className="p-8 rounded-xl ml-10">
             <h3 className="text-2xl font-semibold text-white mb-6">
               <Info className="inline mr-2" /> Product Details
             </h3>
@@ -162,7 +178,7 @@ const EMSLMS = () => {
             <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
           </div>
 
-          <div className="bg-[#111827] p-8 rounded-xl shadow border border-green-700 flex flex-col items-center justify-center text-center">
+          <div className="p-8 rounded-xl shadow flex flex-col items-center justify-center text-center">
             <Sparkles className="text-green-400 w-14 h-14 animate-pulse mb-3" />
             <p className="text-2xl font-medium">
               EMS and LMS, streamlined for institutions of tomorrow.

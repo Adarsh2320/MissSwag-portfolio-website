@@ -13,7 +13,7 @@ const About = () => {
       <Navbar />
 
       {/* About Section */}
-      <section className="relative py-24 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white overflow-hidden">
+      <section className="relative py-24 px-6 mt-20 bg-gradient-to-b from-[#0f172a] to-black text-white overflow-hidden">
         {/* Floating Background Shape */}
         <div className="absolute -top-20 -left-20 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-float z-0" />
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-green-700/10 rounded-full blur-2xl animate-pulse z-0" />
@@ -535,7 +535,7 @@ const About = () => {
 
                   <div className="relative z-10 flex flex-col items-center">
                     {/* Image */}
-                    <div className="w-16 h-16 mb-4 rounded-xl overflow-hidden border border-green-500 bg-green-400/5">
+                    <div className="w-28 h-28 mb-4 rounded-xl overflow-hidden border border-green-500 bg-green-400/5">
                       <img
                         src={step.img}
                         alt={`${step.title} icon`}

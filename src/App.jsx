@@ -22,6 +22,7 @@ import ITConsultingStaffing from "./pages/Services/ITConsultingStaffing";
 import ProductEngineering from "./pages/Services/ProductEngineering";
 import OutsourcingServices from "./pages/Services/OutsourcingServices";
 import AdvancedTechnologyIntegration from "./pages/Services/AdvancedTechnologyIntegration";
+import Momo_Moffin from "./pages/Products/Momo_Moffin"; 
 
 export default function App() {
   return (
@@ -73,6 +74,7 @@ export default function App() {
           path="/services/advancedtechnologyintegration"
           element={<AdvancedTechnologyIntegration />}
         />
+        <Route path="/products/momo_moffin" element={<Momo_Moffin />} />
 
         {/* Add more routes as needed */}
       </Routes>
