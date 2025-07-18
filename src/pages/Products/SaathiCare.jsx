@@ -31,7 +31,6 @@ import p9Img from "../../assets/Saathi Care Screenshots/p9.jpeg";
 import p10Img from "../../assets/Saathi Care Screenshots/p10.jpeg";
 import p11Img from "../../assets/Saathi Care Screenshots/p11.jpeg";
 
-
 const product = {
   name: "Saathi Care",
   tagline: "On-Demand Home & Elderly Healthcare",
@@ -45,7 +44,19 @@ const product = {
     { icon: AlertTriangle, label: "Emergency Alert Integration with SOS" },
     { icon: Users, label: "Multi-user Support for Families" },
   ],
-  screenshots: [p1Img, p2Img, p3Img, p4Img, p5Img, p6Img, p7Img, p8Img, p9Img, p10Img, p11Img],
+  screenshots: [
+    p1Img,
+    p2Img,
+    p3Img,
+    p4Img,
+    p5Img,
+    p6Img,
+    p7Img,
+    p8Img,
+    p9Img,
+    p10Img,
+    p11Img,
+  ],
   details: {
     launched: "2023",
     version: "1.5",
@@ -135,8 +146,9 @@ const SaathiCare = () => {
           <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
             Screenshots
           </h2>
-          <div className="relative overflow-x-hidden">
-            <div className="flex gap-6 animate-marquee whitespace-nowrap">
+
+          <div className="relative overflow-hidden w-full">
+            <div className="flex gap-6 animate-marquee whitespace-nowrap w-[max-content]">
               {[...product.screenshots, ...product.screenshots].map(
                 (img, i) => (
                   <div

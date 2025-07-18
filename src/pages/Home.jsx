@@ -2,7 +2,7 @@
 
 // File: src/pages/Home.jsx
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
@@ -86,7 +86,7 @@ const products = [
   { title: "AutoCure Hub", slug: "AutoCure_Hub", image: autoCureImg, desc: "AI-powered vehicle service management and diagnostics interface." },
   { title: "Integrated HIMS", slug: "IntegratedHIMS", image: HIMS, desc: "Comprehensive hospital management system with real-time analytics." },
   { title: "Integrated HRMS", slug: "IntegratedHRMS", image: HRMS, desc: "Streamlined human resource solution for modern enterprise teams." },
-  { title: "EMS + LMS", slug: "IntegratedEMS_LMS", image: EMS_LMS, desc: "Unified Emergency + Learning Management System for smart institutions." },
+  { title: "EMS + LMS", slug: "IntegratedEMS_LMS", image: EMS_LMS, desc: "Emergency & Learning Management System for smart institutions." },
   { title: "Momo Moffin", slug: "Momo_Moffin", image: MomoMuffin, desc: "Effortless Fashion. Everyday Comfort. Curated for the Modern Wardrobe." },
 
 ];
@@ -103,8 +103,15 @@ const serviceData = [
   { title: "Data Engineering", image: deImg, slug: "dataengineering", desc: "Building powerful data architectures for real‑time analytics and informed decisions." },
 ];
 
+
+
 const Home = () => {
+
   const [activeIndex, setActiveIndex] = useState(0);
+  
+  useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }, []);
 
   return (
     <div className="bg-black text-white overflow-x-hidden">

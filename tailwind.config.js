@@ -44,6 +44,10 @@ export default {
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         glow: "glow 2s ease-in-out infinite alternate",
         "fade-in-up": "fadeInUp 1s ease-out",
+        bob: "bob 4s ease-in-out infinite", // Merged from second config
+        fall: "fall linear infinite", // Merged from second config
+        // Add the marquee animation here
+        marquee: "marquee 10s linear infinite", // Increased to 60 seconds
       },
       keyframes: {
         float: {
@@ -58,6 +62,20 @@ export default {
           "0%": { boxShadow: "0 0 0 rgba(6, 182, 212, 0.2)" },
           "100%": { boxShadow: "0 0 20px rgba(6, 182, 212, 0.6)" },
         },
+        bob: { // Merged from second config
+          "0%,100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-15px)" },
+        },
+        fall: { // Merged from second config
+          "0%": { transform: "translateY(-120vh) rotateX(20deg)" },
+          "100%": { transform: "translateY(120vh) rotateX(20deg)" },
+        },
+        // Add the marquee keyframes here
+
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" }, // This is crucial for continuous loop with duplicated content
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -68,29 +86,6 @@ export default {
         "inner-xl": "inset 0 4px 14px 0 rgba(0, 0, 0, 0.1)",
         "glow-cyan": "0 0 15px rgba(6, 182, 212, 0.5)",
         "glow-blue": "0 0 15px rgba(59, 130, 246, 0.5)",
-      },
-    },
-  },
-  plugins: [],
-};
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  theme: {
-    extend: {
-      // floating bob for images
-      animation: {
-        bob: "bob 4s ease-in-out infinite",
-        fall: "fall linear infinite",
-      },
-      keyframes: {
-        bob: {
-          "0%,100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-15px)" },
-        },
-        fall: {
-          "0%":   { transform: "translateY(-120vh) rotateX(20deg)" },
-          "100%": { transform: "translateY(120vh) rotateX(20deg)" },
-        },
       },
     },
   },

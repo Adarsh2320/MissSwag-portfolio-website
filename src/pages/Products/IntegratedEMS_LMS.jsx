@@ -19,12 +19,16 @@ import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
 
 import logoImg from "../../assets/products_logos/EMS+LMS.jpg";
-const p1Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlbGCvXeBtDGLB4YnMgNBKcgydPVAYcrgHdi-PjR8aXbI5xMcrH7d9tm5OuKomMyZxgVg&usqp=CAU";
-const p2Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4tTGyevAcMAFxOOJd0gsZeqIyJTzW-F7MZQ&s";
-const p3Img = "https://thinkpalm.com/wp-content/uploads/2017/11/Learning-Management-System.jpg";
-const p4Img = "https://thinkpalm.com/wp-content/uploads/2017/11/Learning-Management-System.jpg";
-const p5Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW-ljA5bYD7N6Fi2njnM04NzyOdKqqQ1KYbg&s";
-
+const p1Img =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlbGCvXeBtDGLB4YnMgNBKcgydPVAYcrgHdi-PjR8aXbI5xMcrH7d9tm5OuKomMyZxgVg&usqp=CAU";
+const p2Img =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4tTGyevAcMAFxOOJd0gsZeqIyJTzW-F7MZQ&s";
+const p3Img =
+  "https://thinkpalm.com/wp-content/uploads/2017/11/Learning-Management-System.jpg";
+const p4Img =
+  "https://thinkpalm.com/wp-content/uploads/2017/11/Learning-Management-System.jpg";
+const p5Img =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW-ljA5bYD7N6Fi2njnM04NzyOdKqqQ1KYbg&s";
 
 const product = {
   name: "EMS + LMS",
@@ -32,12 +36,24 @@ const product = {
   description:
     "EMS + LMS is an integrated web solution combining Emergency Management Systems (EMS) with Learning Management Systems (LMS). It helps educational institutions and organizations maintain safety while delivering uninterrupted learning. From instant alerts to remote classrooms, it provides real-time coordination and continuous skill development.",
   highlights: [
-    { icon: Video, label: "Live Digital Classrooms with Attendance and Recordings" },
-    { icon: AlertTriangle, label: "Real-Time Emergency Alerts with Geo-Fencing" },
-    { icon: ShieldCheck, label: "Role-Based Dashboards for Admins, Teachers, and Responders" },
+    {
+      icon: Video,
+      label: "Live Digital Classrooms with Attendance and Recordings",
+    },
+    {
+      icon: AlertTriangle,
+      label: "Real-Time Emergency Alerts with Geo-Fencing",
+    },
+    {
+      icon: ShieldCheck,
+      label: "Role-Based Dashboards for Admins, Teachers, and Responders",
+    },
     { icon: Brain, label: "AI-Enabled Incident Prediction and Escalation" },
     { icon: Download, label: "Offline Access and Backup Learning Materials" },
-    { icon: BellRing, label: "Push Notifications and Secure Communication Channels" },
+    {
+      icon: BellRing,
+      label: "Push Notifications and Secure Communication Channels",
+    },
   ],
   screenshots: [p1Img, p2Img, p3Img, p4Img, p5Img],
   details: {
@@ -87,7 +103,9 @@ const EMSLMS = () => {
           >
             {product.name} <ArrowRightCircle className="w-8 h-8" />
           </a>
-          <p className="text-2xl text-gray-300 italic mt-3">{product.tagline}</p>
+          <p className="text-2xl text-gray-300 italic mt-3">
+            {product.tagline}
+          </p>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -115,26 +133,35 @@ const EMSLMS = () => {
         >
           <p className="mb-6">{product.description}</p>
           <p className="text-gray-400">
-            This system is perfect for crisis-resilient institutions needing uninterrupted education alongside swift emergency response. It supports both synchronous and asynchronous learning, centralized SOP dissemination, and secure stakeholder communication during any crisis.
+            This system is perfect for crisis-resilient institutions needing
+            uninterrupted education alongside swift emergency response. It
+            supports both synchronous and asynchronous learning, centralized SOP
+            dissemination, and secure stakeholder communication during any
+            crisis.
           </p>
         </motion.div>
 
         <div className="mb-20">
-          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Screenshots</h2>
-          <div className="relative overflow-x-hidden">
-            <div className="flex gap-6 animate-marquee whitespace-nowrap">
-              {[...product.screenshots, ...product.screenshots].map((img, i) => (
-                <div
-                  key={i}
-                  className="flex-shrink-0 w-[600px] h-[350px] rounded-xl overflow-hidden shadow-lg"
-                >
-                  <img
-                    src={img}
-                    alt={`Screenshot ${i + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
+            Screenshots
+          </h2>
+
+          <div className="relative overflow-hidden w-full">
+            <div className="flex gap-6 animate-marquee whitespace-nowrap w-[max-content]">
+              {[...product.screenshots, ...product.screenshots].map(
+                (img, i) => (
+                  <div
+                    key={i}
+                    className="flex-shrink-0 w-[600px] h-[350px] rounded-xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={img}
+                      alt={`Screenshot ${i + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -177,10 +204,22 @@ const EMSLMS = () => {
             <h3 className="text-2xl font-semibold text-white mb-6">
               <Info className="inline mr-2" /> Product Details
             </h3>
-            <p><span className="text-green-400 font-medium">Launched:</span> {product.details.launched}</p>
-            <p><span className="text-green-400 font-medium">Version:</span> {product.details.version}</p>
-            <p><span className="text-green-400 font-medium">Platform:</span> {product.details.platforms}</p>
-            <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
+            <p>
+              <span className="text-green-400 font-medium">Launched:</span>{" "}
+              {product.details.launched}
+            </p>
+            <p>
+              <span className="text-green-400 font-medium">Version:</span>{" "}
+              {product.details.version}
+            </p>
+            <p>
+              <span className="text-green-400 font-medium">Platform:</span>{" "}
+              {product.details.platforms}
+            </p>
+            <p>
+              <span className="text-green-400 font-medium">Tech Stack:</span>{" "}
+              {product.details.techStack}
+            </p>
           </div>
 
           <div className="p-8 rounded-xl shadow flex flex-col items-center justify-center text-center">

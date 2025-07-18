@@ -149,8 +149,9 @@ const MissSwag = () => {
           <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
             Screenshots
           </h2>
-          <div className="relative overflow-x-hidden">
-            <div className="flex gap-6 animate-marquee whitespace-nowrap">
+
+          <div className="relative overflow-hidden w-full">
+            <div className="flex gap-6 animate-marquee whitespace-nowrap w-[max-content]">
               {[...product.screenshots, ...product.screenshots].map(
                 (img, i) => (
                   <div

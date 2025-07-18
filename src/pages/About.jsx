@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import { Rocket, Users, Lightbulb, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -8,6 +8,11 @@ import Footer from "../components/Footer";
 import WhatsappButton from "../components/WhatsappButton";
 
 const About = () => {
+
+  useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }, []);
+  
   return (
     <div className="bg-black text-white">
       <Navbar />

@@ -19,11 +19,16 @@ import { useNavigate } from "react-router-dom";
 import WhatsappButton from "../../components/WhatsappButton";
 
 import autoCureImg from "../../assets/products_logos/HRMS.jpg";
-const p1Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTUaJwiid4sLK0VX066zc9KuuQoiB_WRP-sQ&s";
-const p2Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_dPkKFL-HgR94PIxcNnG6G6VIbIqsndaX08MF_O0RSjkJRN9P2-u0a4_5DA4scQC0kf0&usqp=CAU";
-const p3Img = "https://cdn.educba.com/academy/wp-content/uploads/2023/05/Human-Resource-Management-System.jpg";
-const p4Img = "https://peopleworks.in/wp-content/uploads/2018/10/how-to-set-up-HRMS-sofware.jpg";
-const p5Img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvYXrE64TiJs_0xdr-B8iP6_GFeCrqJuxBMw&s";
+const p1Img =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTUaJwiid4sLK0VX066zc9KuuQoiB_WRP-sQ&s";
+const p2Img =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_dPkKFL-HgR94PIxcNnG6G6VIbIqsndaX08MF_O0RSjkJRN9P2-u0a4_5DA4scQC0kf0&usqp=CAU";
+const p3Img =
+  "https://cdn.educba.com/academy/wp-content/uploads/2023/05/Human-Resource-Management-System.jpg";
+const p4Img =
+  "https://peopleworks.in/wp-content/uploads/2018/10/how-to-set-up-HRMS-sofware.jpg";
+const p5Img =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvYXrE64TiJs_0xdr-B8iP6_GFeCrqJuxBMw&s";
 
 const product = {
   name: "Integrated HRMS",
@@ -35,7 +40,10 @@ const product = {
     { icon: ClipboardCheck, label: "Employee Onboarding & Exit Process" },
     { icon: Users, label: "Leave, Attendance & Shift Management" },
     { icon: UserCircle2, label: "Performance Appraisal & Document Storage" },
-    { icon: ShieldCheck, label: "Role-Based Access for Admins, HR, and Employees" },
+    {
+      icon: ShieldCheck,
+      label: "Role-Based Access for Admins, HR, and Employees",
+    },
     { icon: MailCheck, label: "Analytics Dashboard with HR Metrics" },
   ],
   moreDetails:
@@ -88,7 +96,9 @@ const IntegratedHRMS = () => {
           >
             {product.name} <ArrowRightCircle className="w-8 h-8" />
           </a>
-          <p className="text-2xl text-gray-300 italic mt-3">{product.tagline}</p>
+          <p className="text-2xl text-gray-300 italic mt-3">
+            {product.tagline}
+          </p>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -119,21 +129,26 @@ const IntegratedHRMS = () => {
         </motion.div>
 
         <div className="mb-20">
-          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Screenshots</h2>
-          <div className="relative overflow-x-hidden">
-            <div className="flex gap-6 animate-marquee whitespace-nowrap">
-              {[...product.screenshots, ...product.screenshots].map((img, i) => (
-                <div
-                  key={i}
-                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl overflow-hidden shadow-lg"
-                >
-                  <img
-                    src={img}
-                    alt={`Screenshot ${i + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
+            Screenshots
+          </h2>
+
+          <div className="relative overflow-hidden w-full">
+            <div className="flex gap-6 animate-marquee whitespace-nowrap w-[max-content]">
+              {[...product.screenshots, ...product.screenshots].map(
+                (img, i) => (
+                  <div
+                    key={i}
+                    className="flex-shrink-0 w-[600px] h-[350px] rounded-xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={img}
+                      alt={`Screenshot ${i + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -176,10 +191,22 @@ const IntegratedHRMS = () => {
             <h3 className="text-2xl font-semibold text-white mb-6">
               <Info className="inline mr-2" /> Product Details
             </h3>
-            <p><span className="text-green-400 font-medium">Launched:</span> {product.details.launched}</p>
-            <p><span className="text-green-400 font-medium">Version:</span> {product.details.version}</p>
-            <p><span className="text-green-400 font-medium">Platform:</span> {product.details.platforms}</p>
-            <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
+            <p>
+              <span className="text-green-400 font-medium">Launched:</span>{" "}
+              {product.details.launched}
+            </p>
+            <p>
+              <span className="text-green-400 font-medium">Version:</span>{" "}
+              {product.details.version}
+            </p>
+            <p>
+              <span className="text-green-400 font-medium">Platform:</span>{" "}
+              {product.details.platforms}
+            </p>
+            <p>
+              <span className="text-green-400 font-medium">Tech Stack:</span>{" "}
+              {product.details.techStack}
+            </p>
           </div>
 
           <div className="p-8 rounded-xl shadow flex flex-col items-center justify-center text-center">

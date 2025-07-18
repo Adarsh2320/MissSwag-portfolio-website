@@ -24,6 +24,7 @@
     "crypto": "^1.0.1",
     "dayjs": "^1.11.13",
     "dotenv": "^16.4.5",
+    "emailjs-com": "^3.2.0",
     "emoji-picker-react": "^4.12.2",
     "express": "^5.1.0",
     "framer-motion": "^10.18.0",

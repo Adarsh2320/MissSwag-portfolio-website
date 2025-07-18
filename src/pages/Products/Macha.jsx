@@ -22,7 +22,7 @@ import autoCureImg from "../../assets/products_logos/macha.jpg";
 import p1Img from "../../assets/Macha Screenshots/p1.png";
 import p2Img from "../../assets/Macha Screenshots/p2.png";
 import p3Img from "../../assets/Macha Screenshots/p3.png";
-import p4Img from "../../assets/Macha Screenshots/p4.png"; 
+import p4Img from "../../assets/Macha Screenshots/p4.png";
 import p5Img from "../../assets/Macha Screenshots/p5.png";
 import p6Img from "../../assets/Macha Screenshots/p6.png";
 import p7Img from "../../assets/Macha Screenshots/p7.png";
@@ -48,16 +48,38 @@ const product = {
     { icon: Users, label: "Easy Vendor Onboarding" },
     { icon: Rocket, label: "Integrated Review & Rating System" },
     { icon: LayoutDashboard, label: "Admin Dashboard for Complete Oversight" },
-    { icon: Smartphone, label: "Mobile-Optimized Interfaces for Vendors & Users" },
-    { icon: Lock, label: "Secure Payments & Transaction History Logs" }
+    {
+      icon: Smartphone,
+      label: "Mobile-Optimized Interfaces for Vendors & Users",
+    },
+    { icon: Lock, label: "Secure Payments & Transaction History Logs" },
   ],
-  screenshots: [p1Img, p2Img, p3Img, p4Img, p5Img, p6Img, p7Img, p8Img, p9Img, p10Img, p11Img, p12Img, p13Img, p14Img, p15Img, p16Img, p17Img, p18Img],
+  screenshots: [
+    p1Img,
+    p2Img,
+    p3Img,
+    p4Img,
+    p5Img,
+    p6Img,
+    p7Img,
+    p8Img,
+    p9Img,
+    p10Img,
+    p11Img,
+    p12Img,
+    p13Img,
+    p14Img,
+    p15Img,
+    p16Img,
+    p17Img,
+    p18Img,
+  ],
   details: {
     launched: "2023",
     version: "3.1",
     techStack: "React, Node.js, Express, MongoDB, TailwindCSS",
     platforms: "Web, Android",
-    liveLink: "https://macha-platform.vercel.app/",
+    liveLink: "https://swatip012.github.io/MACHA",
   },
 };
 
@@ -99,7 +121,9 @@ const MachaPlatform = () => {
           >
             {product.name} <ArrowRightCircle className="w-8 h-8" />
           </a>
-          <p className="text-2xl text-gray-300 italic mt-3">{product.tagline}</p>
+          <p className="text-2xl text-gray-300 italic mt-3">
+            {product.tagline}
+          </p>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -127,26 +151,34 @@ const MachaPlatform = () => {
         >
           <p className="mb-6">{product.description}</p>
           <p className="text-gray-400">
-            Designed for scalability and ease-of-use, the platform facilitates vendor discovery, order management, and performance monitoring with analytics. It bridges the gap between offline vendors and digital marketplaces.
+            Designed for scalability and ease-of-use, the platform facilitates
+            vendor discovery, order management, and performance monitoring with
+            analytics. It bridges the gap between offline vendors and digital
+            marketplaces.
           </p>
         </motion.div>
 
         <div className="mb-20">
-          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Screenshots</h2>
-          <div className="relative overflow-x-hidden">
-            <div className="flex gap-6 animate-marquee whitespace-nowrap">
-              {[...product.screenshots, ...product.screenshots].map((img, i) => (
-                <div
-                  key={i}
-                  className="flex-shrink-0 w-[600px] h-[350px] rounded-xl overflow-hidden shadow-lg"
-                >
-                  <img
-                    src={img}
-                    alt={`Screenshot ${i + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
+            Screenshots
+          </h2>
+
+          <div className="relative overflow-hidden w-full">
+            <div className="flex gap-6 animate-marquee whitespace-nowrap w-[max-content]">
+              {[...product.screenshots, ...product.screenshots].map(
+                (img, i) => (
+                  <div
+                    key={i}
+                    className="flex-shrink-0 w-[600px] h-[350px] rounded-xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={img}
+                      alt={`Screenshot ${i + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -189,10 +221,22 @@ const MachaPlatform = () => {
             <h3 className="text-2xl font-semibold text-white mb-6">
               <Info className="inline mr-2" /> Product Details
             </h3>
-            <p><span className="text-green-400 font-medium">Launched:</span> {product.details.launched}</p>
-            <p><span className="text-green-400 font-medium">Version:</span> {product.details.version}</p>
-            <p><span className="text-green-400 font-medium">Platform:</span> {product.details.platforms}</p>
-            <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
+            <p>
+              <span className="text-green-400 font-medium">Launched:</span>{" "}
+              {product.details.launched}
+            </p>
+            <p>
+              <span className="text-green-400 font-medium">Version:</span>{" "}
+              {product.details.version}
+            </p>
+            <p>
+              <span className="text-green-400 font-medium">Platform:</span>{" "}
+              {product.details.platforms}
+            </p>
+            <p>
+              <span className="text-green-400 font-medium">Tech Stack:</span>{" "}
+              {product.details.techStack}
+            </p>
           </div>
 
           <div className="p-8 rounded-xl shadow flex flex-col items-center justify-center text-center">

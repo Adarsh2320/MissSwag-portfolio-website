@@ -89,7 +89,9 @@ const MomoMoffin = () => {
           >
             {product.name} <ArrowRightCircle className="w-8 h-8" />
           </a>
-          <p className="text-2xl text-gray-300 italic mt-3">{product.tagline}</p>
+          <p className="text-2xl text-gray-300 italic mt-3">
+            {product.tagline}
+          </p>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -120,21 +122,26 @@ const MomoMoffin = () => {
         </motion.div>
 
         <div className="mb-20">
-          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">Gallery</h2>
-          <div className="relative overflow-x-hidden">
-            <div className="flex gap-6 animate-marquee whitespace-nowrap">
-              {[...product.screenshots, ...product.screenshots].map((img, i) => (
-                <div
-                  key={i}
-                  className="flex-shrink-0 w-[420px] h-[300px] rounded-xl overflow-hidden shadow-lg"
-                >
-                  <img
-                    src={img}
-                    alt={`Screenshot ${i + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
+            Screenshots
+          </h2>
+
+          <div className="relative overflow-hidden w-full">
+            <div className="flex gap-6 animate-marquee whitespace-nowrap w-[max-content]">
+              {[...product.screenshots, ...product.screenshots].map(
+                (img, i) => (
+                  <div
+                    key={i}
+                    className="flex-shrink-0 w-[600px] h-[350px] rounded-xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={img}
+                      alt={`Screenshot ${i + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -177,10 +184,22 @@ const MomoMoffin = () => {
             <h3 className="text-2xl font-semibold text-white mb-6">
               <Info className="inline mr-2" /> Product Details
             </h3>
-            <p><span className="text-green-400 font-medium">Launched:</span> {product.details.launched}</p>
-            <p><span className="text-green-400 font-medium">Version:</span> {product.details.version}</p>
-            <p><span className="text-green-400 font-medium">Platform:</span> {product.details.platforms}</p>
-            <p><span className="text-green-400 font-medium">Tech Stack:</span> {product.details.techStack}</p>
+            <p>
+              <span className="text-green-400 font-medium">Launched:</span>{" "}
+              {product.details.launched}
+            </p>
+            <p>
+              <span className="text-green-400 font-medium">Version:</span>{" "}
+              {product.details.version}
+            </p>
+            <p>
+              <span className="text-green-400 font-medium">Platform:</span>{" "}
+              {product.details.platforms}
+            </p>
+            <p>
+              <span className="text-green-400 font-medium">Tech Stack:</span>{" "}
+              {product.details.techStack}
+            </p>
           </div>
 
           <div className="p-8 rounded-xl shadow flex flex-col items-center justify-center text-center">
