@@ -118,7 +118,7 @@ const products = [
     title: "EMS + LMS",
     slug: "IntegratedEMS_LMS",
     image: EMS_LMS,
-    desc: "Emergency & Learning Management System for smart institutions.",
+    desc: "Education & Learning Management System for smart institutions.",
   },
   {
     title: "Momo Moffin",
@@ -544,7 +544,7 @@ const Home = () => {
                     <img
                       src={p.image}
                       alt={p.title}
-                      className="relative w-full h-full object-contain rounded-xl shadow-md"
+                      className="relative w-full h-full object-cover rounded-xl shadow-md"
                     />
                   </div>
 

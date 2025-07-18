@@ -20,41 +20,47 @@ import WhatsappButton from "../../components/WhatsappButton";
 
 import logoImg from "../../assets/products_logos/EMS+LMS.jpg";
 const p1Img =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlbGCvXeBtDGLB4YnMgNBKcgydPVAYcrgHdi-PjR8aXbI5xMcrH7d9tm5OuKomMyZxgVg&usqp=CAU";
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfzEfAp4IyvyIwjj_kk93CQOKsFHmqUXENeQ&s";
 const p2Img =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4tTGyevAcMAFxOOJd0gsZeqIyJTzW-F7MZQ&s";
 const p3Img =
   "https://thinkpalm.com/wp-content/uploads/2017/11/Learning-Management-System.jpg";
 const p4Img =
-  "https://thinkpalm.com/wp-content/uploads/2017/11/Learning-Management-System.jpg";
+  "https://media.licdn.com/dms/image/v2/D5612AQGtnNtItp_WVg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1681200497432?e=2147483647&v=beta&t=VX0BSjzBMCfl-tfBOJzOd_luKV-fm2-b3joeARcLQ70";
 const p5Img =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW-ljA5bYD7N6Fi2njnM04NzyOdKqqQ1KYbg&s";
 
 const product = {
   name: "EMS + LMS",
-  tagline: "Emergency Response Meets Seamless Learning",
+  tagline: "Empowering Education Through Smart Management",
   description:
-    "EMS + LMS is an integrated web solution combining Emergency Management Systems (EMS) with Learning Management Systems (LMS). It helps educational institutions and organizations maintain safety while delivering uninterrupted learning. From instant alerts to remote classrooms, it provides real-time coordination and continuous skill development.",
-  highlights: [
-    {
-      icon: Video,
-      label: "Live Digital Classrooms with Attendance and Recordings",
-    },
-    {
-      icon: AlertTriangle,
-      label: "Real-Time Emergency Alerts with Geo-Fencing",
-    },
-    {
-      icon: ShieldCheck,
-      label: "Role-Based Dashboards for Admins, Teachers, and Responders",
-    },
-    { icon: Brain, label: "AI-Enabled Incident Prediction and Escalation" },
-    { icon: Download, label: "Offline Access and Backup Learning Materials" },
-    {
-      icon: BellRing,
-      label: "Push Notifications and Secure Communication Channels",
-    },
-  ],
+    "EMS + LMS is a comprehensive web-based solution that integrates the Education Management System (EMS) with the Learning Management System (LMS). Designed for educational institutions, it streamlines academic administration and digital learning in a unified platform. From admissions and attendance tracking to online classes and course assessments, the system enables efficient management and uninterrupted learning experiences.",
+    highlights: [
+      {
+        icon: Video,
+        label: "Live Online Classrooms with Attendance Tracking and Recordings",
+      },
+      {
+        icon: AlertTriangle,
+        label: "Automated Alerts for Announcements, Deadlines, and Emergencies",
+      },
+      {
+        icon: ShieldCheck,
+        label: "Secure, Role-Based Dashboards for Administrators, Teachers, and Students",
+      },
+      {
+        icon: Brain,
+        label: "AI-Powered Analytics for Performance, Engagement, and Early Intervention",
+      },
+      {
+        icon: Download,
+        label: "Offline Access to Course Materials and Academic Records",
+      },
+      {
+        icon: BellRing,
+        label: "Push Notifications and Encrypted Communication Channels",
+      },
+    ], 
   screenshots: [p1Img, p2Img, p3Img, p4Img, p5Img],
   details: {
     launched: "2024",
@@ -133,11 +139,12 @@ const EMSLMS = () => {
         >
           <p className="mb-6">{product.description}</p>
           <p className="text-gray-400">
-            This system is perfect for crisis-resilient institutions needing
-            uninterrupted education alongside swift emergency response. It
-            supports both synchronous and asynchronous learning, centralized SOP
-            dissemination, and secure stakeholder communication during any
-            crisis.
+            Ideal for modern, growth-focused institutions, EMS + LMS supports
+            both synchronous and asynchronous learning while automating
+            administrative workflows. It centralizes data, enhances
+            communication among stakeholders, ensures policy compliance, and
+            fosters a seamless educational journey—from enrollment to
+            examination.
           </p>
         </motion.div>
 
