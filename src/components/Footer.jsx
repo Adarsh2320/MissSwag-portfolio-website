@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
+
 import {
   Facebook,
   Twitter,
@@ -12,6 +14,7 @@ import {
   X,
 } from "lucide-react";
 import gamayasLogo from "../assets/logo.jpg";
+
 
 const Footer = () => {
   const [showAdminLogin, setShowAdminLogin] = useState(false);
@@ -41,14 +44,14 @@ const Footer = () => {
                 Custom IT & AI Solutions on Demand
               </span>
             </div>
-            <div>
-              <a
-                href="mailto:ceo@gamayas.com"
-                className="inline-flex items-center px-4 py-2 bg-white text-green-800 rounded-lg font-medium text-base hover:bg-green-100 transition-colors"
-              >
-                <Mail className="w-5 h-5 mr-1.5" /> Email Us
-              </a>
-            </div>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=adarshpatel@gmail.com&su=Let's%20Connect&body=Hi%20Adarsh%2C%0A%0AI%20want%20to%20discuss%20a%20project.%0A"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 bg-white text-green-800 rounded-lg font-medium text-base hover:bg-green-100 transition-colors"
+            >
+              <Mail className="w-5 h-5 mr-1.5" /> Email Us
+            </a>
           </div>
         </div>
 
@@ -112,33 +115,34 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-xl font-bold text-white mb-6">Core Services</h3>
-            <div className="grid grid-cols-2 gap-y-4 gap-x-48 text-gray-300">
-              {[
-                "Digital Transformation",
-                "Digital Marketing",
-                "Product Engineering",
-                "Data Engineering",
-                "Cloud & Infra Solutions",
-                "Staffing & Consulting",
-                "Digital Engineering",
-                "Outsourcing Services",
-              ].map((service, idx) => (
-                <a
-                  key={idx}
-                  href="#services"
-                  className="hover:text-white transition-colors flex items-center whitespace-nowrap"
-                >
-                  {service}
-                  <ChevronRight
-                    size={14}
-                    className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity"
-                  />
-                </a>
-              ))}
-            </div>
-          </div>
+         
+<div>
+  <h3 className="text-xl font-bold text-white mb-6">Core Services</h3>
+  <div className="grid grid-cols-2 gap-y-4 gap-x-48 text-gray-300">
+    {[
+      { label: "Digital Transformation", link: "/services/digitaltransformation" },
+      { label: "Product Engineering", link: "/services/productengineering" },
+      { label: "Digital Marketing", link: "/services/digitalmarketing" },
+      { label: "Software Development", link: "/services/softwaredevelopment" },
+      { label: "Cloud & Infrastructure", link: "/services/cloudinfrastructure" },
+      { label: "Staffing & Consulting", link: "/services/itconsultingstaffing" },
+      { label: "Outsourcing Services", link: "/services/outsourcingservices" },
+      { label: "Data Engineering", link: "/services/dataengineering" },
+    ].map((service, idx) => (
+      <Link
+        key={idx}
+        to={service.link}
+        className="group hover:text-white transition-colors flex items-center whitespace-nowrap"
+      >
+        {service.label}
+        <ChevronRight
+          size={14}
+          className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity"
+        />
+      </Link>
+    ))}
+  </div>
+</div>
 
           {/* Quick Links (with Admin Login click handler) */}
           <div className="pl-28">
@@ -178,9 +182,7 @@ const Footer = () => {
                 <button
                   onClick={() => setShowAdminLogin(true)}
                   className="hover:text-white transition-colors"
-                >
-                  
-                </button>
+                ></button>
               </li>
             </ul>
           </div>

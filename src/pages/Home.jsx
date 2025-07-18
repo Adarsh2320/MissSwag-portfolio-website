@@ -1,5 +1,3 @@
-
-
 // File: src/pages/Home.jsx
 
 import React, { useState, useEffect } from "react";
@@ -41,10 +39,10 @@ import autoCureImg from "../assets/products_logos/autocurehub.jpg";
 import HIMS from "../assets/products_logos/HIMS.jpg";
 import HRMS from "../assets/products_logos/HRMS.jpg";
 import EMS_LMS from "../assets/products_logos/EMS+LMS.jpg";
-import MomoMuffin from "../assets/products_logos/Momo_Muffin.jpg"
+import MomoMuffin from "../assets/products_logos/Momo_Muffin.jpg";
 import logo from "../assets/logo.jpg";
 
-import { Info } from "lucide-react";
+import { ArrowRightCircle } from "lucide-react";
 
 const container = {
   hidden: {},
@@ -80,44 +78,125 @@ const slides = [
 ];
 
 const products = [
-  { title: "MissSwag", slug: "Missswag", image: missSwagImg, desc: "Patient engagement platform tailored for modern clinics and hospitals." },
-  { title: "Macha Platform", slug: "Macha", image: machaImg, desc: "Smart delivery service platform for vendors and customers." },
-  { title: "Saathi Care", slug: "SaathiCare", image: saathiImg, desc: "On-demand home healthcare and elderly assistance mobile solution." },
-  { title: "AutoCure Hub", slug: "AutoCure_Hub", image: autoCureImg, desc: "AI-powered vehicle service management and diagnostics interface." },
-  { title: "Integrated HIMS", slug: "IntegratedHIMS", image: HIMS, desc: "Comprehensive hospital management system with real-time analytics." },
-  { title: "Integrated HRMS", slug: "IntegratedHRMS", image: HRMS, desc: "Streamlined human resource solution for modern enterprise teams." },
-  { title: "EMS + LMS", slug: "IntegratedEMS_LMS", image: EMS_LMS, desc: "Emergency & Learning Management System for smart institutions." },
-  { title: "Momo Moffin", slug: "Momo_Moffin", image: MomoMuffin, desc: "Effortless Fashion. Everyday Comfort. Curated for the Modern Wardrobe." },
-
+  {
+    title: "MissSwag",
+    slug: "Missswag",
+    image: missSwagImg,
+    desc: "Patient engagement platform tailored for modern clinics and hospitals.",
+  },
+  {
+    title: "Macha Platform",
+    slug: "Macha",
+    image: machaImg,
+    desc: "Smart delivery service platform for vendors and customers.",
+  },
+  {
+    title: "Saathi Care",
+    slug: "SaathiCare",
+    image: saathiImg,
+    desc: "On-demand home healthcare and elderly assistance mobile solution.",
+  },
+  {
+    title: "AutoCure Hub",
+    slug: "AutoCure_Hub",
+    image: autoCureImg,
+    desc: "AI-powered vehicle service management and diagnostics interface.",
+  },
+  {
+    title: "Integrated HIMS",
+    slug: "IntegratedHIMS",
+    image: HIMS,
+    desc: "Comprehensive hospital management system with real-time analytics.",
+  },
+  {
+    title: "Integrated HRMS",
+    slug: "IntegratedHRMS",
+    image: HRMS,
+    desc: "Streamlined human resource solution for modern enterprise teams.",
+  },
+  {
+    title: "EMS + LMS",
+    slug: "IntegratedEMS_LMS",
+    image: EMS_LMS,
+    desc: "Emergency & Learning Management System for smart institutions.",
+  },
+  {
+    title: "Momo Moffin",
+    slug: "Momo_Moffin",
+    image: MomoMuffin,
+    desc: "Effortless Fashion. Everyday Comfort. Curated for the Modern Wardrobe.",
+  },
 ];
 
 const serviceData = [
-  { title: "Digital Transformation", image: dtImg, slug: "digitaltransformation", desc: "Driving enterprise-wide innovation with strategic digital adoption and agile execution." },
-  { title: "Product Engineering", image: peImg, slug: "productengineering", desc: "Designing, building, and scaling next‑gen products that fuel business evolution." },
-  { title: "Digital Marketing", image: dmImg, slug: "digitalmarketing", desc: "Boosting brand presence with performance‑driven and creative marketing strategies." },
-  { title: "Software Development", image: sdImg, slug: "softwaredevelopment", desc: "Crafting robust, scalable software tailored to meet dynamic business demands." },
-  { title: "Cloud and Infrastructure", image: ciImg, slug: "cloudinfrastructure", desc: "Empowering businesses with secure, scalable, and optimized cloud infrastructure solutions." },
-  { title: "IT Consulting & Staffing", image: itsImg, slug: "itconsultingstaffing", desc: "Delivering expert guidance and skilled professionals to support your IT objectives." },
-  { title: "Outsourcing Services", image: osImg, slug: "outsourcingservices", desc: "Enhancing operational efficiency through reliable and strategic outsourcing models." },
-  { title: "Advanced Tech Integration", image: atiImg, slug: "advancedtechnologyintegration", desc: "Integrating cutting‑edge technologies to streamline processes and drive innovation." },
-  { title: "Data Engineering", image: deImg, slug: "dataengineering", desc: "Building powerful data architectures for real‑time analytics and informed decisions." },
+  {
+    title: "Digital Transformation",
+    image: dtImg,
+    slug: "digitaltransformation",
+    desc: "Driving enterprise-wide innovation with strategic digital adoption and agile execution.",
+  },
+  {
+    title: "Product Engineering",
+    image: peImg,
+    slug: "productengineering",
+    desc: "Designing, building, and scaling next‑gen products that fuel business evolution.",
+  },
+  {
+    title: "Digital Marketing",
+    image: dmImg,
+    slug: "digitalmarketing",
+    desc: "Boosting brand presence with performance‑driven and creative marketing strategies.",
+  },
+  {
+    title: "Software Development",
+    image: sdImg,
+    slug: "softwaredevelopment",
+    desc: "Crafting robust, scalable software tailored to meet dynamic business demands.",
+  },
+  {
+    title: "Cloud and Infrastructure",
+    image: ciImg,
+    slug: "cloudinfrastructure",
+    desc: "Empowering businesses with secure, scalable, and optimized cloud infrastructure solutions.",
+  },
+  {
+    title: "IT Consulting & Staffing",
+    image: itsImg,
+    slug: "itconsultingstaffing",
+    desc: "Delivering expert guidance and skilled professionals to support your IT objectives.",
+  },
+  {
+    title: "Outsourcing Services",
+    image: osImg,
+    slug: "outsourcingservices",
+    desc: "Enhancing operational efficiency through reliable and strategic outsourcing models.",
+  },
+  {
+    title: "Advanced Tech Integration",
+    image: atiImg,
+    slug: "advancedtechnologyintegration",
+    desc: "Integrating cutting‑edge technologies to streamline processes and drive innovation.",
+  },
+  {
+    title: "Data Engineering",
+    image: deImg,
+    slug: "dataengineering",
+    desc: "Building powerful data architectures for real‑time analytics and informed decisions.",
+  },
 ];
 
-
-
 const Home = () => {
-
   const [activeIndex, setActiveIndex] = useState(0);
-  
+
   useEffect(() => {
-      window.scrollTo({ top: 0, behavior: "auto" });
-    }, []);
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
 
   return (
     <div className="bg-black text-white overflow-x-hidden">
       <Navbar />
 
-       {/* Hero Section with Swiper */}
+      {/* Hero Section with Swiper */}
       <section className="relative w-full h-[calc(100vh-80px)] overflow-hidden mt-20">
         <Swiper
           spaceBetween={0}
@@ -308,8 +387,11 @@ const Home = () => {
                           {/* Text */}
                           <div className="flex-grow">
                             <h3 className="text-2xl font-semibold text-green-400 mb-2 flex items-center">
-                              <Info size={28} className="mr-2 text-green-500" />
                               {service.title}
+                              <ArrowRightCircle
+                                size={28}
+                                className="ml-2 text-green-500"
+                              />
                             </h3>
                             <p className="text-lg text-gray-300">
                               {service.desc}
@@ -378,11 +460,11 @@ const Home = () => {
                 className="bg-[#111827] border-l-4 border-green-500 p-8 rounded-3xl shadow-xl hover:shadow-green-500/30 transition transform hover:scale-[1.03]"
               >
                 <div className="flex flex-col items-center gap-4">
-                  <div className="w-20 h-20 bg-green-500/10 border border-green-400 rounded-full flex items-center justify-center shadow-md">
+                  <div className="w-28 h-28 bg-green-500/10 border border-green-400 rounded-full flex items-center justify-center shadow-md">
                     <img
                       src={s.icon}
                       alt={s.title}
-                      className="w-10 h-10 object-contain"
+                      className="w-28 h-28 object-contain rounded-full"
                     />
                   </div>
                   <h3 className="text-xl font-bold text-green-400 mt-2">
@@ -520,7 +602,6 @@ const Home = () => {
         </div>
       </section>
 
-
       <WhatsappButton />
       <Footer />
     </div>
@@ -528,4 +609,3 @@ const Home = () => {
 };
 
 export default Home;
-

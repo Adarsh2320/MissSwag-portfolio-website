@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Rocket, Users, Lightbulb, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -8,29 +8,39 @@ import Footer from "../components/Footer";
 import WhatsappButton from "../components/WhatsappButton";
 
 const About = () => {
-
   useEffect(() => {
-      window.scrollTo({ top: 0, behavior: "auto" });
-    }, []);
-  
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
+
   return (
     <div className="bg-black text-white">
       <Navbar />
 
       {/* About Section */}
       <section className="relative py-24 px-6 mt-20 bg-gradient-to-b from-[#0f172a] to-black text-white overflow-hidden">
-        {/* Floating Background Shape */}
-        <div className="absolute -top-20 -left-20 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-float z-0" />
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-green-700/10 rounded-full blur-2xl animate-pulse z-0" />
+        {/* Background Image with Opacity */}
+        <div className="absolute inset-0">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Yp5EkkV_52TImGEYYeB1fBAw4oycyrmTDA&s" // ← Add your background image source here
+            alt="background"
+            className="w-full h-full object-cover opacity-50"
+          />
+          <div className="absolute inset-0 bg-black/50" />{" "}
+          {/* Optional overlay for contrast */}
+        </div>
 
-        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 z-10">
+        {/* Floating Background Shapes */}
+        <div className="absolute -top-20 -left-20 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-float z-10" />
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-green-700/10 rounded-full blur-2xl animate-pulse z-10" />
+
+        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 z-20">
           {/* Text Content with Motion */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="w-full md:w-1/2 md:pr-12"
+            className="w-full md:w-1/2 md:pr-12 hover:scale-[1.01] transition-transform duration-500"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-left">
               About Gamayas
@@ -47,11 +57,11 @@ const About = () => {
 
           {/* Image with Hover Zoom + Motion */}
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
+            initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="w-full md:w-1/2 relative group"
+            className="w-full md:w-1/2 relative group hover:scale-105 transition-transform duration-700"
           >
             <div className="overflow-hidden rounded-xl shadow-xl border border-green-400/20">
               <img
@@ -291,8 +301,18 @@ const About = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-16 pl-64 pr-6 bg-gradient-to-b from-[#0f172a] to-black text-white">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+      <section className="relative py-16 pl-64 pr-6 bg-gradient-to-b from-[#0f172a] to-black text-white overflow-hidden">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://i.pinimg.com/originals/36/e4/d0/36e4d0b856694fc471344b644a1dd6e4.gif" // Add your background image path here
+            alt="Timeline Background"
+            className="w-full h-full object-cover opacity-40"
+          />
+        </div>
+
+        {/* Content Layer */}
+        <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
           {/* Left Description Panel */}
           <div className="md:w-1/3">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Timeline</h2>
