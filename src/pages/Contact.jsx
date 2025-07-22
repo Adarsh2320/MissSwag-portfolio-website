@@ -106,7 +106,7 @@ const Contact = () => {
       {/* Contact Info + Map Section */}
       <section
         id="contact"
-        className="py-20 px-6 bg-gradient-to-br from-[#0f172a] to-black text-white"
+        className="py-20 px-6 bg-gradient-to-br from-[#1e293b] to-[#1a1a1a] text-white"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -123,7 +123,7 @@ const Contact = () => {
               rotateX: 2,
             }}
             transition={{ duration: 0.4, type: "spring" }}
-            className="bg-[#0f172a] p-6 rounded-2xl shadow-2xl hover:shadow-green-400/30 transition-all text-center md:text-left"
+            className="bg-[#1e293b] p-6 rounded-2xl shadow-2xl hover:shadow-green-400/30 transition-all text-center md:text-left"
           >
             <h2 className="text-2xl font-bold mb-4 text-green-400">
               Find Us Here
@@ -179,7 +179,7 @@ const Contact = () => {
                   boxShadow: "0px 6px 15px rgba(0,255,128,0.15)",
                 }}
                 transition={{ type: "spring", stiffness: 100, damping: 10 }}
-                className="bg-[#101828] p-6 mt-8 rounded-xl text-center md:text-left hover:shadow-md transition-all duration-300"
+                className="bg-[#1e293b] p-6 mt-8 rounded-xl text-center md:text-left hover:shadow-md transition-all duration-300"
               >
                 <div className="flex items-center justify-center md:justify-start mb-3">
                   {link ? (
@@ -199,7 +199,6 @@ const Contact = () => {
       </section>
 
       {/* Contact Form Section */}
-
       <motion.section
         initial={{ opacity: 0, scale: 0.9, rotateX: -10 }}
         whileInView={{ opacity: 1, scale: 1, rotateX: 0 }}
@@ -216,7 +215,7 @@ const Contact = () => {
           stiffness: 80,
         }}
         viewport={{ once: true, amount: 0.3 }}
-        className="bg-black/80 dark:bg-black/20 backdrop-blur-md p-6 rounded-2xl shadow-lg transition-all duration-300"
+        className="bg-[#1a1a1a]/80 dark:bg-[#1a1a1a]/20 backdrop-blur-md p-6 rounded-2xl shadow-lg transition-all duration-300"
       >
         <ContactForm />
       </motion.section>

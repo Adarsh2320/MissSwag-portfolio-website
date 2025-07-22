@@ -47,7 +47,7 @@ const DigitalTransformation = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-[#1a1a1a] text-white">
       <Navbar />
 
       {/* Hero Section */}
@@ -55,7 +55,7 @@ const DigitalTransformation = () => {
         className="relative h-[80vh] w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${bannerImg})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a]/80 to-black/90 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1e293b]/80 to-[#1a1a1a]/90 flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ const DigitalTransformation = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black">
+      <section className="py-16 px-6 bg-gradient-to-b from-[#1e293b] to-[#1a1a1a]">
         <motion.div
           className="max-w-5xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -100,7 +100,7 @@ const DigitalTransformation = () => {
           {[img1, img2, img3, img4, img5, img6].map((img, i) => (
             <motion.div
               key={i}
-              className="bg-gradient-to-br from-[#0f172a] to-black p-6 rounded-xl shadow-lg border border-green-700 hover:shadow-green-500/30 transition duration-300 hover:-translate-y-1"
+              className="bg-gradient-to-br from-[#1e293b] to-[#1a1a1a] p-6 rounded-xl shadow-lg border border-green-700 hover:shadow-green-500/30 transition duration-300 hover:-translate-y-1"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: i * 0.2 }}
@@ -121,7 +121,7 @@ const DigitalTransformation = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black text-center">
+      <section className="py-16 px-6 bg-gradient-to-br from-[#1e293b] to-[#1a1a1a] text-center">
         <motion.div
           className="max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
@@ -145,6 +145,7 @@ const DigitalTransformation = () => {
           </a>
         </motion.div>
       </section>
+
       {/* WhatsApp Button */}
       <WhatsappButton />
       <Footer />

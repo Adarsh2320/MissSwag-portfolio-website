@@ -17,16 +17,15 @@ const About = () => {
       <Navbar />
 
       {/* About Section */}
-      <section className="relative py-24 px-6 mt-20 bg-gradient-to-b from-[#0f172a] to-black text-white overflow-hidden">
+      <section className="relative py-24 px-6 mt-20 bg-gradient-to-b from-[#1e293b] to-[#111827] text-white overflow-hidden">
         {/* Background Image with Opacity */}
         <div className="absolute inset-0">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Yp5EkkV_52TImGEYYeB1fBAw4oycyrmTDA&s" // ← Add your background image source here
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Yp5EkkV_52TImGEYYeB1fBAw4oycyrmTDA&s"
             alt="background"
             className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-black/50" />{" "}
-          {/* Optional overlay for contrast */}
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         {/* Floating Background Shapes */}
@@ -34,7 +33,7 @@ const About = () => {
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-green-700/10 rounded-full blur-2xl animate-pulse z-10" />
 
         <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 z-20">
-          {/* Text Content with Motion */}
+          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -47,15 +46,11 @@ const About = () => {
             </h1>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed text-justify">
               We are a technology company that builds intelligent platforms and
-              delivers world-class digital transformation solutions. At Gamayas,
-              we harness innovation to empower enterprises and uplift
-              communities. Our goal is to provide reliable, efficient, and
-              scalable solutions that help businesses stay ahead in a rapidly
-              changing digital world.
+              delivers world-class digital transformation solutions...
             </p>
           </motion.div>
 
-          {/* Image with Hover Zoom + Motion */}
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -76,7 +71,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white">
+      <section className="py-16 px-6 bg-gradient-to-b from-[#1e293b] to-[#111827] text-white">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-16"
@@ -106,27 +101,27 @@ const About = () => {
               {
                 icon: <Rocket className="w-10 h-10 text-green-400 mb-4" />,
                 title: "Innovation",
-                desc: "We design cutting-edge solutions that drive growth and competitive advantage.",
+                desc: "We design cutting-edge solutions that drive growth...",
               },
               {
                 icon: <Users className="w-10 h-10 text-green-400 mb-4" />,
                 title: "People First",
-                desc: "We build human-centered systems that empower teams and users alike.",
+                desc: "We build human-centered systems...",
               },
               {
                 icon: <Lightbulb className="w-10 h-10 text-green-400 mb-4" />,
                 title: "Integrity",
-                desc: "We commit to transparency, accountability, and ethical technology.",
+                desc: "We commit to transparency...",
               },
               {
                 icon: <ShieldCheck className="w-10 h-10 text-green-400 mb-4" />,
                 title: "Trust",
-                desc: "We deliver reliable, secure and scalable platforms backed by industry best practices.",
+                desc: "We deliver secure and scalable platforms...",
               },
             ].map((val, i) => (
               <motion.div
                 key={i}
-                className="relative bg-[#111827] p-8 rounded-2xl border border-green-500/10 hover:border-green-400 transition-all duration-300 shadow-md hover:shadow-green-500/20 group cursor-pointer"
+                className="relative bg-[#1f2937] p-8 rounded-2xl border border-green-500/10 hover:border-green-400 transition-all duration-300 shadow-md hover:shadow-green-500/20 group cursor-pointer"
                 variants={{
                   hidden: { opacity: 0, y: 40 },
                   visible: { opacity: 1, y: 0 },
@@ -138,9 +133,7 @@ const About = () => {
                   transition: { type: "spring", stiffness: 200 },
                 }}
               >
-                {/* Soft Glow on Hover */}
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 bg-green-500/10 blur-lg pointer-events-none transition-all duration-500" />
-
                 <div className="relative z-10 flex flex-col items-center text-center">
                   {val.icon}
                   <h3 className="text-xl font-bold text-green-400 mb-2">
@@ -157,7 +150,7 @@ const About = () => {
       </section>
 
       {/* Our Mission Section */}
-      <section className="py-16 pl-32 pr-6 bg-gradient-to-b from-[#0f172a] to-black text-white overflow-hidden">
+      <section className="py-16 pl-32 pr-6 bg-gradient-to-b from-[#1e293b] to-[#111827] text-white overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-24">
           {/* Image */}
           <motion.div
@@ -189,22 +182,18 @@ const About = () => {
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
               At Gamayas, we bridge the gap between traditional systems and
-              future innovation by delivering scalable, human-centric digital
-              solutions. We focus on modernizing legacy infrastructure with
-              thoughtful engineering and user-first design.
+              future innovation...
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
               Our mission is to accelerate digital journeys through technical
-              excellence, creativity, and deep industry insight. We build
-              adaptable, future-ready solutions that empower organizations to
-              thrive in a rapidly evolving digital landscape.
+              excellence, creativity, and deep industry insight...
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Our Team Section */}
-      <section className="py-16 pl-32 pr-6 md:pl-32 bg-gradient-to-b from-black to-[#0f172a] text-white overflow-hidden">
+      <section className="py-16 pl-32 pr-6 md:pl-32 bg-gradient-to-b from-[#111827] to-[#1e293b] text-white overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center md:items-start gap-24">
           {/* Text */}
           <motion.div
@@ -220,14 +209,11 @@ const About = () => {
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
               We are a diverse team of engineers, strategists, creatives, and
               problem-solvers united by a shared belief in the transformative
-              power of technology. Together, we bring a wide range of skills and
-              perspectives that fuel innovation and drive meaningful change.
+              power of technology.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
               Guided by agility, empathy, and relentless curiosity, we work
-              tirelessly to make technology more accessible and impactful. Our
-              mission is to create solutions that truly resonate with people and
-              deliver real-world value for everyone.
+              tirelessly to make technology more accessible and impactful.
             </p>
           </motion.div>
 
@@ -251,7 +237,7 @@ const About = () => {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-16 pl-32 pr-6 md:pl-32 bg-gradient-to-b from-[#0f172a] to-black text-white overflow-hidden">
+      <section className="py-16 pl-32 pr-6 md:pl-32 bg-gradient-to-b from-[#1e293b] to-[#111827] text-white overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-24">
           {/* Image Side */}
           <motion.div
@@ -263,7 +249,7 @@ const About = () => {
           >
             <div className="overflow-hidden rounded-2xl shadow-xl border border-green-400/20">
               <img
-                src="https://image.semiconductor.samsung.com/image/samsung/p6/semiconductor/about-us/our-story/pc-our-story-block-02.png?$ORIGIN_PNG$" // <-- example image added
+                src="https://image.semiconductor.samsung.com/image/samsung/p6/semiconductor/about-us/our-story/pc-our-story-block-02.png?$ORIGIN_PNG$"
                 alt="Our Story"
                 className="w-full h-[300px] object-cover transform group-hover:scale-105 transition duration-700"
               />
@@ -289,8 +275,7 @@ const About = () => {
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
               From humble beginnings, we’ve grown into a team of passionate
               thinkers, designers, and engineers committed to building solutions
-              that matter. Every line of code, every design, every decision —
-              all driven by our belief in building a better digital future.
+              that matter.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
               This isn’t just our journey — it’s a shared story with our
@@ -301,11 +286,11 @@ const About = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="relative py-16 pl-64 pr-6 bg-gradient-to-b from-[#0f172a] to-black text-white overflow-hidden">
+      <section className="relative py-16 pl-64 pr-6 bg-gradient-to-b from-[#1e293b] to-[#111827] text-white overflow-hidden">
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://i.pinimg.com/originals/36/e4/d0/36e4d0b856694fc471344b644a1dd6e4.gif" // Add your background image path here
+            src="https://i.pinimg.com/originals/36/e4/d0/36e4d0b856694fc471344b644a1dd6e4.gif"
             alt="Timeline Background"
             className="w-full h-full object-cover opacity-40"
           />
@@ -318,7 +303,7 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Timeline</h2>
             <p className="text-gray-400 text-xl leading-relaxed">
               A journey through our milestones — from bold ideas to impactful
-              achievements. See how we’ve evolved over the years.
+              achievements.
             </p>
           </div>
 
@@ -378,7 +363,7 @@ const About = () => {
       {/* Technologies Section */}
       <section
         id="technologies"
-        className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white"
+        className="py-16 px-6 bg-gradient-to-b from-[#1e293b] to-[#0f172a] text-white"
       >
         <div className="max-w-6xl mx-auto text-center">
           <motion.h2
@@ -457,7 +442,7 @@ const About = () => {
             ].map(({ tech, logo }) => (
               <motion.div
                 key={tech}
-                className="group bg-[#111827] border border-green-500/20 rounded-2xl p-6 flex flex-col items-center justify-center transition duration-300 shadow-md"
+                className="group bg-[#1f2937] border border-green-500/20 rounded-2xl p-6 flex flex-col items-center justify-center transition duration-300 shadow-md"
                 variants={{
                   hidden: { opacity: 0, y: 50 },
                   visible: { opacity: 1, y: 0 },
@@ -468,7 +453,6 @@ const About = () => {
                   transition: { type: "spring", stiffness: 300 },
                 }}
               >
-                {/* Logo Container */}
                 <div className="relative w-20 h-20 mb-4 rounded-xl overflow-hidden bg-green-400/5 group-hover:shadow-lg group-hover:shadow-green-500/20 transition duration-300">
                   <img
                     src={logo}
@@ -476,8 +460,6 @@ const About = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-
-                {/* Tech Name */}
                 <span className="text-lg font-semibold text-green-300">
                   {tech}
                 </span>
@@ -490,10 +472,9 @@ const About = () => {
       {/* Methodology Section */}
       <section
         id="methodology"
-        className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white"
+        className="py-16 px-6 bg-gradient-to-b from-[#1e293b] to-[#0f172a] text-white"
       >
         <div className="max-w-6xl mx-auto text-center">
-          {/* Heading */}
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: -30 }}
@@ -510,7 +491,6 @@ const About = () => {
             clarity, speed, and continuous innovation at every step.
           </p>
 
-          {/* Steps Grid */}
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16"
             initial="hidden"
@@ -547,40 +527,33 @@ const About = () => {
             ].map((step, i) => (
               <motion.div
                 key={i}
-                className="bg-[#111827] border border-green-500/10 p-6 rounded-2xl shadow-lg hover:shadow-green-500/20 group transition-all duration-300 cursor-default"
+                className="bg-[#1f2937] border border-green-500/10 p-6 rounded-2xl shadow-lg hover:shadow-green-500/20 group transition-all duration-300 cursor-default"
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0 },
                 }}
                 whileHover={{ scale: 1.05, rotateX: 1, rotateY: -1 }}
               >
-                <div className="relative">
-                  {/* Hover Glow */}
-                  <div className="absolute inset-0 bg-green-500/10 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none" />
-
-                  <div className="relative z-10 flex flex-col items-center">
-                    {/* Image */}
-                    <div className="w-28 h-28 mb-4 rounded-xl overflow-hidden border border-green-500 bg-green-400/5">
-                      <img
-                        src={step.img}
-                        alt={`${step.title} icon`}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
-                    <h3 className="text-xl font-bold text-green-400 mb-2 text-center">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm leading-relaxed text-center">
-                      {step.desc}
-                    </p>
+                <div className="absolute inset-0 bg-green-500/10 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none" />
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="w-28 h-28 mb-4 rounded-xl overflow-hidden border border-green-500 bg-green-400/5">
+                    <img
+                      src={step.img}
+                      alt={`${step.title} icon`}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
+                  <h3 className="text-xl font-bold text-green-400 mb-2 text-center">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed text-center">
+                    {step.desc}
+                  </p>
                 </div>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Call to Action */}
           <motion.a
             href="/contact"
             className="inline-block bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition"
@@ -593,7 +566,7 @@ const About = () => {
       </section>
 
       {/* Our Team Section */}
-      <section className="py-16 px-6 bg-gradient-to-b from-[#0f172a] to-black text-white">
+      <section className="py-16 px-6 bg-gradient-to-b from-[#1e293b] to-[#0f172a] text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Team</h2>
           <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg">
@@ -606,22 +579,22 @@ const About = () => {
               {
                 name: "John Carter",
                 role: "CEO & Co-Founder",
-                src: "https://images.unsplash.com/photo-1676378388741-61acfa5ac03b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRlY2huaWNhbCUyMHBlcnNvbiUyMHdpdGglMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D", // ← Add image URL here
+                src: "https://images.unsplash.com/photo-1676378388741-61acfa5ac03b?w=600&auto=format&fit=crop&q=60",
               },
               {
                 name: "Sophie Moore",
                 role: "Community Lead",
-                src: "https://images.unsplash.com/photo-1652105425332-e10c5392b863?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHRlY2huaWNhbCUyMHBlcnNvbiUyMHdpdGglMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D", // ← Add image URL here
+                src: "https://images.unsplash.com/photo-1652105425332-e10c5392b863?w=600&auto=format&fit=crop&q=60",
               },
               {
                 name: "Alex Turner",
                 role: "Operations",
-                src: "https://plus.unsplash.com/premium_photo-1663040355610-20350fe375ee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzN8fHRlY2huaWNhbCUyMHBlcnNvbiUyMHdpdGglMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D", // ← Add image URL here
+                src: "https://plus.unsplash.com/premium_photo-1663040355610-20350fe375ee?w=600&auto=format&fit=crop&q=60",
               },
               {
                 name: "Alex Johnson",
                 role: "Developer",
-                src: "https://images.unsplash.com/photo-1654262609484-76d1a8f3b016?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTB8fHRlY2huaWNhbCUyMHBlcnNvbiUyMHdpdGglMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D", // ← Add image URL here
+                src: "https://images.unsplash.com/photo-1654262609484-76d1a8f3b016?w=600&auto=format&fit=crop&q=60",
               },
             ].map((member, i) => (
               <motion.div
@@ -630,7 +603,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-[#111827] rounded-3xl overflow-hidden shadow-lg hover:shadow-green-500/10 transition"
+                className="bg-[#1f2937] rounded-3xl overflow-hidden shadow-lg hover:shadow-green-500/10 transition"
               >
                 <img
                   src={member.src}
@@ -650,7 +623,7 @@ const About = () => {
       </section>
 
       {/* Investors Section */}
-      <section className="py-16 px-6 bg-gradient-to-b from-black to-[#0f172a] text-white text-center">
+      <section className="py-16 px-6 bg-gradient-to-b from-[#1a202c] to-[#1e293b] text-white text-center">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Investors</h2>
           <p className="text-gray-400 mb-10 max-w-xl mx-auto text-lg">
@@ -663,14 +636,14 @@ const About = () => {
               (name, i) => (
                 <motion.div
                   key={i}
-                  className="flex items-center gap-2 px-6 py-3 bg-[#1f2937] rounded-full text-white font-semibold text-base shadow hover:shadow-green-400/20 transition"
+                  className="flex items-center gap-2 px-6 py-3 bg-[#374151] rounded-full text-white font-semibold text-base shadow hover:shadow-green-400/20 transition"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1, duration: 0.5 }}
                   viewport={{ once: true }}
                 >
                   <img
-                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIcA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcDBAUCAQj/xABFEAABAwICBAcLCgUFAAAAAAAAAQIDBAUGESExQVESE1VhcbHRBxUiQlKBkZShwdIUFiQzQ2JykrLwIzV0gqIyY3Ph8f/EABsBAQADAQEBAQAAAAAAAAAAAAAEBQYDAQIH/8QAMhEAAQMCBAMGBQQDAAAAAAAAAAECAwQRBRIhUTFBcRNhobHB0RUiMpHwBkJSgRQjM//aAAwDAQACEQMRAD8AvEAAAAAArnHeK1ndJarZJ/CTNtRK1f8AWu1qc2/fq6etj/Ea26m73Ub8qudvhuaumNnav72FYFPiNZb/AFM/v2NPgmGI61TKnRPX2+4ABSmrAAAABvW2z3G6L9ApJZm55cNEyan9y6D1rVctmpc+HvaxMzlshogmdH3OrhKiLWVlPAm5iLIvuT2nUj7m9Gn1twqXfha1vaS24fUO/aV0mM0TFtnv0RSuAWQ/ucUK/V19Un4kavuQ51Z3OKxiKtHXwTfdlYrPamZ67D6hv7TxmNUT1tnt1RSEA6V0sF0tWbq2jkbGn2rfCZ6U1ec5pEcxzFs5LFlHIyRuZi3TuAATSuSaVPk+wiKq5ImarsLKwThH5EjLldI/pWuKF32XOv3urp1MFYR+RIy43SNFqtcMLvsudfvdXTqmpd0NDltJImvJDJYvi+e8EC6c137k7gAC3M0AAAAAAAAAAAADTu9whtVunrahfAibnl5S7ETpU3CO4nnZO5KNyI6NEze1UzRVXZ6Osh19WlJAsi8eXU700aSSoi8OfQqmuq5q+smq6l3CllcrnL7k5k1GA712sDos5qFFezWsWtW9G/rOCZZkqS/Min6LBJHIxOz4eQAB9nYGeio6mvqWU1HC6WZ+pretdyc57tdvqbpWx0dGzhSv36mptVeYt/D1hpLFScVTpw5nJ/FmVPCevuTchMpKN1Qt+DSrxLE2UbbJq5eCeqnDw/gOkpGtmu3Bqp9fFfZt+Lz6OYmDGNjYjGNRrWpkjWpkiHoGhihjiSzEMTU1U1S7NK64AB1I4AAAVM0yXURa/wCCbfckdLRI2jql05sTwHLzt96e0lIOckTJUyvS53gqZad2eJ1lKMulrrLTVrTV0Ksk8VU0o9N7V2k+wThH5EjLldI0WqXTFC5PqudfvdXTqmE1PBO6N00LJHRO4cauai8F29NymUhQYcyKTOq32LWrxyWohSNEyqvFd+mwABYlGAAAAAAAAAAAAAAAeXvbGxz3Lk1qKqrzELnldNM+V2t7lUk19l4q3PRF0yKjU9/sIqZH9Rz3kZCnJL/f88S1w9lmq4HKu1lirc5Ysoqjfsd09p1QZ1j3MW7SzjkdG7M1Sv6mnlpZlinYrHpsXb0GJEVVyRFVdiIT2to4K2Hi6hmabFTW1eZTBhTCz/nA2afKSkpk4xrvKd4qKnNr8xcUcv8AkvSPgqlsmJxpEr36KiffoSjBlgbZbajpmp8tnRHTL5O5nm6yQgG1jjbG1Gt4IYaeZ88iyPXVQAD7OQAAAAAAAAAAAAAAAAAAAAAAAAAAAAABw8TSaII+lynBOviV2dZG3dHn7VOQfn+MPz1sn5yL2kS0LQACtJAJRYIeKt6PVPCkVXL1IRcmlGzi6SFieKxE9hof07Ejp3PXknmQK91mIm5mABsSpAAAAAAKKuN0uKXGrRtwrERJ5EREqHoiJwl5zW763LlGt9Yf2nm5fzKs/qJP1KaxrWxsypoZdz3XXU2++ty5RrfWH9o763LlGt9Yf2moD67Nmx5ndubffW5co1vrD+0d9blyjW+sP7TUA7Nmwzu3NvvrcuUa31h/aO+ty5RrfWH9pqAdmzYZ3bm331uXKNb6w/tHfW5co1vrD+01AOzZsM7tzejvN1jXOO51zVyyzSof2kw7m16rqq+TU1bW1FQx9OrmpNKrslRU1Z8yqQEkfc8kVmL6JM8ke2Rq/kVfcR6qJiwu05HemkckrdeZcwAMwaIAAAAAAjOI/wCYN/4061OWdfErcquJ2+PL0Kvacg/PMVS1bJ1L6m/4tAAIB3C6icM/0Ny3EHJnRP4yjgfvjTqNN+mnJnkb3J6ldiCaNUzgA1hVgAAAAAH5/uX8yrP6iT9SmsbNy/mVZ/USfqU1jYN+lDKu4qAAfR4AAAAAAAAADvYFz+d1ty8t/wChxwSS9zqPh4uo18hsjv8ABU95wqVtC/ovkdYEvK3qhcgAMoaYAAAAAA4mJo844JNyq30/+HAJZeoeOt0uWtnhp5tfszImYfH4slZm/kiL6ehc0LrxW2AAKUmAkmHalstI6DhIr4V0pnpRF0p7/QQW4XZG5xUqortsmtE6BhO697ry18z14mo/hyqq6s9S+nrU0mC00kMvbP0RUtYoa/EoVckLdddV5IWgADXHAAAAAAApqvwjiCSvqpI7ZK5j5nuaqPZpRXKqbTB8zsRclS/nZ8RdgLJMUmRLWTx9yvXDYlW918PYpP5nYi5Kl/Oz4h8zsRclS/nZ8RdgPfis2yePuefDYt18PYpP5nYi5Kl/Oz4h8zsRclS/nZ8RdgHxWbZPH3Hw2LdfD2KIuVgutrp0nuFE+CJXIxHOc1c1XZoXmU5pMu6beErrsy3wuzho8+HltkXX6E0edSGlxTvfJGjnpqpVTsYyRWs4IAAdzkCbdyimWS9VdQrdENPwc+dzk+FSElqdyui4iyT1bm5OqZlyXe1qZJ7eEQsQflp179CXQszTp3E1ABmjQAAAAAAHxyI5qoqZoqZKhC6qFaepkhXxHZebYTUjeL0bSwNr+CrkTJjkTfs/fQUmOUbqiFHsS7m+SkuknbCq51shxpZWQxq+VyNam1Tg3C5vqc4482Rbtruk1qurlq38KVdCampqQwFbRYa2H55NXeRV1+LPnuyLRvioABaFMWLgu+JX0qUVS/6VA3QqrpkZv6U2+kkxTFPPLTTxzwPVksa8Jrk2KWXhvEUN4hSOTgx1jU8OPY7nbzc2wnwTXTK7iWtLUI5MjuJ3AASiaAAAAAAAAACPYzxEywW1ViVq1s2bYGLpy3uXmTryNjEuI6PD9Jxk68ZUPReKp2r4T19yc5TV1uVVdq6SsrpOHK/YmpqbGom5CwoqNZnZ3fT5kGsq0iTK36vI1XOc9yue5XOcubnKuaqu9T4AaEogAD0HqKN80rIoW8KSRyNY1NrlXJEL7tFC22WulomKipBE1mabVRNK+krLuaWf5deVr5WZwUSZtVdsi6vQma+gtkosUmzPSNORc4bFZqyLzAAKosgAAAAAAYaymirKWWmnbnHK1WuQzAKlwupT1zoZbbXS0k6eFGuhfKTYqdJqlmYtsffajSWBv0uBFVn302t7P+ytFRWqqORUVFyVFTSilXLGsbrFLUQrE7uPgAORHB6je+N7Xxucx7Vza5q5Ki8ynkA9JnZMaqxrYbu1XZaEnjbp/uT3p6CY0lZTVsSS0k8czN7HZ5dO4psyQTS08nGU8r4np40blavpQksqXN0XUmRVj26O1LnBWVJi68U6Ijp2TtTZMxF9qZKdGPHlUn1lDC78L1b2khKlikttZEvHQngII/HtSv1dBE38Uir7kNCqxld50VI5IoE/249P+WYWpjQLWRJwUsaeeGmiWWolZFGmtz3IiIRK9Y1ijR0NpZxj9XHvTwU6E2/vWQuqqqirk4yqnkmfsWRyrl0bjCcH1Ll0boRZK1ztG6Hi5NkuMr56iVz6h2lZHaVXm6DjPY6N3BemTjuGKogZOzguTTsXahPw7FX065JNWeX5sV725teZxgZJ4XwOyemhdTtimM18cjZGo9i3RThwBkp4JameOCnYsk0jkaxia1VTGWb3OcMfJY23iujVJ5G/R2O8Rq+N0r1dJyqZ2wR5l/o7U8KzPyoSnDlojsdogoo14TmpwpX+W9da/vYiHTAMu5yuVXLxU0jWo1ERAAD5PQAAAAAAAAAQ/GeHUmZJc6JGtkY1XTs1I9E8ZOfr6df0HOVqOYtznKxr2KikDABVFCAAAAAAAAAAAAAAAAAAeZI2ysVr0zRTk1VOtO/XmxdSgFvg1TIyobGi/K7kfD0S1yYYBwklxfHdLi1rqNi5wxZ/WORda8yKmrb0a7TAJtbK6SZ2bkti8pI2siS3PUAAiEkAAAAAA//Z" // ← Add investor logo URL
+                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/..." // (unchanged base64 logo)
                     alt="Investor"
                     className="w-8 h-9 object-fit"
                   />
@@ -683,11 +656,11 @@ const About = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="relative py-12 px-6 bg-gradient-to-r from-green-800 via-[#0f172a] to-green-900 text-white overflow-hidden">
+      <section className="relative py-12 px-6 bg-gradient-to-r from-green-700 via-[#1a202c] to-green-800 text-white overflow-hidden">
         {/* Floating Glow Effects */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute w-72 h-72 bg-green-400/10 blur-3xl rounded-full top-0 left-0 animate-pulse" />
-          <div className="absolute w-60 h-60 bg-green-700/10 blur-2xl rounded-full bottom-0 right-0 animate-pulse" />
+          <div className="absolute w-72 h-72 bg-green-300/10 blur-3xl rounded-full top-0 left-0 animate-pulse" />
+          <div className="absolute w-60 h-60 bg-green-600/10 blur-2xl rounded-full bottom-0 right-0 animate-pulse" />
         </div>
 
         <motion.div

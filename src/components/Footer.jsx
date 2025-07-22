@@ -45,7 +45,7 @@ const Footer = () => {
               </span>
             </div>
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=adarshpatel@gmail.com&su=Let's%20Connect&body=Hi%20Adarsh%2C%0A%0AI%20want%20to%20discuss%20a%20project.%0A"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=srikanthiit2014@gmail.com&su=Let's%20Connect&body=Hi%20Shrikanth%2C%0A%0AI%20want%20to%20discuss%20a%20project.%0A"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-2 bg-white text-green-800 rounded-lg font-medium text-base hover:bg-green-100 transition-colors"

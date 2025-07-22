@@ -35,32 +35,34 @@ const product = {
   tagline: "Empowering Education Through Smart Management",
   description:
     "EMS + LMS is a comprehensive web-based solution that integrates the Education Management System (EMS) with the Learning Management System (LMS). Designed for educational institutions, it streamlines academic administration and digital learning in a unified platform. From admissions and attendance tracking to online classes and course assessments, the system enables efficient management and uninterrupted learning experiences.",
-    highlights: [
-      {
-        icon: Video,
-        label: "Live Online Classrooms with Attendance Tracking and Recordings",
-      },
-      {
-        icon: AlertTriangle,
-        label: "Automated Alerts for Announcements, Deadlines, and Emergencies",
-      },
-      {
-        icon: ShieldCheck,
-        label: "Secure, Role-Based Dashboards for Administrators, Teachers, and Students",
-      },
-      {
-        icon: Brain,
-        label: "AI-Powered Analytics for Performance, Engagement, and Early Intervention",
-      },
-      {
-        icon: Download,
-        label: "Offline Access to Course Materials and Academic Records",
-      },
-      {
-        icon: BellRing,
-        label: "Push Notifications and Encrypted Communication Channels",
-      },
-    ], 
+  highlights: [
+    {
+      icon: Video,
+      label: "Live Online Classrooms with Attendance Tracking and Recordings",
+    },
+    {
+      icon: AlertTriangle,
+      label: "Automated Alerts for Announcements, Deadlines, and Emergencies",
+    },
+    {
+      icon: ShieldCheck,
+      label:
+        "Secure, Role-Based Dashboards for Administrators, Teachers, and Students",
+    },
+    {
+      icon: Brain,
+      label:
+        "AI-Powered Analytics for Performance, Engagement, and Early Intervention",
+    },
+    {
+      icon: Download,
+      label: "Offline Access to Course Materials and Academic Records",
+    },
+    {
+      icon: BellRing,
+      label: "Push Notifications and Encrypted Communication Channels",
+    },
+  ],
   screenshots: [p1Img, p2Img, p3Img, p4Img, p5Img],
   details: {
     launched: "2024",
@@ -79,7 +81,7 @@ const EMSLMS = () => {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-[#0f172a] to-black text-white py-20 px-6 min-h-screen">
+    <section className="relative bg-gradient-to-br from-[#1e293b] to-[#0a0a0a] text-white py-20 px-6 min-h-screen">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581092787764-d91c1f348b48')] bg-cover bg-center opacity-70 -z-10"></div>
 
       <div className="max-w-6xl mx-auto text-xl">
@@ -135,7 +137,7 @@ const EMSLMS = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-[#0f172a] p-10 rounded-2xl shadow-xl border-l-8 border-green-500 mb-16 text-gray-300 leading-relaxed text-xl"
+          className="bg-[#1e293b] p-10 rounded-2xl shadow-xl border-l-8 border-green-500 mb-16 text-gray-300 leading-relaxed text-xl"
         >
           <p className="mb-6">{product.description}</p>
           <p className="text-gray-400">
@@ -187,7 +189,7 @@ const EMSLMS = () => {
             {product.highlights.map((item, i) => (
               <div
                 key={i}
-                className="bg-[#111827] p-6 rounded-2xl shadow hover:shadow-green-500/30 group transition duration-300 transform hover:scale-105"
+                className="bg-[#1f2937] p-6 rounded-2xl shadow hover:shadow-green-500/30 group transition duration-300 transform hover:scale-105"
               >
                 <div className="w-full h-36 mb-4 flex items-center justify-center rounded-xl">
                   <item.icon className="w-16 h-16 text-green-400 group-hover:scale-110 transition-transform duration-300" />

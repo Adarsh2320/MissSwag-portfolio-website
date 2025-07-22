@@ -219,7 +219,7 @@ const Home = () => {
         </Swiper>
 
         {/* Overlay with dynamic title/subtitle */}
-        <div className="absolute inset-0 bg-[#0f172a]/70 z-10 flex items-center justify-center">
+        <div className="absolute inset-0 bg-[#1e293b]/70 z-10 flex items-center justify-center">
           <motion.div
             key={activeIndex}
             initial={{ opacity: 0, y: 40 }}
@@ -246,7 +246,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-gradient-to-br from-[#0f172a] to-black text-white py-12 px-6">
+      <section className="bg-gradient-to-br from-[#1e293b] to-gray-900 text-white py-12 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
             { number: "10+", label: "Projects Completed" },
@@ -273,7 +273,7 @@ const Home = () => {
       {/* About Section */}
       <section
         id="about"
-        className="py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black overflow-hidden"
+        className="py-16 px-6 bg-gradient-to-br from-[#1e293b] to-gray-900 overflow-hidden"
       >
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-32 items-center">
           {/* Image with effects */}
@@ -333,7 +333,7 @@ const Home = () => {
       {/* Services Section */}
       <section
         id="services"
-        className="py-16 bg-gradient-to-br from-[#0f172a] to-black"
+        className="py-16 bg-gradient-to-br from-[#1e293b] to-gray-900"
       >
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
@@ -370,7 +370,7 @@ const Home = () => {
                     {/* Card */}
                     <div className="md:w-4/5 w-full">
                       <div
-                        className={`bg-[#0f172a] px-8 py-6 rounded-2xl shadow-xl hover:shadow-green-500/30 border-l-8 border-green-500 transition ${
+                        className={`bg-[#1e293b] px-8 py-6 rounded-2xl shadow-xl hover:shadow-green-500/30 border-l-8 border-green-500 transition ${
                           !isEven ? "md:border-r-8 md:border-l-0" : ""
                         }`}
                       >
@@ -411,7 +411,7 @@ const Home = () => {
       {/* Roadmap Section */}
       <section
         id="roadmap"
-        className="py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black text-white"
+        className="py-16 px-6 bg-gradient-to-br from-[#1e293b] to-gray-900 text-white"
       >
         <div className="max-w-7xl mx-auto text-center">
           <motion.h2
@@ -430,25 +430,25 @@ const Home = () => {
                 step: "1",
                 title: "Discovery",
                 desc: "We understand your goals, challenges, and users to define a clear roadmap.",
-                icon: "https://cdn-icons-gif.flaticon.com/14447/14447460.gif", // magnifying glass / discovery
+                icon: "https://cdn-icons-gif.flaticon.com/14447/14447460.gif",
               },
               {
                 step: "2",
                 title: "Design",
                 desc: "We craft user-centric wireframes, UI/UX, and branding aligned with your vision.",
-                icon: "https://cdn-icons-gif.flaticon.com/17122/17122766.gif", // pen tool / design
+                icon: "https://cdn-icons-gif.flaticon.com/17122/17122766.gif",
               },
               {
                 step: "3",
                 title: "Development",
                 desc: "Our engineers build scalable and secure solutions using modern tech.",
-                icon: "https://cdn-icons-gif.flaticon.com/17122/17122569.gif", // coding / dev
+                icon: "https://cdn-icons-gif.flaticon.com/17122/17122569.gif",
               },
               {
                 step: "4",
                 title: "Launch & Support",
                 desc: "We deploy, monitor, and support your app for long-term success.",
-                icon: "https://cdn-icons-gif.flaticon.com/14447/14447525.gif", // rocket / launch
+                icon: "https://cdn-icons-gif.flaticon.com/14447/14447525.gif",
               },
             ].map((s, i) => (
               <motion.div
@@ -457,7 +457,7 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-[#111827] border-l-4 border-green-500 p-8 rounded-3xl shadow-xl hover:shadow-green-500/30 transition transform hover:scale-[1.03]"
+                className="bg-[#1f2937] border-l-4 border-green-500 p-8 rounded-3xl shadow-xl hover:shadow-green-500/30 transition transform hover:scale-[1.03]"
               >
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-28 h-28 bg-green-500/10 border border-green-400 rounded-full flex items-center justify-center shadow-md">
@@ -483,7 +483,7 @@ const Home = () => {
       {/* Products Section */}
       <section
         id="products"
-        className="relative py-16 px-6 bg-gradient-to-br from-[#0f172a] to-black overflow-hidden"
+        className="relative py-16 px-6 bg-gradient-to-br from-[#1e293b] to-[#1a1a1a] overflow-hidden"
         style={{ perspective: "1200px" }} // true 3‑D depth
       >
         {/* Down‑fall background squares */}
@@ -537,7 +537,7 @@ const Home = () => {
               >
                 <Link
                   to={`/products/${p.slug}`}
-                  className="group bg-[#111827] p-6 rounded-2xl border border-gray-700 hover:border-green-400 transition duration-500 shadow-lg hover:shadow-green-500/30 block"
+                  className="group bg-[#1f2937] p-6 rounded-2xl border border-gray-700 hover:border-green-400 transition duration-500 shadow-lg hover:shadow-green-500/30 block"
                 >
                   <div className="relative w-32 h-32 mx-auto mb-6 animate-bob">
                     <div className="absolute inset-0 rounded-xl bg-green-500/10 blur-xl group-hover:scale-105 transition duration-500" />
@@ -562,7 +562,7 @@ const Home = () => {
       </section>
 
       {/* Project Discussion CTA Section */}
-      <section className="bg-gradient-to-b from-[#0f172a] to-black text-white py-16 px-6">
+      <section className="bg-gradient-to-b from-[#1e293b] to-[#1a1a1a] text-white py-16 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Left Content */}
           <motion.div
@@ -583,7 +583,7 @@ const Home = () => {
 
           {/* Right Quote + Button */}
           <motion.div
-            className="md:w-1/2 bg-[#111827] text-white p-8 rounded-xl shadow-lg border border-green-500/20 text-center"
+            className="md:w-1/2 bg-[#1f2937] text-white p-8 rounded-xl shadow-lg border border-green-500/20 text-center"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
