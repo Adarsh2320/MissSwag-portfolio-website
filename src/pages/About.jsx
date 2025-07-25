@@ -46,7 +46,11 @@ const About = () => {
             </h1>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed text-justify">
               We are a technology company that builds intelligent platforms and
-              delivers world-class digital transformation solutions...
+              delivers world-class digital transformation solutions, empowering
+              businesses to innovate, scale, and thrive in the digital era. Our
+              expertise spans cutting-edge technologies, AI-driven automation,
+              cloud solutions, and data-driven strategies, enabling seamless
+              experiences and measurable outcomes for our clients.
             </p>
           </motion.div>
 
@@ -181,13 +185,12 @@ const About = () => {
               Our Mission
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              At Gamayas, we bridge the gap between traditional systems and
-              future innovation...
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              Our mission is to accelerate digital journeys through technical
-              excellence, creativity, and deep industry insight...
-            </p>
+  At Gamayas, we bridge the gap between traditional systems and future innovation by building intelligent platforms and delivering world-class digital transformation solutions. Our expertise spans cloud-native development, AI-powered automation, and scalable digital ecosystems, helping organizations modernize their infrastructure while driving business growth.
+</p>
+<p className="text-lg text-gray-300 leading-relaxed mb-4">
+  Our mission is to accelerate digital journeys through technical excellence, creativity, and deep industry insight. We partner with businesses to design innovative strategies, develop cutting-edge solutions, and deliver measurable results that shape the future of their industries.
+</p>
+
           </motion.div>
         </div>
       </section>
@@ -212,9 +215,9 @@ const About = () => {
               power of technology.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              Guided by agility, empathy, and relentless curiosity, we work
-              tirelessly to make technology more accessible and impactful.
-            </p>
+  Guided by agility, empathy, and relentless curiosity, we work tirelessly to make technology more accessible and impactful. We believe in creating solutions that not only solve today’s challenges but also empower businesses to thrive in the future. Through continuous innovation and a user-first approach, we transform complex problems into seamless, intuitive digital experiences.
+</p>
+
           </motion.div>
 
           {/* Image */}
@@ -577,22 +580,22 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {[
               {
-                name: "John Carter",
+                name: "Srikant Dasari",
                 role: "CEO & Co-Founder",
                 src: "https://images.unsplash.com/photo-1676378388741-61acfa5ac03b?w=600&auto=format&fit=crop&q=60",
               },
               {
-                name: "Sophie Moore",
+                name: "Sanjay Pavan",
                 role: "Community Lead",
                 src: "https://images.unsplash.com/photo-1652105425332-e10c5392b863?w=600&auto=format&fit=crop&q=60",
               },
               {
-                name: "Alex Turner",
+                name: "Arpan Vyas",
                 role: "Operations",
                 src: "https://plus.unsplash.com/premium_photo-1663040355610-20350fe375ee?w=600&auto=format&fit=crop&q=60",
               },
               {
-                name: "Alex Johnson",
+                name: "Adarsh Patel",
                 role: "Developer",
                 src: "https://images.unsplash.com/photo-1654262609484-76d1a8f3b016?w=600&auto=format&fit=crop&q=60",
               },
