@@ -14,8 +14,8 @@ import team5 from "../assets/team_photos/priyanka.png";
 import team6 from "../assets/team_photos/pavan.png";
 import team7 from "../assets/team_photos/jacob.jpg";
 import team8 from "../assets/team_photos/juhi.png";
-import team9 from "../assets/team_photos/arpna.jpg";
-import team10 from "../assets/team_photos/adarsh.jpg";
+import team9 from "../assets/team_photos/arpan.png";
+import team10 from "../assets/team_photos/adarsh.png";
 
 
 
@@ -326,7 +326,7 @@ const About = () => {
         <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
           {/* Left Description Panel */}
           <div className="md:w-1/3">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Timeline</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Journey</h2>
             <p className="text-gray-400 text-xl leading-relaxed">
               A journey through our milestones — from bold ideas to impactful
               achievements.
@@ -594,7 +594,7 @@ const About = () => {
       {/* Our Team Section */}
       <section className="py-16 px-6 bg-gradient-to-b from-[#1e293b] to-[#0f172a] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Team</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Leadership Team</h2>
           <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg">
             We are a group of innovators, creators, and builders committed to
             turning ideas into impactful realities.
@@ -623,19 +623,19 @@ const About = () => {
                 src: team4,
               },
               {
+                name: "Pavan Sanjay",
+                role: "CISO",
+                src: team7,
+              },
+              {
                 name: "Priyanka",
                 role: "Tech Head",
                 src: team5,
               },
               {
-                name: "Pavan Sanjay",
-                role: "CISO",
-                src: team6,
-              },
-              {
                 name: "Jacob",
                 role: "UI & UX Head",
-                src: team7,
+                src: team6,
               },
               {
                 name: "Juhi Desai",

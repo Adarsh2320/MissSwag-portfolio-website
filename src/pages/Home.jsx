@@ -573,7 +573,7 @@ const Home = () => {
       {/* Investors Section */}
       <section className="py-16 px-6 bg-gradient-to-b from-[#1a202c] to-[#1e293b] text-white text-center">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Investors</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Technology Partnership Companies</h2>
           <p className="text-gray-400 mb-10 max-w-xl mx-auto text-lg">
             We are proudly backed by industry-leading investors who believe in
             our mission and vision.

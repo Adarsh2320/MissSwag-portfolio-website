@@ -231,7 +231,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="bg-black py-4 text-center text-sm text-gray-500 border-t border-green-800">
-          &copy; {new Date().getFullYear()} Gamayas Digital Design Pvt. Ltd. All
+          &copy; {new Date().getFullYear()} Gamayas Group of Companies All
           rights reserved.
         </div>
       </footer>
