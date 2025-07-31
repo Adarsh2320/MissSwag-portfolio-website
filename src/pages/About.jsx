@@ -60,7 +60,7 @@ const About = () => {
               About Gamayas
             </h1>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed text-justify">
-              We are a gourp of technology company that builds intelligent platforms and
+              We are a technology company that builds intelligent platforms and
               delivers world-class digital transformation solutions, empowering
               businesses to innovate, scale, and thrive in the digital era. Our
               expertise spans cutting-edge technologies, AI-driven automation,
@@ -200,12 +200,17 @@ const About = () => {
               Our Mission
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
-  At Gamayas, we bridge the gap between traditional systems and future innovation by building intelligent platforms and delivering world-class digital transformation solutions. Our expertise spans cloud-native development, AI-powered automation, and scalable digital ecosystems, helping organizations modernize their infrastructure while driving business growth.
-</p>
-<p className="text-lg text-gray-300 leading-relaxed mb-4">
-  Our mission is to accelerate digital journeys through technical excellence, creativity, and deep industry insight. We partner with businesses to design innovative strategies, develop cutting-edge solutions, and deliver measurable results that shape the future of their industries.
-</p>
-
+              At Gamayas, we bridge the gap between traditional systems and
+              future innovation by delivering scalable, human-centric digital
+              solutions. We focus on modernizing legacy infrastructure with
+              thoughtful engineering and user-first design.
+            </p>
+            <p className="text-lg text-gray-300 leading-relaxed mb-4">
+              Our mission is to accelerate digital journeys through technical
+              excellence, creativity, and deep industry insight. We build
+              adaptable, future-ready solutions that empower organizations to
+              thrive in a rapidly evolving digital landscape.
+            </p>
           </motion.div>
         </div>
       </section>
@@ -227,12 +232,15 @@ const About = () => {
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
               We are a diverse team of engineers, strategists, creatives, and
               problem-solvers united by a shared belief in the transformative
-              power of technology.
+              power of technology. Together, we bring a wide range of skills and
+              perspectives that fuel innovation and drive meaningful change.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
-  Guided by agility, empathy, and relentless curiosity, we work tirelessly to make technology more accessible and impactful. We believe in creating solutions that not only solve today’s challenges but also empower businesses to thrive in the future. Through continuous innovation and a user-first approach, we transform complex problems into seamless, intuitive digital experiences.
-</p>
-
+              Guided by agility, empathy, and relentless curiosity, we work
+              tirelessly to make technology more accessible and impactful. Our
+              mission is to create solutions that truly resonate with people and
+              deliver real-world value for everyone.
+            </p>
           </motion.div>
 
           {/* Image */}
