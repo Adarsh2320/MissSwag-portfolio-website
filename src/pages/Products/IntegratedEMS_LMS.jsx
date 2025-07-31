@@ -202,6 +202,30 @@ const EMSLMS = () => {
           </div>
         </motion.div>
 
+        {/* Product Demo Video */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <h2 className="text-4xl font-semibold text-green-300 mb-10 text-center">
+            Visualise the Experience
+          </h2>
+          <div className="relative pb-[40%] h-0 overflow-hidden rounded-2xl shadow-xl max-w-4xl mx-auto">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full rounded-xl"
+              src="https://www.youtube.com/embed/AWuIdK5MU8U?autoplay=1&mute=1&si=u2OWI3aGN6ar8DxN"
+              title="Integrated EMS + LMS Demo"
+              frameBorder="2"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

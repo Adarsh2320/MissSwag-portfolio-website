@@ -53,7 +53,7 @@ const Navbar = () => {
             className="w-14 h-14 rounded-md object-cover border border-green-500 shadow"
           />
           <span className="text-sm md:text-xl font-bold tracking-wide">
-            GAMAYAS DIGITAL DESIGN PVT LTD
+            GAMAYAS GROUP OF COMPANIES
           </span>
         </div>
 

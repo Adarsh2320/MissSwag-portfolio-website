@@ -5,6 +5,21 @@ import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+//team images
+import team1 from "../assets/team_photos/srikant.jpg";
+import team2 from "../assets/team_photos/sujith.png";
+import team3 from "../assets/team_photos/sarika.png";
+import team4 from "../assets/team_photos/mounika.png";
+import team5 from "../assets/team_photos/priyanka.png";
+import team6 from "../assets/team_photos/pavan.png";
+import team7 from "../assets/team_photos/jacob.jpg";
+import team8 from "../assets/team_photos/juhi.png";
+import team9 from "../assets/team_photos/arpna.jpg";
+import team10 from "../assets/team_photos/adarsh.jpg";
+
+
+
+
 import WhatsappButton from "../components/WhatsappButton";
 
 const About = () => {
@@ -45,7 +60,7 @@ const About = () => {
               About Gamayas
             </h1>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed text-justify">
-              We are a technology company that builds intelligent platforms and
+              We are a gourp of technology company that builds intelligent platforms and
               delivers world-class digital transformation solutions, empowering
               businesses to innovate, scale, and thrive in the digital era. Our
               expertise spans cutting-edge technologies, AI-driven automation,
@@ -580,25 +595,56 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {[
               {
-                name: "Srikant Dasari",
-                role: "CEO & Co-Founder",
-                src: "https://images.unsplash.com/photo-1676378388741-61acfa5ac03b?w=600&auto=format&fit=crop&q=60",
+                name: "Ronith Srikanth",
+                role: "Founder & CEO",
+                src: team1,
               },
               {
-                name: "Sanjay Pavan",
-                role: "Community Lead",
-                src: "https://images.unsplash.com/photo-1652105425332-e10c5392b863?w=600&auto=format&fit=crop&q=60",
+                name: "Sujith",
+                role: "CTO & Co-Founder",
+                src: team2,
+              },
+              {
+                name: "Sarika",
+                role: "CFO",
+                src: team3,
+              },
+              {
+                name: "Mounika",
+                role: "COO & HR",
+                src: team4,
+              },
+              {
+                name: "Priyanka",
+                role: "Tech Head",
+                src: team5,
+              },
+              {
+                name: "Pavan Sanjay",
+                role: "CISO",
+                src: team6,
+              },
+              {
+                name: "Jacob",
+                role: "UI & UX Head",
+                src: team7,
+              },
+              {
+                name: "Juhi Desai",
+                role: "Director of Marketing & Business Development (USA)",
+                src: team8,
               },
               {
                 name: "Arpan Vyas",
-                role: "Operations",
-                src: "https://plus.unsplash.com/premium_photo-1663040355610-20350fe375ee?w=600&auto=format&fit=crop&q=60",
+                role: "Developer",
+                src: team9,
               },
               {
                 name: "Adarsh Patel",
                 role: "Developer",
-                src: "https://images.unsplash.com/photo-1654262609484-76d1a8f3b016?w=600&auto=format&fit=crop&q=60",
+                src: team10,
               },
+             
             ].map((member, i) => (
               <motion.div
                 key={i}
@@ -621,39 +667,6 @@ const About = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Investors Section */}
-      <section className="py-16 px-6 bg-gradient-to-b from-[#1a202c] to-[#1e293b] text-white text-center">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Investors</h2>
-          <p className="text-gray-400 mb-10 max-w-xl mx-auto text-lg">
-            We are proudly backed by industry-leading investors who believe in
-            our mission and vision.
-          </p>
-
-          <div className="flex flex-wrap justify-center items-center gap-6">
-            {["Google", "Microsoft", "Amazon", "Flipkart", "Apple"].map(
-              (name, i) => (
-                <motion.div
-                  key={i}
-                  className="flex items-center gap-2 px-6 py-3 bg-[#374151] rounded-full text-white font-semibold text-base shadow hover:shadow-green-400/20 transition"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1, duration: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  <img
-                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/..." // (unchanged base64 logo)
-                    alt="Investor"
-                    className="w-8 h-9 object-fit"
-                  />
-                  {name}
-                </motion.div>
-              )
-            )}
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 import {
   Facebook,
@@ -14,7 +14,6 @@ import {
   X,
 } from "lucide-react";
 import gamayasLogo from "../assets/logo.jpg";
-
 
 const Footer = () => {
   const [showAdminLogin, setShowAdminLogin] = useState(false);
@@ -68,7 +67,7 @@ const Footer = () => {
               <div className="ml-3">
                 <div className="font-bold text-2xl text-white">GAMAYAS</div>
                 <div className="text-sm text-green-300">
-                  Digital Design Pvt. Ltd.
+                  GROUP OF COMPANIES
                 </div>
               </div>
             </div>
@@ -115,34 +114,58 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-         
-<div>
-  <h3 className="text-xl font-bold text-white mb-6">Core Services</h3>
-  <div className="grid grid-cols-2 gap-y-4 gap-x-48 text-gray-300">
-    {[
-      { label: "Digital Transformation", link: "/services/digitaltransformation" },
-      { label: "Product Engineering", link: "/services/productengineering" },
-      { label: "Digital Marketing", link: "/services/digitalmarketing" },
-      { label: "Software Development", link: "/services/softwaredevelopment" },
-      { label: "Cloud & Infrastructure", link: "/services/cloudinfrastructure" },
-      { label: "Staffing & Consulting", link: "/services/itconsultingstaffing" },
-      { label: "Outsourcing Services", link: "/services/outsourcingservices" },
-      { label: "Data Engineering", link: "/services/dataengineering" },
-    ].map((service, idx) => (
-      <Link
-        key={idx}
-        to={service.link}
-        className="group hover:text-white transition-colors flex items-center whitespace-nowrap"
-      >
-        {service.label}
-        <ChevronRight
-          size={14}
-          className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity"
-        />
-      </Link>
-    ))}
-  </div>
-</div>
+
+          <div>
+            <h3 className="text-xl font-bold text-white mb-6">Core Services</h3>
+            <div className="grid grid-cols-2 gap-y-4 gap-x-48 text-gray-300">
+              {[
+                {
+                  label: "Digital Transformation",
+                  link: "/services/digitaltransformation",
+                },
+                {
+                  label: "Product Engineering",
+                  link: "/services/productengineering",
+                },
+                {
+                  label: "Digital Marketing",
+                  link: "/services/digitalmarketing",
+                },
+                {
+                  label: "Software Development",
+                  link: "/services/softwaredevelopment",
+                },
+                {
+                  label: "Cloud & Infrastructure",
+                  link: "/services/cloudinfrastructure",
+                },
+                {
+                  label: "Staffing & Consulting",
+                  link: "/services/itconsultingstaffing",
+                },
+                {
+                  label: "Outsourcing Services",
+                  link: "/services/outsourcingservices",
+                },
+                {
+                  label: "Data Engineering",
+                  link: "/services/dataengineering",
+                },
+              ].map((service, idx) => (
+                <Link
+                  key={idx}
+                  to={service.link}
+                  className="group hover:text-white transition-colors flex items-center whitespace-nowrap"
+                >
+                  {service.label}
+                  <ChevronRight
+                    size={14}
+                    className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
 
           {/* Quick Links (with Admin Login click handler) */}
           <div className="pl-28">

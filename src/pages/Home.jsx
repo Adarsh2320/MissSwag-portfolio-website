@@ -42,6 +42,15 @@ import EMS_LMS from "../assets/products_logos/EMS+LMS.jpg";
 import MomoMuffin from "../assets/products_logos/Momo_Muffin.jpg";
 import logo from "../assets/logo.jpg";
 
+//Investors logo
+import mkDigitalLogo from "../assets/Inverstors_logos/mkdigital.jpg";
+import vfc from "../assets/Inverstors_logos/vfc.jpg";
+import digitaz from "../assets/Inverstors_logos/digitaz.jpg";
+import Weiteredge from "../assets/Inverstors_logos/weiteredge.jpg";
+
+
+
+
 import { ArrowRightCircle } from "lucide-react";
 
 const container = {
@@ -309,7 +318,7 @@ const Home = () => {
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed">
                 <span className="font-semibold text-white">
-                  Gamayas Digital Design Pvt. Ltd.
+                  Gamayas Group of Companies
                 </span>{" "}
                 is a Hyderabad-based tech innovation company crafting
                 intelligent, scalable, and human-centric platforms. We
@@ -558,6 +567,55 @@ const Home = () => {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* Investors Section */}
+      <section className="py-16 px-6 bg-gradient-to-b from-[#1a202c] to-[#1e293b] text-white text-center">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Investors</h2>
+          <p className="text-gray-400 mb-10 max-w-xl mx-auto text-lg">
+            We are proudly backed by industry-leading investors who believe in
+            our mission and vision.
+          </p>
+
+          <div className="flex flex-wrap justify-center items-center gap-6">
+            {[
+              {
+                name: "MK Digitalmare Pvt Ltd ",
+                logo: mkDigitalLogo,
+              },
+              {
+                name: " Weiteredge Technologies",
+                logo: Weiteredge,
+              },
+              {
+                name: "Digitaz Digital Design Pvt Ltd ",
+                logo: digitaz,
+              },
+              {
+                name: "VFC Cyber solutions Pvt Ltd",
+                logo: vfc,
+              },
+              
+            ].map((investor, i) => (
+              <motion.div
+                key={i}
+                className="flex items-center gap-3 px-6 py-3 bg-[#374151] rounded-full text-white font-semibold text-base shadow hover:shadow-green-400/20 transition"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <img
+                  src={investor.logo}
+                  alt={investor.name}
+                  className="w-8 h-8 object-contain"
+                />
+                {investor.name}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
