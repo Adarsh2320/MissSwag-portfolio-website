@@ -48,9 +48,6 @@ import vfc from "../assets/Inverstors_logos/vfc.jpg";
 import digitaz from "../assets/Inverstors_logos/digitaz.jpg";
 import Weiteredge from "../assets/Inverstors_logos/weiteredge.jpg";
 
-
-
-
 import { ArrowRightCircle } from "lucide-react";
 
 const container = {
@@ -571,15 +568,30 @@ const Home = () => {
       </section>
 
       {/* Investors Section */}
-      <section className="py-16 px-6 bg-gradient-to-b from-[#1a202c] to-[#1e293b] text-white text-center">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Technology Partnership Companies</h2>
-          <p className="text-gray-400 mb-10 max-w-xl mx-auto text-lg">
+      <section className="py-16 px-6 bg-gradient-to-br from-[#1e293b] to-gray-900 text-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold mb-16"
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Technology Partnership Companies
+          </motion.h2>
+
+          <motion.p
+            className="text-gray-400 mb-16 max-w-2xl mx-auto text-lg"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             We are proudly backed by industry-leading investors who believe in
             our mission and vision.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-wrap justify-center items-center gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
             {[
               {
                 name: "MK Digitalmare Pvt Ltd ",
@@ -597,22 +609,27 @@ const Home = () => {
                 name: "VFC Cyber solutions Pvt Ltd",
                 logo: vfc,
               },
-              
             ].map((investor, i) => (
               <motion.div
                 key={i}
-                className="flex items-center gap-3 px-6 py-3 bg-[#374151] rounded-full text-white font-semibold text-base shadow hover:shadow-green-400/20 transition"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
+                transition={{ duration: 0.5, delay: i * 0.2 }}
                 viewport={{ once: true }}
+                className="bg-[#1f2937] border-l-4 border-green-500 p-6 rounded-3xl shadow-xl hover:shadow-green-500/30 transition transform hover:scale-[1.03]"
               >
-                <img
-                  src={investor.logo}
-                  alt={investor.name}
-                  className="w-8 h-8 object-contain"
-                />
-                {investor.name}
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-20 h-20 bg-green-500/10 border border-green-400 rounded-full flex items-center justify-center shadow-md">
+                    <img
+                      src={investor.logo}
+                      alt={investor.name}
+                      className="w-16 h-16 object-contain rounded-full"
+                    />
+                  </div>
+                  <h3 className="text-base font-semibold text-white-400 mt-2 text-center">
+                    {investor.name}
+                  </h3>
+                </div>
               </motion.div>
             ))}
           </div>
