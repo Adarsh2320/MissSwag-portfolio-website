@@ -50,9 +50,9 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Gamayas Logo"
-            className="w-16 h-16 rounded-md object-cover border border-green-500 shadow"
+            className="w-14 h-14 rounded-md object-cover border border-green-500 shadow"
           />
-          <span className="text-sm md:text-2xl font-bold tracking-wide">
+          <span className="text-sm md:text-3xl font-bold tracking-wide">
             GAMAYAS GROUP OF COMPANIES
           </span>
         </div>

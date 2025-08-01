@@ -62,7 +62,7 @@ const Footer = () => {
               <img
                 src={gamayasLogo}
                 alt="Gamayas Logo"
-                className="h-12 w-auto rounded-md object-cover shadow-sm"
+                className="h-14 w-14 rounded-md object-fit shadow-sm"
               />
               <div className="ml-3">
                 <div className="font-bold text-2xl text-white">GAMAYAS</div>
@@ -231,7 +231,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="bg-black py-4 text-center text-sm text-gray-500 border-t border-green-800">
-          &copy; {new Date().getFullYear()} Gamayas Group of Companies All
+          &copy; {new Date().getFullYear()} | Gamayas Group of Companies | All
           rights reserved.
         </div>
       </footer>

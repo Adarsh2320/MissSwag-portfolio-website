@@ -423,7 +423,7 @@ const About = () => {
               },
               {
                 tech: "Node.js",
-                logo: "https://static-img.2coffee.dev/cluster-trong-nodejs-la-gi-su-dung-cluster-de-tang-kha-nang-chiu-tai-ung-dung-viet-bang-nodejs-horizontal-thumbnail.webp",
+                logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWL-fysxok7qiB2tGursGmiJ_B08v_Za8cFQ&s",
               },
               {
                 tech: "Java",
@@ -594,7 +594,9 @@ const About = () => {
       {/* Our Team Section */}
       <section className="py-16 px-6 bg-gradient-to-b from-[#1e293b] to-[#0f172a] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Leadership Team</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Our Leadership Team
+          </h2>
           <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg">
             We are a group of innovators, creators, and builders committed to
             turning ideas into impactful realities.
@@ -652,7 +654,6 @@ const About = () => {
                 role: "Developer",
                 src: team10,
               },
-             
             ].map((member, i) => (
               <motion.div
                 key={i}
