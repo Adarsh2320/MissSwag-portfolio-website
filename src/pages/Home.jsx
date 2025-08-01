@@ -571,7 +571,7 @@ const Home = () => {
       <section className="py-16 px-6 bg-gradient-to-br from-[#1e293b] to-gray-900 text-white">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-16"
+            className="text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: -40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
