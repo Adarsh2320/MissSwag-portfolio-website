@@ -619,11 +619,11 @@ const Home = () => {
                 className="bg-[#1f2937] border-l-4 border-green-500 p-6 rounded-3xl shadow-xl hover:shadow-green-500/30 transition transform hover:scale-[1.03]"
               >
                 <div className="flex flex-col items-center gap-4">
-                  <div className="w-20 h-20 bg-green-500/10 border border-green-400 rounded-full flex items-center justify-center shadow-md">
+                  <div className="w-32 h-32 bg-green-500/10 flex items-center justify-center shadow-md">
                     <img
                       src={investor.logo}
                       alt={investor.name}
-                      className="w-16 h-16 object-contain rounded-full"
+                      className="w-32 h-32 object-contain rounded-2xl"
                     />
                   </div>
                   <h3 className="text-base font-semibold text-white-400 mt-2 text-center">

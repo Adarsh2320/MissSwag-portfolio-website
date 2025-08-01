@@ -666,7 +666,7 @@ const About = () => {
                 <img
                   src={member.src}
                   alt={member.name}
-                  className="w-full h-48 object-cover object-center"
+                  className="w-full h-64 object-fit"
                 />
                 <div className="p-4 text-left">
                   <h3 className="text-xl font-semibold text-white">
