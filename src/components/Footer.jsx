@@ -27,345 +27,245 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-gradient-to-b from-gray-800 to-black text-white text-[1.125rem]">
-        {/* Top Promo */}
-        <div className="bg-[#14532d]">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+      <footer className="bg-gradient-to-b from-[#e84e9c] via-[#b8005a] to-[#5a189a] text-white text-[1.125rem]">
+        {/* Top Promo Bar */}
+        <div className="bg-[#fae0ec]/90">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4 text-pink-100">
             <div className="flex items-center">
-              <Clock className="w-6 h-6 mr-2 text-green-100" />
-              <span className="text-base sm:text-lg text-white">
-                24x7 Support & Fast Deployment
+              <Clock className="w-6 h-6 mr-2 text-[#b8005a]" />
+              <span className="text-base sm:text-lg text-[#b8005a]">
+                24x7 Care Support for Moms & Families
               </span>
             </div>
             <div className="flex items-center">
-              <Mail className="w-6 h-6 mr-2 text-green-100" />
-              <span className="text-base sm:text-lg text-white">
-                Custom IT & AI Solutions on Demand
+              <Phone className="w-6 h-6 mr-2 text-[#b8005a]" />
+              <span className="text-base sm:text-lg text-[#b8005a]">
+                Need help? We’re just a call away
               </span>
             </div>
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=srikanthiit2014@gmail.com&su=Let's%20Connect&body=Hi%20Shrikanth%2C%0A%0AI%20want%20to%20discuss%20a%20project.%0A"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-white text-green-800 rounded-lg font-medium text-base hover:bg-green-100 transition-colors"
+              href="mailto:hello@missswag.in"
+              className="inline-flex items-center px-4 py-2 bg-white text-[#b8005a] rounded-full font-medium text-base hover:bg-pink-100 transition"
             >
-              <Mail className="w-5 h-5 mr-1.5" /> Email Us
+              <Mail className="w-5 h-5 mr-1.5" /> Contact Us
             </a>
           </div>
         </div>
 
-        {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-6 pt-16 pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-28 gap-y-16">
-          {/* About Us */}
-          <div className="max-w-xl">
-            <div className="flex items-center mb-6">
-              <img
-                src={gamayasLogo}
-                alt="Gamayas Logo"
-                className="h-14 w-14 rounded-md object-fit shadow-sm"
-              />
-              <div className="ml-3">
-                <div className="font-bold text-2xl text-white">GAMAYAS</div>
-                <div className="text-sm text-green-300">
-                  GROUP OF COMPANIES
-                </div>
-              </div>
-            </div>
-            <p className="text-gray-300 mb-6 leading-relaxed text-sm lg:text-base text-justify">
-              Gamayas is a Hyderabad-based IT firm specializing in digital
-              transformation, top consulting, software development, product
-              engineering, and AI-driven solutions.
-            </p>
-
-            <div className="flex gap-x-4 mt-4">
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-green-700 transition-colors"
-              >
-                <Facebook size={18} />
-              </a>
-              <a
-                href="https://twitter.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-green-700 transition-colors"
-              >
-                <Twitter size={18} />
-              </a>
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-green-700 transition-colors"
-              >
-                <Instagram size={18} />
-              </a>
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-green-700 transition-colors"
-              >
-                <Linkedin size={18} />
-              </a>
-            </div>
-          </div>
-
-          {/* Services */}
-
+        {/* Main Footer Grid */}
+        <div className="max-w-7xl mx-auto px-6 pt-16 pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-20 gap-y-16">
+          {/* Brand Section */}
           <div>
-            <h3 className="text-xl font-bold text-white mb-6">Core Services</h3>
-            <div className="grid grid-cols-2 gap-y-4 gap-x-48 text-gray-300">
-              {[
-                {
-                  label: "Digital Transformation",
-                  link: "/services/digitaltransformation",
-                },
-                {
-                  label: "Product Engineering",
-                  link: "/services/productengineering",
-                },
-                {
-                  label: "Digital Marketing",
-                  link: "/services/digitalmarketing",
-                },
-                {
-                  label: "Software Development",
-                  link: "/services/softwaredevelopment",
-                },
-                {
-                  label: "Cloud & Infrastructure",
-                  link: "/services/cloudinfrastructure",
-                },
-                {
-                  label: "Staffing & Consulting",
-                  link: "/services/itconsultingstaffing",
-                },
-                {
-                  label: "Outsourcing Services",
-                  link: "/services/outsourcingservices",
-                },
-                {
-                  label: "Data Engineering",
-                  link: "/services/dataengineering",
-                },
-              ].map((service, idx) => (
-                <Link
+            <img
+              src="/logo-missswag.png"
+              alt="MissSwag"
+              className="h-16 mb-4"
+            />
+            <p className="text-pink-100 text-sm leading-relaxed text-justify">
+              MissSwag is your trusted wellness companion through pregnancy and
+              beyond. We combine technology, empathy, and expertise to nurture
+              every mom’s journey.
+            </p>
+            <div className="flex gap-x-4 mt-6">
+              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
+                <a
                   key={idx}
-                  to={service.link}
-                  className="group hover:text-white transition-colors flex items-center whitespace-nowrap"
+                  href="#"
+                  className="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition"
                 >
-                  {service.label}
-                  <ChevronRight
-                    size={14}
-                    className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity"
-                  />
-                </Link>
+                  <Icon size={18} />
+                </a>
               ))}
             </div>
           </div>
 
-          {/* Quick Links (with Admin Login click handler) */}
-          <div className="pl-28">
-            <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
-            <ul className="space-y-4 text-gray-300">
-              <li>
-                <a href="/about" className="hover:text-white transition-colors">
-                  About Us
-                </a>
-              </li>
+          {/* Core Features */}
+          <div>
+            <h3 className="text-xl font-bold mb-6">Features</h3>
+            <ul className="text-pink-100 space-y-3">
+              {[
+                "24/7 Doctor Chat",
+                "Appointment Booking",
+                "PHR Management",
+                "Vaccination Reminders",
+                "Yoga & Wellness",
+                "Community Sessions",
+              ].map((feature, i) => (
+                <li key={i} className="hover:text-white transition">
+                  <ChevronRight size={14} className="inline mr-1" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              <li>
-                <a
-                  href="/#services"
-                  className="hover:text-white transition-colors"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/#products"
-                  className="hover:text-white transition-colors"
-                >
-                  Products
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/contact"
-                  className="hover:text-white transition-colors"
-                >
-                  Contact Us
-                </a>
-              </li>
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-xl font-bold mb-6">Quick Links</h3>
+            <ul className="text-pink-100 space-y-3">
+              {[
+                { label: "Home", link: "/" },
+                { label: "About Us", link: "/about" },
+                { label: "Pricing", link: "/#pricing" },
+                { label: "Download App", link: "/app" },
+                { label: "Contact", link: "/contact" },
+              ].map((link, i) => (
+                <li key={i}>
+                  <Link to={link.link} className="hover:text-white transition">
+                    <ChevronRight size={14} className="inline mr-1" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
               <li>
                 <button
                   onClick={() => setShowAdminLogin(true)}
-                  className="hover:text-white transition-colors"
-                ></button>
+                  className="hover:text-white text-sm mt-4 underline"
+                >
+                  Admin Access
+                </button>
               </li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold text-white mb-6">Contact</h3>
-            <ul className="space-y-5 text-gray-300">
+            <h3 className="text-xl font-bold mb-6">Contact</h3>
+            <ul className="space-y-4 text-pink-100">
               <li className="flex items-start">
-                <Phone className="w-6 h-6 mr-3 text-green-400" /> +91 705 705
-                8841
+                <Phone className="w-5 h-5 mr-2 text-white" />
+                +91 98765 43210
               </li>
               <li className="flex items-start">
-                <Mail className="w-6 h-6 mr-3 text-green-400" /> ceo@gamayas.com
+                <Mail className="w-5 h-5 mr-2 text-white" />
+                hello@missswag.in
               </li>
               <li className="flex items-start">
-                <MapPin className="w-6 h-6 mr-3 text-green-400" /> Hyderabad,
-                Telangana, India
+                <MapPin className="w-5 h-5 mr-2 text-white" />
+                Hyderabad, Telangana, India
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="bg-black py-4 text-center text-sm text-gray-500 border-t border-green-800">
-          &copy; {new Date().getFullYear()} | Gamayas Group of Companies | All
-          rights reserved.
+        <div className="bg-black py-4 text-center text-sm text-pink-200 border-t border-pink-300">
+          © {new Date().getFullYear()} MissSwag Care Platform. All rights
+          reserved.
         </div>
-      </footer>
 
-      {showAdminLogin && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-          <div className="bg-gradient-to-b from-gray-900 to-black border border-green-700 rounded-xl p-6 w-[90%] max-w-md relative shadow-2xl text-white">
-            {/* Close Button */}
-            <button
-              onClick={() => setShowAdminLogin(false)}
-              className="absolute top-3 right-4 text-gray-400 hover:text-white"
-            >
-              <X size={24} />
-            </button>
-
-            {/* Tabs */}
-            <div className="flex justify-center mb-6 gap-4">
+        {/* Admin Login Modal */}
+        {showAdminLogin && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+            <div className="bg-white text-[#5a189a] border-4 border-[#e84e9c] rounded-xl p-6 w-[90%] max-w-md relative shadow-2xl">
               <button
-                className={`px-3 py-1 rounded-md text-sm font-medium ${
-                  adminMode === "login"
-                    ? "bg-green-700 text-white"
-                    : "text-gray-400 hover:text-white"
-                }`}
-                onClick={() => setAdminMode("login")}
+                onClick={() => setShowAdminLogin(false)}
+                className="absolute top-3 right-4 text-[#b8005a] hover:text-[#5a189a]"
               >
-                Admin Login
+                <X size={24} />
               </button>
-              <button
-                className={`px-3 py-1 rounded-md text-sm font-medium ${
-                  adminMode === "signup"
-                    ? "bg-green-700 text-white"
-                    : "text-gray-400 hover:text-white"
-                }`}
-                onClick={() => setAdminMode("signup")}
-              >
-                Admin Signup
-              </button>
-            </div>
 
-            {adminMode === "login" ? (
-              <>
-                <h2 className="text-2xl font-semibold text-green-300 mb-4 text-center">
-                  Admin Login
-                </h2>
-                <form className="space-y-4">
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="w-full px-4 py-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white"
-                  />
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    className="w-full px-4 py-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white"
-                  />
-                  <button
-                    type="submit"
-                    className="w-full py-3 bg-green-600 hover:bg-green-700 rounded-md font-semibold transition-colors"
-                  >
-                    Login
-                  </button>
-                </form>
-              </>
-            ) : (
-              <>
-                <h2 className="text-2xl font-semibold text-green-300 mb-4 text-center">
-                  Admin Signup
-                </h2>
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    if (signup.password !== signup.rePassword) {
-                      alert("Passwords do not match!");
-                      return;
-                    }
-                    // handleSubmit(signup) — your backend function
-                    console.log("Sending Signup:", signup);
-                    alert("Signup successful");
-                    setShowAdminLogin(false);
-                  }}
-                  className="space-y-4"
+              {/* Tabs */}
+              <div className="flex justify-center mb-6 gap-4">
+                <button
+                  className={`px-3 py-1 rounded-md text-sm font-medium ${
+                    adminMode === "login"
+                      ? "bg-[#5a189a] text-white"
+                      : "text-[#b8005a] hover:text-[#5a189a]"
+                  }`}
+                  onClick={() => setAdminMode("login")}
                 >
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    value={signup.name}
-                    onChange={(e) =>
-                      setSignup({ ...signup, name: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    value={signup.email}
-                    onChange={(e) =>
-                      setSignup({ ...signup, email: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white"
-                  />
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    value={signup.password}
-                    onChange={(e) =>
-                      setSignup({ ...signup, password: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white"
-                  />
-                  <input
-                    type="password"
-                    placeholder="Re-enter Password"
-                    value={signup.rePassword}
-                    onChange={(e) =>
-                      setSignup({ ...signup, rePassword: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-white"
-                  />
-                  <button
-                    type="submit"
-                    className="w-full py-3 bg-green-600 hover:bg-green-700 rounded-md font-semibold transition-colors"
-                  >
-                    Signup
-                  </button>
-                </form>
-              </>
-            )}
+                  Admin Login
+                </button>
+                <button
+                  className={`px-3 py-1 rounded-md text-sm font-medium ${
+                    adminMode === "signup"
+                      ? "bg-[#5a189a] text-white"
+                      : "text-[#b8005a] hover:text-[#5a189a]"
+                  }`}
+                  onClick={() => setAdminMode("signup")}
+                >
+                  Admin Signup
+                </button>
+              </div>
 
-            <div className="mt-4 text-sm text-center text-gray-400">
-              Admin access only.
+              {/* Forms */}
+              {adminMode === "login" ? (
+                <>
+                  <h2 className="text-xl font-bold mb-4 text-center">Login</h2>
+                  <form className="space-y-4">
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      className="w-full px-4 py-3 rounded-md bg-pink-100 border border-[#e84e9c] focus:outline-none focus:ring-2 focus:ring-[#5a189a]"
+                    />
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      className="w-full px-4 py-3 rounded-md bg-pink-100 border border-[#e84e9c] focus:outline-none focus:ring-2 focus:ring-[#5a189a]"
+                    />
+                    <button
+                      type="submit"
+                      className="w-full py-3 bg-[#b8005a] hover:bg-[#5a189a] text-white rounded-md font-semibold transition"
+                    >
+                      Login
+                    </button>
+                  </form>
+                </>
+              ) : (
+                <>
+                  <h2 className="text-xl font-bold mb-4 text-center">
+                    Sign Up
+                  </h2>
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      if (signup.password !== signup.rePassword) {
+                        alert("Passwords do not match!");
+                        return;
+                      }
+                      console.log("Signing up:", signup);
+                      alert("Signup successful");
+                      setShowAdminLogin(false);
+                    }}
+                    className="space-y-4"
+                  >
+                    {["name", "email", "password", "rePassword"].map(
+                      (field, i) => (
+                        <input
+                          key={i}
+                          type={
+                            field.includes("password") ? "password" : "text"
+                          }
+                          placeholder={
+                            field === "rePassword"
+                              ? "Re-enter Password"
+                              : field.charAt(0).toUpperCase() + field.slice(1)
+                          }
+                          value={signup[field]}
+                          onChange={(e) =>
+                            setSignup({ ...signup, [field]: e.target.value })
+                          }
+                          className="w-full px-4 py-3 rounded-md bg-pink-100 border border-[#e84e9c] focus:outline-none focus:ring-2 focus:ring-[#5a189a]"
+                        />
+                      )
+                    )}
+                    <button
+                      type="submit"
+                      className="w-full py-3 bg-[#b8005a] hover:bg-[#5a189a] text-white rounded-md font-semibold transition"
+                    >
+                      Sign Up
+                    </button>
+                  </form>
+                </>
+              )}
+              <div className="mt-4 text-xs text-center text-[#b8005a]">
+                For authorized personnel only.
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </footer>
     </>
   );
 };

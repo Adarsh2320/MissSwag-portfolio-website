@@ -48,6 +48,7 @@ export default {
         fall: "fall linear infinite", // Merged from second config
         // Add the marquee animation here
         marquee: "marquee 10s linear infinite", // Increased to 60 seconds
+        
       },
       keyframes: {
         float: {
