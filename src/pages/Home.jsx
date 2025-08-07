@@ -42,12 +42,6 @@ import EMS_LMS from "../assets/products_logos/EMS+LMS.jpg";
 import MomoMuffin from "../assets/products_logos/Momo_Muffin.jpg";
 import logo from "../assets/logo.jpg";
 
-//Investors logo
-import mkDigitalLogo from "../assets/Inverstors_logos/mkdigital.jpg";
-import vfc from "../assets/Inverstors_logos/vfc.jpg";
-import digitaz from "../assets/Inverstors_logos/digitaz.jpg";
-import Weiteredge from "../assets/Inverstors_logos/weiteredge.jpg";
-
 import { ArrowRightCircle } from "lucide-react";
 import CrawlingBaby from "../components/CrawlingBaby";
 
@@ -228,7 +222,12 @@ const Home = () => {
       className={`${theme.bgMain} min-h-screen ${theme.textDark} overflow-x-hidden`}
     >
       {/* Hero Section with Swiper */}
-      <section className="relative w-full h-[calc(100vh)] overflow-hidden ">
+      <section className="relative w-full h-[100vh] overflow-hidden">
+        {/* Centered Logo */}
+        <div className="absolute top-[15%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
+          <img src={logo} alt="logo" className="w-36 h-36 object-contain rounded-full shadow-lg border-4 border-pink-700" />
+        </div>
+
         <Swiper
           spaceBetween={0}
           centeredSlides
@@ -290,7 +289,7 @@ const Home = () => {
             </div>
           </motion.div>
 
-          <div className="absolute inset-0  z-10 flex items-center justify-center">
+          <div className="absolute inset-0 z-10 flex items-center justify-center">
             <CrawlingBaby direction="right" speed={20} />
           </div>
         </div>
@@ -670,7 +669,6 @@ const Home = () => {
         id="medical-team"
         className="py-20 px-6 bg-gradient-to-br from-[#e84e9c] via-[#b8005a] to-[#72064d] text-[#72094e]"
       >
-        
         <div className="max-w-7xl mx-auto text-center">
           <motion.h2
             className="text-4xl text-white md:text-5xl font-extrabold mb-16"
@@ -747,15 +745,12 @@ const Home = () => {
                 </div>
               </motion.div>
             ))}
-            
           </div>
-          
         </div>
-        
+
         <div className="absolute inset-0  z-10 flex items-center justify-center">
           <CrawlingBaby direction="right" speed={20} />
         </div>
-
       </section>
 
       {/* Patient Module Section */}
@@ -832,13 +827,11 @@ const Home = () => {
               </motion.div>
             ))}
           </div>
-          
         </div>
 
         <div className="absolute inset-0  z-10 flex items-center justify-center">
           <CrawlingBaby direction="right" speed={20} />
         </div>
-        
       </section>
 
       {/* Doctor Module Section */}
