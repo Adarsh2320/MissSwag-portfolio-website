@@ -503,11 +503,11 @@ const Home = () => {
                 transition={{ type: "spring", stiffness: 200 }}
                 className="flex flex-col items-center group"
               >
-                <div className="w-24 h-24 md:w-28 md:h-28 bg-white rounded-3xl shadow-lg border-4 border-pink-300 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
+                <div className="w-32 h-32 md:w-36 md:h-36 bg-white rounded-3xl shadow-lg border-4 border-pink-300 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
                   <img
                     src={service.icon}
                     alt={service.title}
-                    className="w-full h-full object-fit transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
                 <p className="mt-4 text-[#72094e] text-center font-semibold text-lg md:text-xl">
@@ -517,7 +517,7 @@ const Home = () => {
             ))}
           </motion.div>
         </div>
-        <div className="absolute inset-0  z-10 flex items-center justify-center">
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
           <CrawlingBaby direction="right" speed={20} />
         </div>
       </section>
@@ -577,11 +577,11 @@ const Home = () => {
                 transition={{ type: "spring", stiffness: 200 }}
                 className="flex flex-col items-center group"
               >
-                <div className="w-24 h-24 md:w-28 md:h-28 bg-white/20 backdrop-blur-xl rounded-3xl shadow-xl border-4 border-white/30 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
+                <div className="w-32 h-32 md:w-36 md:h-36 bg-white/20 backdrop-blur-xl rounded-3xl shadow-xl border-4 border-white/30 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
                   <img
                     src={service.icon}
                     alt={service.title}
-                    className="w-full h-full object-fit transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
                 <p className="mt-4 text-white text-center font-semibold text-lg md:text-xl">
@@ -1189,7 +1189,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-[#fae0ec] px-6 overflow-hidden">
+      <section className="py-20 bg-[#fae0ec] px-6 overflow-hidden relative">
         <div className="max-w-6xl mx-auto text-center">
           {/* Heading */}
           <motion.h2
@@ -1214,56 +1214,69 @@ const Home = () => {
             both patients and doctors — smooth, accessible, and human-first.
           </motion.p>
 
-          {/* Screens Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          {/* Horizontal Scroll Screenshots */}
+          <div className="relative w-full overflow-x-auto whitespace-nowrap py-4 scroll-smooth animate-scroll-rtl">
+            {[
+              patientHome,
+              appointment,
+              consultation,
+              doctorDashboard,
+              query,
+              phr,
+            ].map((imgSrc, i) => (
+              <motion.div
+                key={i}
+                className="inline-block mx-4 w-40 h-80 rounded-xl overflow-hidden shadow-md border-2 border-[#5a189a] bg-white"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: i * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <img
+                  src={imgSrc}
+                  alt={`UI ${i + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Descriptions (Text Content Below) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-12">
             {[
               {
                 title: "Patient Home",
                 desc: "A warm dashboard showing updates, baby growth, reminders, and quick actions.",
-                img: patientHome,
               },
               {
                 title: "Book Appointment",
                 desc: "Schedule doctor consultations with live availability filters.",
-                img: appointment,
               },
               {
                 title: "Consultation Room",
                 desc: "Chat or video call with doctors, with real-time PHR access.",
-                img: consultation,
               },
               {
                 title: "Doctor Dashboard",
                 desc: "Doctor view for upcoming appointments, patient records & queries.",
-                img: doctorDashboard,
               },
               {
                 title: "Query System",
                 desc: "Every question gets a unique ID and timeline for quick follow-up.",
-                img: query,
               },
               {
                 title: "Health Records",
                 desc: "Upload, review, and update all test reports securely.",
-                img: phr,
               },
             ].map((screen, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.04 }}
-                className="bg-[#f8cde6] rounded-2xl p-4 border-4 border-[#5a189a] shadow-md hover:shadow-[#e84e9c]/40 transition duration-300"
+                className="p-4 bg-[#fce4f1] rounded-xl shadow hover:shadow-lg transition transform hover:scale-105"
               >
-                <div className="w-24 h-auto bg-white rounded-xl overflow-hidden shadow-inner mb-4">
-                  <img
-                    src={screen.img}
-                    alt={screen.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
                 <h3 className="text-lg font-bold text-[#b8005a] mb-1">
                   {screen.title}
                 </h3>
@@ -1274,7 +1287,9 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="absolute inset-0  z-10 flex items-center justify-center">
+
+        {/* Crawling Baby Animation */}
+        <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
           <CrawlingBaby direction="right" speed={20} />
         </div>
       </section>
