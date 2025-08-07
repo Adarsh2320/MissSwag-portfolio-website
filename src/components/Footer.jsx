@@ -13,7 +13,7 @@ import {
   ChevronRight,
   X,
 } from "lucide-react";
-import gamayasLogo from "../assets/logo.jpg";
+import Logo from "../assets/logo.jpg";
 
 const Footer = () => {
   const [showAdminLogin, setShowAdminLogin] = useState(false);
@@ -57,9 +57,9 @@ const Footer = () => {
           {/* Brand Section */}
           <div>
             <img
-              src="/logo-missswag.png"
+              src={Logo}
               alt="MissSwag"
-              className="h-16 mb-4"
+              className="h-20 mb-4 rounded-2xl shadow-lg"
             />
             <p className="text-pink-100 text-sm leading-relaxed text-justify">
               MissSwag is your trusted wellness companion through pregnancy and

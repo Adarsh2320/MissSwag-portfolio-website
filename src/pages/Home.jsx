@@ -45,6 +45,14 @@ import logo from "../assets/logo.jpg";
 import { ArrowRightCircle } from "lucide-react";
 import CrawlingBaby from "../components/CrawlingBaby";
 
+import patientHome from "../assets/MissSwag Screenshots/p4.png";
+import appointment from "../assets/MissSwag Screenshots/p15.png";
+import consultation from "../assets/MissSwag Screenshots/p24.png";
+import doctorDashboard from "../assets/MissSwag Screenshots/p20.png";
+import query from "../assets/MissSwag Screenshots/p22.png";
+import phr from "../assets/MissSwag Screenshots/p13.png";
+
+
 const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.15 } },
@@ -225,7 +233,11 @@ const Home = () => {
       <section className="relative w-full h-[100vh] overflow-hidden">
         {/* Centered Logo */}
         <div className="absolute top-[15%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
-          <img src={logo} alt="logo" className="w-36 h-36 object-contain rounded-full shadow-lg border-4 border-pink-700" />
+          <img
+            src={logo}
+            alt="logo"
+            className="w-36 h-36 object-contain rounded-full shadow-lg border-4 border-pink-700"
+          />
         </div>
 
         <Swiper
@@ -311,7 +323,7 @@ const Home = () => {
           >
             <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-[#e84e9c] shadow-2xl mx-auto group-hover:scale-105 transition-transform duration-500">
               <img
-                src={aboutImg}
+                src={logo}
                 alt="About MissSwag"
                 className="w-full h-full object-cover"
               />
@@ -460,12 +472,30 @@ const Home = () => {
             viewport={{ once: true }}
           >
             {[
-              { title: "24/7 Medical Assistance", icon: "/icons/medical.png" },
-              { title: "1-on-1 Consultation", icon: "/icons/consultation.png" },
-              { title: "Baby Growth Updates", icon: "/icons/baby-growth.png" },
-              { title: "Menstrual Follow-ups", icon: "/icons/menstrual.png" },
-              { title: "Diet & Nutrition Plans", icon: "/icons/diet.png" },
-              { title: "Vaccination Reminders", icon: "/icons/vaccine.png" },
+              {
+                title: "24/7 Medical Assistance",
+                icon: "https://bhagwatihospital.org/wp-content/uploads/2025/01/emergency-care.webp",
+              },
+              {
+                title: "1-on-1 Consultation",
+                icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStyQ6MIYmn1xrOOvmwfG1bx1gC8deh121hjA&s",
+              },
+              {
+                title: "Baby Growth Updates",
+                icon: "https://images.agoramedia.com/wte3.0/gcms/wbw-your-baby-2021-alt-w12-1200x1200.jpg",
+              },
+              {
+                title: "Menstrual Follow-ups",
+                icon: "https://www.morelandobgyn.com/hs-fs/hubfs/The%20Four%20Phases%20of%20the%20Menstrual%20Tracked%20On%20Phone.jpg?width=498&height=343&name=The%20Four%20Phases%20of%20the%20Menstrual%20Tracked%20On%20Phone.jpg",
+              },
+              {
+                title: "Diet & Nutrition Plans",
+                icon: "https://diet2nourish.com/wp-content/uploads/2022/01/Balanced-diet-1086x1536-1-724x1024.webp",
+              },
+              {
+                title: "Vaccination Reminders",
+                icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROocjeF2Vo2WslL38RwovEI4lWe40jyZaFTQ&s",
+              },
             ].map((service, i) => (
               <motion.div
                 key={i}
@@ -473,11 +503,11 @@ const Home = () => {
                 transition={{ type: "spring", stiffness: 200 }}
                 className="flex flex-col items-center group"
               >
-                <div className="w-24 h-24 md:w-28 md:h-28 bg-white rounded-full shadow-lg border-4 border-pink-300 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
+                <div className="w-24 h-24 md:w-28 md:h-28 bg-white rounded-3xl shadow-lg border-4 border-pink-300 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
                   <img
                     src={service.icon}
                     alt={service.title}
-                    className="w-14 h-14 object-contain transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-fit transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
                 <p className="mt-4 text-[#72094e] text-center font-semibold text-lg md:text-xl">
@@ -516,12 +546,30 @@ const Home = () => {
             viewport={{ once: true }}
           >
             {[
-              { title: "Yoga & Meditation", icon: "/icons/yoga.png" },
-              { title: "Emergency Services", icon: "/icons/emergency.png" },
-              { title: "Online Store", icon: "/icons/shop.png" },
-              { title: "Articles & Videos", icon: "/icons/articles.png" },
-              { title: "PHR Management", icon: "/icons/phr.png" },
-              { title: "Stem Cell Banking", icon: "/icons/stemcell.png" },
+              {
+                title: "Yoga & Meditation",
+                icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHsV4ixnMgC95W5dr2ZXzwoIiXgV6bMmCiiA&s",
+              },
+              {
+                title: "Emergency Services",
+                icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRweEyIglNKGa9jZLe_Tw-aAuavtXU7zjTypQ&s",
+              },
+              {
+                title: "Online Store",
+                icon: "https://momzjoy.com/cdn/shop/files/5_8c0da8bd-181e-4b46-ab30-f383627a1aaa.jpg?v=1743835595",
+              },
+              {
+                title: "Articles & Videos",
+                icon: "https://theputchi.com/cdn/shop/articles/maternity_tales_of_an_independent_mom.png?v=1691997056",
+              },
+              {
+                title: "PHR Management",
+                icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8fwsKDNqVKpeFGrVerrb-2xOIAVA43KDZhA&s",
+              },
+              {
+                title: "Stem Cell Banking",
+                icon: "https://static.wixstatic.com/media/00a9ac_a24e2eef11a64cd78a2607c42cac6f92~mv2.jpg/v1/fill/w_640,h_590,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/00a9ac_a24e2eef11a64cd78a2607c42cac6f92~mv2.jpg",
+              },
             ].map((service, i) => (
               <motion.div
                 key={i}
@@ -529,11 +577,11 @@ const Home = () => {
                 transition={{ type: "spring", stiffness: 200 }}
                 className="flex flex-col items-center group"
               >
-                <div className="w-24 h-24 md:w-28 md:h-28 bg-white/20 backdrop-blur-xl rounded-full shadow-xl border-4 border-white/30 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
+                <div className="w-24 h-24 md:w-28 md:h-28 bg-white/20 backdrop-blur-xl rounded-3xl shadow-xl border-4 border-white/30 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
                   <img
                     src={service.icon}
                     alt={service.title}
-                    className="w-14 h-14 object-contain transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-fit transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
                 <p className="mt-4 text-white text-center font-semibold text-lg md:text-xl">
@@ -602,27 +650,31 @@ const Home = () => {
             {[
               {
                 title: "Maternity Clothing",
-                image: "/products/maternity-clothing.jpg",
+                image:
+                  "https://momsever.in/cdn/shop/files/12_7.jpg?v=1738468467&width=1024",
                 desc: "Comfortable and stylish apparel for moms-to-be at every stage.",
               },
               {
                 title: "Supplements",
-                image: "/products/supplements.jpg",
+                image:
+                  "https://images.theconversation.com/files/566580/original/file-20231219-23-vklpav.jpg?ixlib=rb-4.1.0&rect=11%2C11%2C7704%2C5151&q=45&auto=format&w=926&fit=clip",
                 desc: "Essential vitamins and supplements tailored for pregnancy wellness.",
               },
               {
                 title: "Pregnancy Comfort Products",
-                image: "/products/comfort-products.jpg",
+                image: "https://m.media-amazon.com/images/I/41PR3AgsyDL.jpg",
                 desc: "From pillows to belts, find the perfect products to ease your journey.",
               },
               {
                 title: "Sanitary Napkins",
-                image: "/products/sanitary-napkins.jpg",
+                image:
+                  "https://m.media-amazon.com/images/I/51MkljNkSfL._AC_.jpg",
                 desc: "Gentle, safe, and eco-friendly hygiene products for every need.",
               },
               {
                 title: "In-App Shopping",
-                image: "/products/shopping-preview.jpg",
+                image:
+                  "https://themomstore.in/cdn/shop/files/the_mom_store_logo.jpg?v=1727504508",
                 desc: "Explore and purchase all essentials within the MissSwag mobile app.",
               },
             ].map((p, i) => (
@@ -688,7 +740,7 @@ const Home = () => {
                 experience: "10+ years",
                 availability: "Mon - Sat | 10 AM - 6 PM",
                 languages: ["English", "Hindi", "Telugu"],
-                img: "/doctors/anjali.png",
+                img: "https://www.motherhoodindia.com/wp-content/uploads/2022/06/Dr.-Saloni-Dashore-1-683x1024.jpg",
               },
               {
                 name: "Dr. Ramesh Iyer",
@@ -696,7 +748,7 @@ const Home = () => {
                 experience: "12+ years",
                 availability: "Mon - Fri | 9 AM - 5 PM",
                 languages: ["English", "Tamil"],
-                img: "/doctors/ramesh.png",
+                img: "https://cdn.prod.website-files.com/5ee7039040ea6efb80d7521c/653212f01b3bf40407a2a7df_Dr%20Sathya.PNG",
               },
               {
                 name: "Dr. Farah Khan",
@@ -704,7 +756,7 @@ const Home = () => {
                 experience: "8+ years",
                 availability: "Mon - Sat | 11 AM - 7 PM",
                 languages: ["English", "Urdu"],
-                img: "/doctors/farah.png",
+                img: "https://imagedelivery.net/pe2-CVDxE459ELrkyAVOfQ/4e264a46-ee4e-4c2b-fcd3-b5ccb28c2300/public",
               },
             ].map((doc, i) => (
               <motion.div
@@ -721,7 +773,7 @@ const Home = () => {
                     <img
                       src={doc.img}
                       alt={doc.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-fit"
                     />
                   </div>
 
@@ -783,27 +835,27 @@ const Home = () => {
               {
                 title: "Health Dashboard",
                 desc: "Track BMR, weight, height, and trimester progress in one place.",
-                icon: "/icons/dashboard.png",
+                icon: "https://cdn.boldbi.com/wp/pages/dashboards/healthcare/patient-experience-analysis-thumbnail-v1.webp",
               },
               {
                 title: "PHR & Test Records",
                 desc: "Access all medical history and lab reports on the go.",
-                icon: "/icons/phr.png",
+                icon: "https://st.depositphotos.com/1036970/4355/i/450/depositphotos_43556393-Stethoscope-resting-on-a-sheet-of-medical-lab-test-results-with-patient-file-and-x-ray-or-mri-film.jpg",
               },
               {
                 title: "Smart Reminders",
                 desc: "Personalized health alerts, follow-ups & vaccination schedules.",
-                icon: "/icons/reminder.png",
+                icon: "https://images-cdn.ubuy.co.in/63fc9b296efad7404e62f8d3-comfytemp-medicine-box-smart.jpg",
               },
               {
                 title: "Nearby Diagnostics",
                 desc: "Locate centers near you with price comparison and maps.",
-                icon: "/icons/diagnostics.png",
+                icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiLhzZ5xIJyqI838uuY7ppFfVjgZOw7a1bwg&s",
               },
               {
                 title: "Secure Query System",
                 desc: "Ask questions with unique tracking ID and fast expert replies.",
-                icon: "/icons/query.png",
+                icon: "https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41746-023-00792-0/MediaObjects/41746_2023_792_Fig3_HTML.png",
               },
             ].map((feature, i) => (
               <motion.div
@@ -813,13 +865,13 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: i * 0.2 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-[#e84e9c]  text-white p-6 rounded-3xl shadow-xl hover:shadow-pink-400/40 transition transform hover:scale-[1.03] text-center"
+                className="bg-[#e84e9c]  text-white p-6 rounded-xl shadow-3xl hover:shadow-pink-400/40 transition transform hover:scale-[1.03] text-center"
               >
-                <div className="w-20 h-20 mx-auto mb-4 bg-white/20 rounded-2xl shadow-md flex items-center justify-center">
+                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 bg-white/20 rounded-xl shadow-md flex items-center justify-center">
                   <img
                     src={feature.icon}
                     alt={feature.title}
-                    className="w-12 h-12 object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
@@ -869,32 +921,32 @@ const Home = () => {
               {
                 title: "Appointment Management",
                 desc: "Track, reschedule, and manage appointments with ease.",
-                icon: "/icons/appointment.png",
+                icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOOOaArxsWxk-p9LCYZLZumXOwvCqTg4XWnQ&s",
               },
               {
                 title: "Consultation History",
                 desc: "Access previous patient visits and case notes instantly.",
-                icon: "/icons/history.png",
+                icon: "https://thumbs.dreamstime.com/b/doctor-icon-vector-illustration-consultation-design-isolated-white-background-flat-website-logo-sign-symbol-app-ui-182207370.jpg",
               },
               {
                 title: "PHR Review & Update",
                 desc: "Review patient health records and update them post-consultation.",
-                icon: "/icons/phr.png",
+                icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDluM_jonxt2E2ltc085Qm0XcdIUje2Gsl1w&s",
               },
               {
                 title: "Query Handling",
                 desc: "View, respond, and manage patient queries efficiently.",
-                icon: "/icons/query.png",
+                icon: "https://thumbs.dreamstime.com/b/new-question-mark-symbol-flat-bright-cartoon-bulb-white-orange-colors-sign-stylized-vector-lightbulb-colorful-logotype-query-94605061.jpg",
               },
               {
                 title: "Profile & Schedule",
                 desc: "Manage your availability, languages, and bio from one place.",
-                icon: "/icons/profile.png",
+                icon: "https://img.freepik.com/premium-vector/doctor-profile-with-medical-service-icon_617655-48.jpg",
               },
               {
                 title: "Multilingual Support",
                 desc: "Offer consultations in multiple languages for patient ease.",
-                icon: "/icons/language.png",
+                icon: "https://thumbs.dreamstime.com/b/multilingual-support-blue-gradient-concept-icon-availability-vary-languages-quality-medical-service-round-shape-line-368762198.jpg",
               },
             ].map((feature, i) => (
               <motion.div
@@ -908,11 +960,11 @@ const Home = () => {
               >
                 <div className="flex items-start gap-4">
                   {/* Icon */}
-                  <div className="w-14 h-14 flex-shrink-0 bg-[#5a189a]/10 rounded-xl border border-[#5a189a]/40 flex items-center justify-center shadow-sm">
+                  <div className="w-14 h-14 overflow-hidden flex-shrink-0 bg-[#5a189a]/10 rounded-xl border border-[#5a189a]/40 flex items-center justify-center shadow-sm">
                     <img
                       src={feature.icon}
                       alt={feature.title}
-                      className="w-8 h-8 object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
 
@@ -969,27 +1021,27 @@ const Home = () => {
               {
                 title: "Workshops",
                 desc: "Interactive sessions on prenatal care, parenting, yoga & wellness.",
-                icon: "/icons/workshop.png",
+                icon: "https://thumbs.dreamstime.com/b/illustration-workshop-icon-isolated-over-white-background-60974892.jpg",
               },
               {
                 title: "Testimonials",
                 desc: "Real voices of empowered mothers sharing their MissSwag journey.",
-                icon: "/icons/testimonial.png",
+                icon: "https://www.searchenginejournal.com/wp-content/uploads/2021/04/10-steps-to-help-you-turn-client-testimonials-into-seo-wins-2-608bf543c9a23.png",
               },
               {
                 title: "Success Stories",
                 desc: "Inspiring stories from pregnancy to postpartum victories.",
-                icon: "/icons/success.png",
+                icon: "https://cdn-ilaicbb.nitrocdn.com/hxxHbaPDArtsSzZzjSHNhTqNDzVBpFel/assets/images/optimized/rev-609cf7b/www.littleangelivf.com/wp-content/uploads/2024/09/e.jpg",
               },
               {
                 title: "Mythological Stories",
                 desc: "Cultural stories blended with maternal strength and tradition.",
-                icon: "/icons/mythology.png",
+                icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSANKuByRHyu6YVO43CHLEN4vlvY1aPSDlQew&s",
               },
               {
                 title: "Motivational Sessions",
                 desc: "Empowering talks to uplift your mind and soul during the journey.",
-                icon: "/icons/motivation.png",
+                icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1wO_X74wfGzMBRAjD7EiVlRMSaMtoz3EtPw&s",
               },
             ].map((item, i) => (
               <motion.div
@@ -1003,11 +1055,11 @@ const Home = () => {
               >
                 <div className="flex items-start gap-4">
                   {/* Icon */}
-                  <div className="w-14 h-14 bg-[#5a189a]/10 rounded-xl flex items-center justify-center border border-[#5a189a]/30 shadow">
+                  <div className="w-24 h-16 overflow-hidden bg-[#5a189a]/10 rounded-xl flex items-center justify-center border border-[#5a189a]/30 shadow">
                     <img
                       src={item.icon}
                       alt={item.title}
-                      className="w-8 h-8 object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
 
@@ -1064,7 +1116,7 @@ const Home = () => {
                   "Weekly Health Updates",
                   "Nutrition & Fitness Plans",
                 ],
-                icon: "/icons/calendar-month.png",
+                icon: "https://static.vecteezy.com/system/resources/previews/042/361/596/non_2x/monthly-subscription-automatic-renewal-icon-vector.jpg",
                 color: "border-[#e84e9c]",
               },
               {
@@ -1075,7 +1127,7 @@ const Home = () => {
                   "Exclusive Webinar Invites",
                   "Priority Appointment Booking",
                 ],
-                icon: "/icons/calendar-year.png",
+                icon: "https://static.vecteezy.com/system/resources/previews/042/361/596/non_2x/monthly-subscription-automatic-renewal-icon-vector.jpg",
                 color: "border-[#b8005a]",
               },
               {
@@ -1086,7 +1138,7 @@ const Home = () => {
                   "Personalized Pregnancy Coach",
                   "Free Access to Online Store",
                 ],
-                icon: "/icons/premium.png",
+                icon: "https://static.vecteezy.com/system/resources/previews/042/361/596/non_2x/monthly-subscription-automatic-renewal-icon-vector.jpg",
                 color: "border-[#5a189a]",
               },
             ].map((plan, i) => (
@@ -1100,11 +1152,11 @@ const Home = () => {
                 className={`bg-white text-[#72064d] p-8 rounded-3xl shadow-xl border-4 ${plan.color} hover:shadow-[#fbc2eb]/30 transition duration-300`}
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-[#5a189a]/10 rounded-xl flex items-center justify-center border border-[#5a189a]/30 shadow">
+                  <div className="w-12 h-12 overflow-hidden bg-[#5a189a]/10 rounded-xl flex items-center justify-center border border-[#5a189a]/30 shadow">
                     <img
                       src={plan.icon}
                       alt={plan.name}
-                      className="w-6 h-6 object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <h3 className="text-xl font-bold">{plan.name} Plan</h3>
@@ -1168,32 +1220,32 @@ const Home = () => {
               {
                 title: "Patient Home",
                 desc: "A warm dashboard showing updates, baby growth, reminders, and quick actions.",
-                img: "/mockups/patient-home.png",
+                img: patientHome,
               },
               {
                 title: "Book Appointment",
                 desc: "Schedule doctor consultations with live availability filters.",
-                img: "/mockups/appointment.png",
+                img: appointment,
               },
               {
                 title: "Consultation Room",
                 desc: "Chat or video call with doctors, with real-time PHR access.",
-                img: "/mockups/consultation.png",
+                img: consultation,
               },
               {
                 title: "Doctor Dashboard",
                 desc: "Doctor view for upcoming appointments, patient records & queries.",
-                img: "/mockups/doctor-dashboard.png",
+                img: doctorDashboard,
               },
               {
                 title: "Query System",
                 desc: "Every question gets a unique ID and timeline for quick follow-up.",
-                img: "/mockups/query.png",
+                img: query,
               },
               {
                 title: "Health Records",
                 desc: "Upload, review, and update all test reports securely.",
-                img: "/mockups/phr.png",
+                img: phr,
               },
             ].map((screen, i) => (
               <motion.div
@@ -1205,7 +1257,7 @@ const Home = () => {
                 whileHover={{ scale: 1.04 }}
                 className="bg-[#f8cde6] rounded-2xl p-4 border-4 border-[#5a189a] shadow-md hover:shadow-[#e84e9c]/40 transition duration-300"
               >
-                <div className="w-full  bg-white rounded-xl overflow-hidden shadow-inner mb-4">
+                <div className="w-24 h-auto bg-white rounded-xl overflow-hidden shadow-inner mb-4">
                   <img
                     src={screen.img}
                     alt={screen.title}
