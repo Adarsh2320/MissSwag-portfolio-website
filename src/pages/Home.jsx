@@ -502,11 +502,11 @@ const Home = () => {
                 transition={{ type: "spring", stiffness: 200 }}
                 className="flex flex-col items-center group"
               >
-                <div className="w-24 h-24 md:w-28 md:h-28 bg-white rounded-3xl shadow-lg border-4 border-pink-300 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
+                <div className="w-32 h-32 md:w-36 md:h-36 bg-white rounded-3xl shadow-lg border-4 border-pink-300 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
                   <img
                     src={service.icon}
                     alt={service.title}
-                    className="w-full h-full object-fit transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
                 <p className="mt-4 text-[#72094e] text-center font-semibold text-lg md:text-xl">
@@ -516,7 +516,7 @@ const Home = () => {
             ))}
           </motion.div>
         </div>
-        <div className="absolute inset-0  z-10 flex items-center justify-center">
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
           <CrawlingBaby direction="right" speed={20} />
         </div>
       </section>
@@ -576,11 +576,11 @@ const Home = () => {
                 transition={{ type: "spring", stiffness: 200 }}
                 className="flex flex-col items-center group"
               >
-                <div className="w-24 h-24 md:w-28 md:h-28 bg-white/20 backdrop-blur-xl rounded-3xl shadow-xl border-4 border-white/30 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
+                <div className="w-32 h-32 md:w-36 md:h-36 bg-white/20 backdrop-blur-xl rounded-3xl shadow-xl border-4 border-white/30 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
                   <img
                     src={service.icon}
                     alt={service.title}
-                    className="w-full h-full object-fit transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
                 <p className="mt-4 text-white text-center font-semibold text-lg md:text-xl">
@@ -1221,39 +1221,33 @@ const Home = () => {
               {
                 title: "Patient Home",
                 desc: "A warm dashboard showing updates, baby growth, reminders, and quick actions.",
-                img: patientHome,
               },
               {
                 title: "Book Appointment",
                 desc: "Schedule doctor consultations with live availability filters.",
-                img: appointment,
               },
               {
                 title: "Consultation Room",
                 desc: "Chat or video call with doctors, with real-time PHR access.",
-                img: consultation,
               },
               {
                 title: "Doctor Dashboard",
                 desc: "Doctor view for upcoming appointments, patient records & queries.",
-                img: doctorDashboard,
               },
               {
                 title: "Query System",
                 desc: "Every question gets a unique ID and timeline for quick follow-up.",
-                img: query,
               },
               {
                 title: "Health Records",
                 desc: "Upload, review, and update all test reports securely.",
-                img: phr,
               },
             ].map((screen, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.04 }}
                 className="bg-[#fae0ec] rounded-2xl   hover:shadow-lg transition duration-100"
