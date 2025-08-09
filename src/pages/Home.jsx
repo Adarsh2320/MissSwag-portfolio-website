@@ -1190,91 +1190,107 @@ const Home = () => {
       </section>
 
       {/* Prototype section */}
-      <section className="py-20 bg-[#fae0ec] px-6 overflow-hidden">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* Heading */}
-          <motion.h2
-            className="text-3xl md:text-4xl font-extrabold mb-4 text-[#5a189a]"
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            Prototype & UI Previews 📱
-          </motion.h2>
+      <section className="py-20 bg-[#fae0ec] px-6 overflow-hidden relative">
+  <div className="max-w-6xl mx-auto text-center">
 
-          {/* Subtitle */}
-          <motion.p
-            className="text-[#b8005a] max-w-2xl mx-auto text-lg mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Preview the mobile interface of the MissSwag platform, tailored for
-            both patients and doctors — smooth, accessible, and human-first.
-          </motion.p>
+    {/* Heading */}
+    <motion.h2
+      className="text-3xl md:text-4xl font-extrabold mb-4 text-[#5a189a]"
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      Prototype & UI Previews 📱
+    </motion.h2>
 
-          {/* Screens Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-10">
-            {[
-              {
-                title: "Patient Home",
-                desc: "A warm dashboard showing updates, baby growth, reminders, and quick actions.",
-              },
-              {
-                title: "Book Appointment",
-                desc: "Schedule doctor consultations with live availability filters.",
-              },
-              {
-                title: "Consultation Room",
-                desc: "Chat or video call with doctors, with real-time PHR access.",
-              },
-              {
-                title: "Doctor Dashboard",
-                desc: "Doctor view for upcoming appointments, patient records & queries.",
-              },
-              {
-                title: "Query System",
-                desc: "Every question gets a unique ID and timeline for quick follow-up.",
-              },
-              {
-                title: "Health Records",
-                desc: "Upload, review, and update all test reports securely.",
-              },
-            ].map((screen, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.04 }}
-                className="bg-[#fae0ec] rounded-2xl   hover:shadow-lg transition duration-100"
-              >
-                {/* Image container */}
-                <div className="w-full h-60 bg-[#fae0ec] rounded-2xl overflow-hidden  mb-4 flex items-center justify-center">
-                  <img
-                    src={screen.img}
-                    alt={screen.title}
-                    className="max-w-full max-h-full rounded-2xl object-contain"
-                  />
-                </div>
-                <h3 className="text-lg font-bold text-[#b8005a] mb-1">
-                  {screen.title}
-                </h3>
-                <p className="text-sm text-[#72064d] leading-relaxed">
-                  {screen.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+    {/* Subtitle */}
+    <motion.p
+      className="text-[#b8005a] max-w-2xl mx-auto text-lg mb-12"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      viewport={{ once: true }}
+    >
+      Preview the mobile interface of the MissSwag platform, tailored for both patients and doctors — smooth, accessible, and human-first.
+    </motion.p>
 
-        <div className="absolute inset-0 z-10 flex items-center justify-center">
-          <CrawlingBaby direction="right" speed={20} />
-        </div>
-      </section>
+    {/* Horizontal Scroll Screenshots */}
+    <div className="relative w-full overflow-x-auto whitespace-nowrap py-4 scroll-smooth animate-scroll-rtl">
+      {[
+        patientHome,
+        appointment,
+        consultation,
+        doctorDashboard,
+        query,
+        phr,
+      ].map((imgSrc, i) => (
+        <motion.div
+          key={i}
+          className="inline-block mx-4 w-40 h-80 rounded-xl overflow-hidden shadow-md border-2 border-[#5a189a] bg-white"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: i * 0.2 }}
+          viewport={{ once: true }}
+        >
+          <img
+            src={imgSrc}
+            alt={`UI ${i + 1}`}
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+      ))}
+    </div>
+
+    {/* Descriptions (Text Content Below) */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-12">
+      {[
+        {
+          title: "Patient Home",
+          desc: "A warm dashboard showing updates, baby growth, reminders, and quick actions.",
+        },
+        {
+          title: "Book Appointment",
+          desc: "Schedule doctor consultations with live availability filters.",
+        },
+        {
+          title: "Consultation Room",
+          desc: "Chat or video call with doctors, with real-time PHR access.",
+        },
+        {
+          title: "Doctor Dashboard",
+          desc: "Doctor view for upcoming appointments, patient records & queries.",
+        },
+        {
+          title: "Query System",
+          desc: "Every question gets a unique ID and timeline for quick follow-up.",
+        },
+        {
+          title: "Health Records",
+          desc: "Upload, review, and update all test reports securely.",
+        },
+      ].map((screen, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: i * 0.1 }}
+          viewport={{ once: true }}
+          className="p-4 bg-[#fce4f1] rounded-xl shadow hover:shadow-lg transition transform hover:scale-105"
+        >
+          <h3 className="text-lg font-bold text-[#b8005a] mb-1">{screen.title}</h3>
+          <p className="text-sm text-[#72064d] leading-relaxed">{screen.desc}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+
+  {/* Crawling Baby Animation */}
+  <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+    <CrawlingBaby direction="right" speed={20} />
+  </div>
+</section>
+
 
       {/* MissSwag CTA Section */}
       <section className="bg-gradient-to-br from-[#e84e9c] via-[#b8005a] to-[#5a189a] text-white py-20 px-6">
