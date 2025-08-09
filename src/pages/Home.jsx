@@ -52,7 +52,6 @@ import doctorDashboard from "../assets/MissSwag Screenshots/p20.png";
 import query from "../assets/MissSwag Screenshots/p22.png";
 import phr from "../assets/MissSwag Screenshots/p13.png";
 
-
 const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.15 } },
@@ -261,7 +260,7 @@ const Home = () => {
         </Swiper>
 
         {/* Overlay with dynamic title/subtitle */}
-        <div className="absolute inset-0 bg-[#e84e9c]/50 z-10 flex items-center justify-center">
+        <div className="absolute inset-0 bg-[#e84e9c]/30 z-10 flex items-center justify-center">
           <motion.div
             key={activeIndex}
             initial={{ opacity: 0, y: 40 }}
@@ -990,6 +989,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/*Live session and community */}
       <section className="py-20 bg-[#fae0ec] px-6">
         <div className="max-w-6xl mx-auto text-center">
           {/* Section Heading */}
@@ -1189,6 +1189,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Prototype section */}
       <section className="py-20 bg-[#fae0ec] px-6 overflow-hidden">
         <div className="max-w-6xl mx-auto text-center">
           {/* Heading */}
@@ -1215,7 +1216,7 @@ const Home = () => {
           </motion.p>
 
           {/* Screens Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-10">
             {[
               {
                 title: "Patient Home",
@@ -1255,13 +1256,14 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: i * 0.15 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.04 }}
-                className="bg-[#f8cde6] rounded-2xl p-4 border-4 border-[#5a189a] shadow-md hover:shadow-[#e84e9c]/40 transition duration-300"
+                className="bg-[#fae0ec] rounded-2xl   hover:shadow-lg transition duration-100"
               >
-                <div className="w-24 h-auto bg-white rounded-xl overflow-hidden shadow-inner mb-4">
+                {/* Image container */}
+                <div className="w-full h-60 bg-[#fae0ec] rounded-2xl overflow-hidden  mb-4 flex items-center justify-center">
                   <img
                     src={screen.img}
                     alt={screen.title}
-                    className="w-full h-full object-cover"
+                    className="max-w-full max-h-full rounded-2xl object-contain"
                   />
                 </div>
                 <h3 className="text-lg font-bold text-[#b8005a] mb-1">
@@ -1274,7 +1276,8 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="absolute inset-0  z-10 flex items-center justify-center">
+
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
           <CrawlingBaby direction="right" speed={20} />
         </div>
       </section>
